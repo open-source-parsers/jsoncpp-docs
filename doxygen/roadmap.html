@@ -36,87 +36,8 @@ JsonCpp - JSON data format manipulation library
 <div class="title">JsonCpp roadmap </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="ms_release"></a>
-Makes JsonCpp ready for release</h1>
-<ul>
-<li>Build system clean-up:<ul>
-<li>Fix build on Windows (shared-library build is broken)</li>
-<li>Compile and run tests using shared library on Windows to ensure no JSON_API macro is missing.</li>
-<li>Add enable/disable flag for static and shared library build</li>
-<li>Enhance help</li>
-</ul>
-</li>
-<li>Platform portability check: (Notes: was ok on last check)<ul>
-<li>linux/gcc,</li>
-<li>solaris/cc,</li>
-<li>windows/msvc678,</li>
-<li>aix/vacpp</li>
-</ul>
-</li>
-<li>Add JsonCpp version to header as numeric for use in preprocessor test</li>
-<li>Remove buggy experimental hash stuff </li>
-</ul>
-<h1><a class="anchor" id="ms_strict"></a>
-Adds a strict mode to reader/parser</h1>
-<p>Strict JSON support as specific in RFC 4627 (<a href="http://www.ietf.org/rfc/rfc4627.txt?number=4627">http://www.ietf.org/rfc/rfc4627.txt?number=4627</a>).</p>
-<ul>
-<li>Enforce only object or array as root element</li>
-<li>Disable comment support<ul>
-<li>Get jsonchecker failing tests to pass in strict mode </li>
-</ul>
-</li>
-</ul>
-<h1><a class="anchor" id="ms_writer"></a>
-Writter control</h1>
-<p>Provides more control to determine how specific items are serialized when JSON allow choice:</p>
-<ul>
-<li>Optionally allow escaping of non-ASCII characters using unicode escape sequence "\\u".</li>
-<li>Optionally allow escaping of "/" using "\/". </li>
-</ul>
-<h1><a class="anchor" id="ms_separation"></a>
-Expose json reader/writer API that do not impose using Json::Value.</h1>
-<p>Some typical use-case involve an application specific structure to/from a JSON document.</p>
-<ul>
-<li>Event base parser to allow unserializing a <a class="el" href="namespace_json.html" title="JSON (JavaScript Object Notation). ">Json</a> document directly in datastructure instead of using the intermediate <a class="el" href="class_json_1_1_value.html" title="Represents a JSON value. ">Json::Value</a>.</li>
-<li>Stream based parser to serialized a <a class="el" href="namespace_json.html" title="JSON (JavaScript Object Notation). ">Json</a> document without using <a class="el" href="class_json_1_1_value.html" title="Represents a JSON value. ">Json::Value</a> as input.</li>
-</ul>
-<p>Performance oriented parser/writer:</p>
-<ul>
-<li>Provides an event based parser. Should allow pulling &amp; skipping events for ease of use.</li>
-<li>Provides a JSON document builder: fast only. </li>
-</ul>
-<h1><a class="anchor" id="ms_perfo"></a>
-Performance tuning</h1>
-<ul>
-<li>Provides support for static property name definition avoiding allocation</li>
-<li>Static property dictionnary can be provided to JSON reader</li>
-<li>Performance scenario &amp; benchmarking </li>
-</ul>
-<h1><a class="anchor" id="testing"></a>
-Testing</h1>
-<ul>
-<li>Adds more tests for unicode parsing (e.g. including surrogate and error detection). </li>
-</ul>
+<div class="textblock"><p>Moved to: <a href="https://github.com/jacobsa/jsoncpp/wiki/Roadmap">https://github.com/jacobsa/jsoncpp/wiki/Roadmap</a> </p>
 </div></div><!-- contents -->
 <hr>
-<table width="100%">
-  <tr>
-    <td width="10%" align="left" valign="center">
-      <a href="http://sourceforge.net"> 
-      <img
-      src="http://sourceforge.net/sflogo.php?group_id=144446"
-      width="88" height="31" border="0" alt="SourceForge Logo"></a>
-    </td>
-    <td width="20%" align="left" valign="center">
-      hosts this site.
-    </td>
-    <td>
-    </td>
-    <td align="right" valign="center">
-      Send comments to:<br>
-      <a href="mailto:jsoncpp-devel@lists.sourceforge.net">Json-cpp Developers</a>
-    </td>
-  </tr>
-</table>
 </body> 
 </html>

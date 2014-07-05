@@ -55,11 +55,12 @@ Introduction</h1>
     // Tab indent size
     "indent" : { "length" : 3, "use_space": true }
 }
-</pre><h1><a class="anchor" id="_features"></a>
+</pre><p> <code>jsoncpp</code> supports comments as <em>meta-data</em>.</p>
+<h1><a class="anchor" id="_features"></a>
 Features</h1>
 <ul>
 <li>read and write JSON document</li>
-<li>attach C and C++ style comments to element during parsing</li>
+<li>attach C++ style comments to element during parsing</li>
 <li>rewrite JSON document preserving original comments</li>
 </ul>
 <p>Notes: Comments used to be supported in JSON but where removed for portability (C like comments are not supported in Python). Since comments are useful in configuration/input file, this feature was preserved.</p>
@@ -108,23 +109,12 @@ Code example</h1>
 <div class="line">std::cout &lt;&lt; root;</div>
 </div><!-- fragment --><h1><a class="anchor" id="_pbuild"></a>
 Build instructions</h1>
-<p>The build instructions are located in the file <a href="README.txt">README.txt</a> in the top-directory of the project.</p>
-<p>Permanent link to the latest revision of the file in subversion: <a href="http://jsoncpp.svn.sourceforge.net/viewvc/jsoncpp/trunk/jsoncpp/README.txt?view=markup">latest README.txt</a></p>
-<h1><a class="anchor" id="_pdownload"></a>
-Download</h1>
-<p>The sources can be downloaded from <a href="http://sourceforge.net/projects/jsoncpp/files/">SourceForge download page</a>.</p>
-<p>The latest version of the source is available in the project's subversion repository: <a href="http://jsoncpp.svn.sourceforge.net/svnroot/jsoncpp/trunk/">http://jsoncpp.svn.sourceforge.net/svnroot/jsoncpp/trunk/</a></p>
-<p>To checkout the source, see the following <a href="http://sourceforge.net/scm/?type=svn&amp;group_id=144446">instructions</a>.</p>
+<p>The build instructions are located in the file <a href="https://github.com/jacobsa/jsoncpp/blob/master/README.txt">README.txt</a> in the top-directory of the project.</p>
+<p>The latest version of the source is available in the project's GitHub repository: <a href="https://github.com/jacobsa/jsoncpp/">jsoncpp</a></p>
 <h1><a class="anchor" id="_news"></a>
 What's New?</h1>
-<p>The description of latest changes can be found in <a href="NEWS.txt">NEWS.txt</a> in the top-directory of the project.</p>
-<p>Permanent link to the latest revision of the file in subversion: <a href="http://svn.sourceforge.net/viewcvs.cgi/jsoncpp/README.txt?view=markup">latest NEWS.txt</a></p>
-<h1><a class="anchor" id="_plinks"></a>
-Project links</h1>
-<ul>
-<li><a href="http://jsoncpp.sourceforge.net">json-cpp home</a></li>
-<li><a href="http://www.sourceforge.net/projects/jsoncpp/">json-cpp sourceforge project</a></li>
-</ul>
+<p>The description of latest changes can be found in <a href="https://github.com/jacobsa/jsoncpp/blob/master/NEWS.txt">NEWS.txt</a> in the top-directory of the project.</p>
+<p><b>TODO</b>: Move to wiki.</p>
 <h1><a class="anchor" id="_rlinks"></a>
 Related links</h1>
 <ul>
@@ -132,31 +122,21 @@ Related links</h1>
 <li><a href="http://www.yaml.org/">YAML</a> A data format designed for human readability.</li>
 <li><a href="http://www.cl.cam.ac.uk/~mgk25/unicode.html">UTF-8 and Unicode FAQ</a>.</li>
 </ul>
+<h1><a class="anchor" id="_plinks"></a>
+Old project links</h1>
+<ul>
+<li><a href="https://sourceforge.net/projects/jsoncpp/">https://sourceforge.net/projects/jsoncpp/</a></li>
+<li><a href="http://jsoncpp.sourceforge.net">http://jsoncpp.sourceforge.net</a></li>
+<li><a href="http://sourceforge.net/projects/jsoncpp/files/">http://sourceforge.net/projects/jsoncpp/files/</a></li>
+<li><a href="http://jsoncpp.svn.sourceforge.net/svnroot/jsoncpp/trunk/">http://jsoncpp.svn.sourceforge.net/svnroot/jsoncpp/trunk/</a></li>
+<li><a href="http://jsoncpp.sourceforge.net/old.html">http://jsoncpp.sourceforge.net/old.html</a></li>
+</ul>
 <h1><a class="anchor" id="_license"></a>
 License</h1>
-<p>See file <a href="LICENSE">LICENSE</a> in the top-directory of the project.</p>
+<p>See file <a href="https://github.com/jacobsa/jsoncpp/blob/master/LICENSE"><code>LICENSE</code></a> in the top-directory of the project.</p>
 <p>Basically JsonCpp is licensed under MIT license, or public domain if desired and recognized in your jurisdiction.</p>
-<dl class="section author"><dt>Author</dt><dd>Baptiste Lepilleur <a href="#" onclick="location.href='mai'+'lto:'+'ble'+'p@'+'use'+'rs'+'.so'+'ur'+'cef'+'or'+'ge.'+'ne'+'t'; return false;">blep@<span style="display: none;">.nosp@m.</span>user<span style="display: none;">.nosp@m.</span>s.sou<span style="display: none;">.nosp@m.</span>rcef<span style="display: none;">.nosp@m.</span>orge.<span style="display: none;">.nosp@m.</span>net</a> </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Baptiste Lepilleur <a href="#" onclick="location.href='mai'+'lto:'+'ble'+'p@'+'use'+'rs'+'.so'+'ur'+'cef'+'or'+'ge.'+'ne'+'t'; return false;">blep@<span style="display: none;">.nosp@m.</span>user<span style="display: none;">.nosp@m.</span>s.sou<span style="display: none;">.nosp@m.</span>rcef<span style="display: none;">.nosp@m.</span>orge.<span style="display: none;">.nosp@m.</span>net</a> (originator) </dd></dl>
 </div></div><!-- contents -->
 <hr>
-<table width="100%">
-  <tr>
-    <td width="10%" align="left" valign="center">
-      <a href="http://sourceforge.net"> 
-      <img
-      src="http://sourceforge.net/sflogo.php?group_id=144446"
-      width="88" height="31" border="0" alt="SourceForge Logo"></a>
-    </td>
-    <td width="20%" align="left" valign="center">
-      hosts this site.
-    </td>
-    <td>
-    </td>
-    <td align="right" valign="center">
-      Send comments to:<br>
-      <a href="mailto:jsoncpp-devel@lists.sourceforge.net">Json-cpp Developers</a>
-    </td>
-  </tr>
-</table>
 </body> 
 </html>
