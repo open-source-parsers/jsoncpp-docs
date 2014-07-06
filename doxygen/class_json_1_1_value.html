@@ -286,8 +286,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a57d8e12306732c80d1719206fcc59b22"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_json_1_1_value.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_value.html#a57d8e12306732c80d1719206fcc59b22">null</a></td></tr>
-<tr class="separator:a57d8e12306732c80d1719206fcc59b22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d6e9ea6807e46d5b7ded66d3032f607"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_json_1_1_value.html">Value</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_value.html#a6d6e9ea6807e46d5b7ded66d3032f607">null</a> = reinterpret_cast&lt;const <a class="el" href="class_json_1_1_value.html">Value</a>&amp;&gt;(<a class="el" href="namespace_json.html#a6b6386a40e6c4df0fa209e338b7dfd2e">kNull</a>)</td></tr>
+<tr class="separator:a6d6e9ea6807e46d5b7ded66d3032f607"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af91df130daa50dd43d2cd89e6ee67706"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_json_1_1_value.html#a1cbb82642ed05109b9833e49f042ece7">LargestInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_value.html#af91df130daa50dd43d2cd89e6ee67706">minLargestInt</a> = <a class="el" href="class_json_1_1_value.html#a1cbb82642ed05109b9833e49f042ece7">LargestInt</a>(~(<a class="el" href="class_json_1_1_value.html#a6682a3684d635e03fc06ba229fa24eec">LargestUInt</a>(-1) / 2))</td></tr>
 <tr class="memdesc:af91df130daa50dd43d2cd89e6ee67706"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum signed integer value that can be stored in a <a class="el" href="class_json_1_1_value.html" title="Represents a JSON value. ">Json::Value</a>.  <a href="#af91df130daa50dd43d2cd89e6ee67706">More...</a><br/></td></tr>
 <tr class="separator:af91df130daa50dd43d2cd89e6ee67706"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -512,11 +512,11 @@ Another Value can then be set to this one by assignment.
 <div class="line"><a class="code" href="class_json_1_1_value.html">Json::Value</a> obj_value(<a class="code" href="namespace_json.html#a7d654b75c16a57007925868e38212b4eae8386dcfc36d1ae897745f7b4f77a1f6">Json::objectValue</a>); <span class="comment">// {}</span></div>
 </div><!-- fragment --><p>Default constructor initialization must be equivalent to: memset( this, 0, sizeof(Value) ) This optimization is used in <a class="el" href="class_json_1_1_value_internal_map.html" title="A linked page based hash-table implementation used internally by Value. ">ValueInternalMap</a> fast allocator. </p>
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00221">221</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00231">231</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 <p>References <a class="el" href="json__internalarray_8inl_source.html#l00146">Json::arrayAllocator()</a>, <a class="el" href="value_8h_source.html#l00044">Json::arrayValue</a>, <a class="el" href="value_8h_source.html#l00043">Json::booleanValue</a>, <a class="el" href="value_8h_source.html#l00039">Json::intValue</a>, <a class="el" href="json__value_8cpp_source.html#l00024">JSON_ASSERT_UNREACHABLE</a>, <a class="el" href="json__internalmap_8inl_source.html#l00142">Json::mapAllocator()</a>, <a class="el" href="class_json_1_1_value_array_allocator.html#aa4e33df2e64dc9feac059282a8a30dc2">Json::ValueArrayAllocator::newArray()</a>, <a class="el" href="class_json_1_1_value_map_allocator.html#a5f292d161455c5e524b3379d23e3b0b3">Json::ValueMapAllocator::newMap()</a>, <a class="el" href="value_8h_source.html#l00038">Json::nullValue</a>, <a class="el" href="value_8h_source.html#l00045">Json::objectValue</a>, <a class="el" href="value_8h_source.html#l00041">Json::realValue</a>, <a class="el" href="value_8h_source.html#l00042">Json::stringValue</a>, and <a class="el" href="value_8h_source.html#l00040">Json::uintValue</a>.</p>
 
-<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00907">operator[]()</a>, and <a class="el" href="json__value_8cpp_source.html#l00885">resize()</a>.</p>
+<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00917">operator[]()</a>, and <a class="el" href="json__value_8cpp_source.html#l00895">resize()</a>.</p>
 
 </div>
 </div>
@@ -534,7 +534,7 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00274">274</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00284">284</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 </div>
 </div>
@@ -552,7 +552,7 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00263">263</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00273">273</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 </div>
 </div>
@@ -570,7 +570,7 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00286">286</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00296">296</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 </div>
 </div>
@@ -588,7 +588,7 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00297">297</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00307">307</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 </div>
 </div>
@@ -606,7 +606,7 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00309">309</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00319">319</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 </div>
 </div>
@@ -624,9 +624,9 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00320">320</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00330">330</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
-<p>References <a class="el" href="json__value_8cpp_source.html#l00075">Json::duplicateStringValue()</a>.</p>
+<p>References <a class="el" href="json__value_8cpp_source.html#l00085">Json::duplicateStringValue()</a>.</p>
 
 </div>
 </div>
@@ -654,9 +654,9 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00331">331</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00341">341</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
-<p>References <a class="el" href="json__value_8cpp_source.html#l00075">Json::duplicateStringValue()</a>.</p>
+<p>References <a class="el" href="json__value_8cpp_source.html#l00085">Json::duplicateStringValue()</a>.</p>
 
 </div>
 </div>
@@ -679,7 +679,7 @@ Another Value can then be set to this one by assignment.
 <div class="fragment"><div class="line">* <a class="code" href="class_json_1_1_value.html">Json::Value</a> aValue( StaticString(<span class="stringliteral">&quot;some text&quot;</span>) );</div>
 <div class="line">* </div>
 </div><!-- fragment --> 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00355">355</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00365">365</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 <p>References <a class="el" href="value_8h_source.html#l00081">Json::StaticString::c_str()</a>.</p>
 
@@ -699,9 +699,9 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00343">343</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00353">353</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
-<p>References <a class="el" href="json__value_8cpp_source.html#l00075">Json::duplicateStringValue()</a>.</p>
+<p>References <a class="el" href="json__value_8cpp_source.html#l00085">Json::duplicateStringValue()</a>.</p>
 
 </div>
 </div>
@@ -719,7 +719,7 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00379">379</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00389">389</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 </div>
 </div>
@@ -737,9 +737,9 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00390">390</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00400">400</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
-<p>References <a class="el" href="json__internalarray_8inl_source.html#l00146">Json::arrayAllocator()</a>, <a class="el" href="value_8h_source.html#l00044">Json::arrayValue</a>, <a class="el" href="value_8h_source.html#l00043">Json::booleanValue</a>, <a class="el" href="json__value_8cpp_source.html#l00075">Json::duplicateStringValue()</a>, <a class="el" href="value_8h_source.html#l00039">Json::intValue</a>, <a class="el" href="json__value_8cpp_source.html#l00024">JSON_ASSERT_UNREACHABLE</a>, <a class="el" href="json__internalmap_8inl_source.html#l00142">Json::mapAllocator()</a>, <a class="el" href="class_json_1_1_value_array_allocator.html#abcf14cbbd0c665f82797490a33f7a9c3">Json::ValueArrayAllocator::newArrayCopy()</a>, <a class="el" href="class_json_1_1_value_map_allocator.html#a3773e6a3f9e4a812027fb790c7b648aa">Json::ValueMapAllocator::newMapCopy()</a>, <a class="el" href="value_8h_source.html#l00038">Json::nullValue</a>, <a class="el" href="value_8h_source.html#l00053">Json::numberOfCommentPlacement</a>, <a class="el" href="value_8h_source.html#l00045">Json::objectValue</a>, <a class="el" href="value_8h_source.html#l00041">Json::realValue</a>, <a class="el" href="value_8h_source.html#l00042">Json::stringValue</a>, and <a class="el" href="value_8h_source.html#l00040">Json::uintValue</a>.</p>
+<p>References <a class="el" href="json__internalarray_8inl_source.html#l00146">Json::arrayAllocator()</a>, <a class="el" href="value_8h_source.html#l00044">Json::arrayValue</a>, <a class="el" href="value_8h_source.html#l00043">Json::booleanValue</a>, <a class="el" href="json__value_8cpp_source.html#l00085">Json::duplicateStringValue()</a>, <a class="el" href="value_8h_source.html#l00039">Json::intValue</a>, <a class="el" href="json__value_8cpp_source.html#l00024">JSON_ASSERT_UNREACHABLE</a>, <a class="el" href="json__internalmap_8inl_source.html#l00142">Json::mapAllocator()</a>, <a class="el" href="class_json_1_1_value_array_allocator.html#abcf14cbbd0c665f82797490a33f7a9c3">Json::ValueArrayAllocator::newArrayCopy()</a>, <a class="el" href="class_json_1_1_value_map_allocator.html#a3773e6a3f9e4a812027fb790c7b648aa">Json::ValueMapAllocator::newMapCopy()</a>, <a class="el" href="value_8h_source.html#l00038">Json::nullValue</a>, <a class="el" href="value_8h_source.html#l00053">Json::numberOfCommentPlacement</a>, <a class="el" href="value_8h_source.html#l00045">Json::objectValue</a>, <a class="el" href="value_8h_source.html#l00041">Json::realValue</a>, <a class="el" href="value_8h_source.html#l00042">Json::stringValue</a>, and <a class="el" href="value_8h_source.html#l00040">Json::uintValue</a>.</p>
 
 </div>
 </div>
@@ -756,9 +756,9 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00441">441</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00451">451</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
-<p>References <a class="el" href="json__internalarray_8inl_source.html#l00146">Json::arrayAllocator()</a>, <a class="el" href="value_8h_source.html#l00044">Json::arrayValue</a>, <a class="el" href="value_8h_source.html#l00043">Json::booleanValue</a>, <a class="el" href="class_json_1_1_value_array_allocator.html#a312a85597a5b4f7b4301e407c8cbaa6a">Json::ValueArrayAllocator::destructArray()</a>, <a class="el" href="class_json_1_1_value_map_allocator.html#aac6742bcbe8e4ea67c7ac6d9245620b1">Json::ValueMapAllocator::destructMap()</a>, <a class="el" href="value_8h_source.html#l00039">Json::intValue</a>, <a class="el" href="json__value_8cpp_source.html#l00024">JSON_ASSERT_UNREACHABLE</a>, <a class="el" href="json__internalmap_8inl_source.html#l00142">Json::mapAllocator()</a>, <a class="el" href="value_8h_source.html#l00038">Json::nullValue</a>, <a class="el" href="value_8h_source.html#l00045">Json::objectValue</a>, <a class="el" href="value_8h_source.html#l00041">Json::realValue</a>, <a class="el" href="json__value_8cpp_source.html#l00096">Json::releaseStringValue()</a>, <a class="el" href="value_8h_source.html#l00042">Json::stringValue</a>, and <a class="el" href="value_8h_source.html#l00040">Json::uintValue</a>.</p>
+<p>References <a class="el" href="json__internalarray_8inl_source.html#l00146">Json::arrayAllocator()</a>, <a class="el" href="value_8h_source.html#l00044">Json::arrayValue</a>, <a class="el" href="value_8h_source.html#l00043">Json::booleanValue</a>, <a class="el" href="class_json_1_1_value_array_allocator.html#a312a85597a5b4f7b4301e407c8cbaa6a">Json::ValueArrayAllocator::destructArray()</a>, <a class="el" href="class_json_1_1_value_map_allocator.html#aac6742bcbe8e4ea67c7ac6d9245620b1">Json::ValueMapAllocator::destructMap()</a>, <a class="el" href="value_8h_source.html#l00039">Json::intValue</a>, <a class="el" href="json__value_8cpp_source.html#l00024">JSON_ASSERT_UNREACHABLE</a>, <a class="el" href="json__internalmap_8inl_source.html#l00142">Json::mapAllocator()</a>, <a class="el" href="value_8h_source.html#l00038">Json::nullValue</a>, <a class="el" href="value_8h_source.html#l00045">Json::objectValue</a>, <a class="el" href="value_8h_source.html#l00041">Json::realValue</a>, <a class="el" href="json__value_8cpp_source.html#l00106">Json::releaseStringValue()</a>, <a class="el" href="value_8h_source.html#l00042">Json::stringValue</a>, and <a class="el" href="value_8h_source.html#l00040">Json::uintValue</a>.</p>
 
 <p>Referenced by <a class="el" href="json__internalarray_8inl_source.html#l00335">Json::ValueInternalArray::resize()</a>, and <a class="el" href="json__internalarray_8inl_source.html#l00291">Json::ValueInternalArray::~ValueInternalArray()</a>.</p>
 
@@ -782,9 +782,9 @@ Another Value can then be set to this one by assignment.
 <p>Append value to array at the end. </p>
 <p>Equivalent to jsonvalue[jsonvalue.size()] = value; </p>
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01032">1032</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01042">1042</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
-<p>References <a class="el" href="json__value_8cpp_source.html#l00821">size()</a>.</p>
+<p>References <a class="el" href="json__value_8cpp_source.html#l00831">size()</a>.</p>
 
 </div>
 </div>
@@ -801,7 +801,7 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00769">769</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00779">779</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 <p>References <a class="el" href="value_8h_source.html#l00043">Json::booleanValue</a>, <a class="el" href="value_8h_source.html#l00039">Json::intValue</a>, <a class="el" href="assertions_8h_source.html#l00019">JSON_FAIL_MESSAGE</a>, <a class="el" href="value_8h_source.html#l00038">Json::nullValue</a>, <a class="el" href="value_8h_source.html#l00041">Json::realValue</a>, and <a class="el" href="value_8h_source.html#l00040">Json::uintValue</a>.</p>
 
@@ -820,7 +820,7 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00589">589</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00599">599</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 <p>References <a class="el" href="assertions_8h_source.html#l00036">JSON_ASSERT_MESSAGE</a>, and <a class="el" href="value_8h_source.html#l00042">Json::stringValue</a>.</p>
 
@@ -839,11 +839,11 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00725">725</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00735">735</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 <p>References <a class="el" href="value_8h_source.html#l00043">Json::booleanValue</a>, <a class="el" href="value_8h_source.html#l00039">Json::intValue</a>, <a class="el" href="assertions_8h_source.html#l00019">JSON_FAIL_MESSAGE</a>, <a class="el" href="value_8h_source.html#l00038">Json::nullValue</a>, <a class="el" href="value_8h_source.html#l00041">Json::realValue</a>, and <a class="el" href="value_8h_source.html#l00040">Json::uintValue</a>.</p>
 
-<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00787">isConvertibleTo()</a>.</p>
+<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00797">isConvertibleTo()</a>.</p>
 
 </div>
 </div>
@@ -860,7 +860,7 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00747">747</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00757">757</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 <p>References <a class="el" href="value_8h_source.html#l00043">Json::booleanValue</a>, <a class="el" href="value_8h_source.html#l00039">Json::intValue</a>, <a class="el" href="assertions_8h_source.html#l00019">JSON_FAIL_MESSAGE</a>, <a class="el" href="value_8h_source.html#l00038">Json::nullValue</a>, <a class="el" href="value_8h_source.html#l00041">Json::realValue</a>, and <a class="el" href="value_8h_source.html#l00040">Json::uintValue</a>.</p>
 
@@ -879,11 +879,11 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00620">620</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00630">630</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
-<p>References <a class="el" href="value_8h_source.html#l00043">Json::booleanValue</a>, <a class="el" href="json__value_8cpp_source.html#l00050">Json::InRange()</a>, <a class="el" href="value_8h_source.html#l00039">Json::intValue</a>, <a class="el" href="json__value_8cpp_source.html#l01152">isInt()</a>, <a class="el" href="assertions_8h_source.html#l00036">JSON_ASSERT_MESSAGE</a>, <a class="el" href="assertions_8h_source.html#l00019">JSON_FAIL_MESSAGE</a>, <a class="el" href="value_8h_source.html#l00147">maxInt</a>, <a class="el" href="value_8h_source.html#l00145">minInt</a>, <a class="el" href="value_8h_source.html#l00038">Json::nullValue</a>, <a class="el" href="value_8h_source.html#l00041">Json::realValue</a>, and <a class="el" href="value_8h_source.html#l00040">Json::uintValue</a>.</p>
+<p>References <a class="el" href="value_8h_source.html#l00043">Json::booleanValue</a>, <a class="el" href="json__value_8cpp_source.html#l00060">Json::InRange()</a>, <a class="el" href="value_8h_source.html#l00039">Json::intValue</a>, <a class="el" href="json__value_8cpp_source.html#l01162">isInt()</a>, <a class="el" href="assertions_8h_source.html#l00036">JSON_ASSERT_MESSAGE</a>, <a class="el" href="assertions_8h_source.html#l00019">JSON_FAIL_MESSAGE</a>, <a class="el" href="value_8h_source.html#l00147">maxInt</a>, <a class="el" href="value_8h_source.html#l00145">minInt</a>, <a class="el" href="value_8h_source.html#l00038">Json::nullValue</a>, <a class="el" href="value_8h_source.html#l00041">Json::realValue</a>, and <a class="el" href="value_8h_source.html#l00040">Json::uintValue</a>.</p>
 
-<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00709">asLargestInt()</a>.</p>
+<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00719">asLargestInt()</a>.</p>
 
 </div>
 </div>
@@ -900,11 +900,11 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00666">666</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00676">676</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
-<p>References <a class="el" href="value_8h_source.html#l00043">Json::booleanValue</a>, <a class="el" href="json__value_8cpp_source.html#l00050">Json::InRange()</a>, <a class="el" href="value_8h_source.html#l00039">Json::intValue</a>, <a class="el" href="json__value_8cpp_source.html#l01182">isInt64()</a>, <a class="el" href="assertions_8h_source.html#l00036">JSON_ASSERT_MESSAGE</a>, <a class="el" href="assertions_8h_source.html#l00019">JSON_FAIL_MESSAGE</a>, <a class="el" href="value_8h_source.html#l00155">maxInt64</a>, <a class="el" href="value_8h_source.html#l00153">minInt64</a>, <a class="el" href="value_8h_source.html#l00038">Json::nullValue</a>, <a class="el" href="value_8h_source.html#l00041">Json::realValue</a>, and <a class="el" href="value_8h_source.html#l00040">Json::uintValue</a>.</p>
+<p>References <a class="el" href="value_8h_source.html#l00043">Json::booleanValue</a>, <a class="el" href="json__value_8cpp_source.html#l00060">Json::InRange()</a>, <a class="el" href="value_8h_source.html#l00039">Json::intValue</a>, <a class="el" href="json__value_8cpp_source.html#l01192">isInt64()</a>, <a class="el" href="assertions_8h_source.html#l00036">JSON_ASSERT_MESSAGE</a>, <a class="el" href="assertions_8h_source.html#l00019">JSON_FAIL_MESSAGE</a>, <a class="el" href="value_8h_source.html#l00155">maxInt64</a>, <a class="el" href="value_8h_source.html#l00153">minInt64</a>, <a class="el" href="value_8h_source.html#l00038">Json::nullValue</a>, <a class="el" href="value_8h_source.html#l00041">Json::realValue</a>, and <a class="el" href="value_8h_source.html#l00040">Json::uintValue</a>.</p>
 
-<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00709">asLargestInt()</a>.</p>
+<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00719">asLargestInt()</a>.</p>
 
 </div>
 </div>
@@ -921,9 +921,9 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00709">709</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00719">719</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
-<p>References <a class="el" href="json__value_8cpp_source.html#l00620">asInt()</a>, and <a class="el" href="json__value_8cpp_source.html#l00666">asInt64()</a>.</p>
+<p>References <a class="el" href="json__value_8cpp_source.html#l00630">asInt()</a>, and <a class="el" href="json__value_8cpp_source.html#l00676">asInt64()</a>.</p>
 
 </div>
 </div>
@@ -940,9 +940,9 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00717">717</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00727">727</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
-<p>References <a class="el" href="json__value_8cpp_source.html#l00642">asUInt()</a>, and <a class="el" href="json__value_8cpp_source.html#l00687">asUInt64()</a>.</p>
+<p>References <a class="el" href="json__value_8cpp_source.html#l00652">asUInt()</a>, and <a class="el" href="json__value_8cpp_source.html#l00697">asUInt64()</a>.</p>
 
 </div>
 </div>
@@ -959,11 +959,11 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00595">595</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00605">605</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 <p>References <a class="el" href="value_8h_source.html#l00043">Json::booleanValue</a>, <a class="el" href="value_8h_source.html#l00039">Json::intValue</a>, <a class="el" href="assertions_8h_source.html#l00019">JSON_FAIL_MESSAGE</a>, <a class="el" href="value_8h_source.html#l00038">Json::nullValue</a>, <a class="el" href="value_8h_source.html#l00041">Json::realValue</a>, <a class="el" href="value_8h_source.html#l00042">Json::stringValue</a>, <a class="el" href="value_8h_source.html#l00040">Json::uintValue</a>, and <a class="el" href="json__writer_8cpp_source.html#l00055">Json::valueToString()</a>.</p>
 
-<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00787">isConvertibleTo()</a>.</p>
+<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00797">isConvertibleTo()</a>.</p>
 
 </div>
 </div>
@@ -980,11 +980,11 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00642">642</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00652">652</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
-<p>References <a class="el" href="value_8h_source.html#l00043">Json::booleanValue</a>, <a class="el" href="json__value_8cpp_source.html#l00050">Json::InRange()</a>, <a class="el" href="value_8h_source.html#l00039">Json::intValue</a>, <a class="el" href="json__value_8cpp_source.html#l01167">isUInt()</a>, <a class="el" href="assertions_8h_source.html#l00036">JSON_ASSERT_MESSAGE</a>, <a class="el" href="assertions_8h_source.html#l00019">JSON_FAIL_MESSAGE</a>, <a class="el" href="value_8h_source.html#l00149">maxUInt</a>, <a class="el" href="value_8h_source.html#l00038">Json::nullValue</a>, <a class="el" href="value_8h_source.html#l00041">Json::realValue</a>, and <a class="el" href="value_8h_source.html#l00040">Json::uintValue</a>.</p>
+<p>References <a class="el" href="value_8h_source.html#l00043">Json::booleanValue</a>, <a class="el" href="json__value_8cpp_source.html#l00060">Json::InRange()</a>, <a class="el" href="value_8h_source.html#l00039">Json::intValue</a>, <a class="el" href="json__value_8cpp_source.html#l01177">isUInt()</a>, <a class="el" href="assertions_8h_source.html#l00036">JSON_ASSERT_MESSAGE</a>, <a class="el" href="assertions_8h_source.html#l00019">JSON_FAIL_MESSAGE</a>, <a class="el" href="value_8h_source.html#l00149">maxUInt</a>, <a class="el" href="value_8h_source.html#l00038">Json::nullValue</a>, <a class="el" href="value_8h_source.html#l00041">Json::realValue</a>, and <a class="el" href="value_8h_source.html#l00040">Json::uintValue</a>.</p>
 
-<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00717">asLargestUInt()</a>.</p>
+<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00727">asLargestUInt()</a>.</p>
 
 </div>
 </div>
@@ -1001,11 +1001,11 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00687">687</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00697">697</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
-<p>References <a class="el" href="value_8h_source.html#l00043">Json::booleanValue</a>, <a class="el" href="json__value_8cpp_source.html#l00050">Json::InRange()</a>, <a class="el" href="value_8h_source.html#l00039">Json::intValue</a>, <a class="el" href="json__value_8cpp_source.html#l01202">isUInt64()</a>, <a class="el" href="assertions_8h_source.html#l00036">JSON_ASSERT_MESSAGE</a>, <a class="el" href="assertions_8h_source.html#l00019">JSON_FAIL_MESSAGE</a>, <a class="el" href="value_8h_source.html#l00157">maxUInt64</a>, <a class="el" href="value_8h_source.html#l00038">Json::nullValue</a>, <a class="el" href="value_8h_source.html#l00041">Json::realValue</a>, and <a class="el" href="value_8h_source.html#l00040">Json::uintValue</a>.</p>
+<p>References <a class="el" href="value_8h_source.html#l00043">Json::booleanValue</a>, <a class="el" href="json__value_8cpp_source.html#l00060">Json::InRange()</a>, <a class="el" href="value_8h_source.html#l00039">Json::intValue</a>, <a class="el" href="json__value_8cpp_source.html#l01212">isUInt64()</a>, <a class="el" href="assertions_8h_source.html#l00036">JSON_ASSERT_MESSAGE</a>, <a class="el" href="assertions_8h_source.html#l00019">JSON_FAIL_MESSAGE</a>, <a class="el" href="value_8h_source.html#l00157">maxUInt64</a>, <a class="el" href="value_8h_source.html#l00038">Json::nullValue</a>, <a class="el" href="value_8h_source.html#l00041">Json::realValue</a>, and <a class="el" href="value_8h_source.html#l00040">Json::uintValue</a>.</p>
 
-<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00717">asLargestUInt()</a>.</p>
+<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00727">asLargestUInt()</a>.</p>
 
 </div>
 </div>
@@ -1022,7 +1022,7 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01273">1273</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01283">1283</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 <p>References <a class="el" href="value_8h_source.html#l00044">Json::arrayValue</a>, and <a class="el" href="value_8h_source.html#l00045">Json::objectValue</a>.</p>
 
@@ -1041,7 +1041,7 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01333">1333</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01343">1343</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 <p>References <a class="el" href="value_8h_source.html#l00044">Json::arrayValue</a>, and <a class="el" href="value_8h_source.html#l00045">Json::objectValue</a>.</p>
 
@@ -1064,11 +1064,11 @@ Another Value can then be set to this one by assignment.
 <dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="class_json_1_1_value.html#a695ef31fad36b4712918b3ff80158479">type()</a> is arrayValue, objectValue, or nullValue </dd></dl>
 <dl class="section post"><dt>Postcondition</dt><dd><a class="el" href="class_json_1_1_value.html#a695ef31fad36b4712918b3ff80158479">type()</a> is unchanged </dd></dl>
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00860">860</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00870">870</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 <p>References <a class="el" href="value_8h_source.html#l00044">Json::arrayValue</a>, <a class="el" href="assertions_8h_source.html#l00036">JSON_ASSERT_MESSAGE</a>, <a class="el" href="value_8h_source.html#l00038">Json::nullValue</a>, and <a class="el" href="value_8h_source.html#l00045">Json::objectValue</a>.</p>
 
-<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00885">resize()</a>.</p>
+<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00895">resize()</a>.</p>
 
 </div>
 </div>
@@ -1086,7 +1086,7 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00494">494</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00504">504</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 <p>Referenced by <a class="el" href="json__internalmap_8inl_source.html#l00471">Json::ValueInternalMap::compare()</a>, and <a class="el" href="json__internalarray_8inl_source.html#l00438">Json::ValueInternalArray::compare()</a>.</p>
 
@@ -1107,9 +1107,9 @@ Another Value can then be set to this one by assignment.
 
 <p>Return true if empty array, empty object, or null; otherwise, false. </p>
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00851">851</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00861">861</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
-<p>References <a class="el" href="json__value_8cpp_source.html#l01236">isArray()</a>, <a class="el" href="json__value_8cpp_source.html#l01148">isNull()</a>, <a class="el" href="json__value_8cpp_source.html#l01238">isObject()</a>, and <a class="el" href="json__value_8cpp_source.html#l00821">size()</a>.</p>
+<p>References <a class="el" href="json__value_8cpp_source.html#l01246">isArray()</a>, <a class="el" href="json__value_8cpp_source.html#l01158">isNull()</a>, <a class="el" href="json__value_8cpp_source.html#l01248">isObject()</a>, and <a class="el" href="json__value_8cpp_source.html#l00831">size()</a>.</p>
 
 </div>
 </div>
@@ -1126,7 +1126,7 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01303">1303</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01313">1313</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 <p>References <a class="el" href="value_8h_source.html#l00044">Json::arrayValue</a>, and <a class="el" href="value_8h_source.html#l00045">Json::objectValue</a>.</p>
 
@@ -1145,7 +1145,7 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01363">1363</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01373">1373</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 <p>References <a class="el" href="value_8h_source.html#l00044">Json::arrayValue</a>, and <a class="el" href="value_8h_source.html#l00045">Json::objectValue</a>.</p>
 
@@ -1177,7 +1177,7 @@ Another Value can then be set to this one by assignment.
 
 <p>If the array contains at least index+1 elements, returns the element value, otherwise returns defaultValue. </p>
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00985">985</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00995">995</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 <p>References <a class="el" href="value_8h_source.html#l00136">null</a>.</p>
 
@@ -1209,7 +1209,7 @@ Another Value can then be set to this one by assignment.
 
 <p>Return the member named key if it exist, defaultValue otherwise. </p>
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01034">1034</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01044">1044</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 <p>References <a class="el" href="value_8h_source.html#l00136">null</a>.</p>
 
@@ -1241,7 +1241,7 @@ Another Value can then be set to this one by assignment.
 
 <p>Return the member named key if it exist, defaultValue otherwise. </p>
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01039">1039</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01049">1049</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 </div>
 </div>
@@ -1261,9 +1261,9 @@ Another Value can then be set to this one by assignment.
 
 <p>Include delimiters and embedded newlines. </p>
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01254">1254</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01264">1264</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
-<p>References <a class="el" href="json__value_8cpp_source.html#l01250">hasComment()</a>.</p>
+<p>References <a class="el" href="json__value_8cpp_source.html#l01260">hasComment()</a>.</p>
 
 </div>
 </div>
@@ -1285,7 +1285,7 @@ Another Value can then be set to this one by assignment.
 <dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="class_json_1_1_value.html#a695ef31fad36b4712918b3ff80158479">type()</a> is objectValue or nullValue </dd></dl>
 <dl class="section post"><dt>Postcondition</dt><dd>if <a class="el" href="class_json_1_1_value.html#a695ef31fad36b4712918b3ff80158479">type()</a> was nullValue, it remains nullValue </dd></dl>
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01094">1094</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01104">1104</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 <p>References <a class="el" href="assertions_8h_source.html#l00036">JSON_ASSERT_MESSAGE</a>, <a class="el" href="value_8h_source.html#l00038">Json::nullValue</a>, and <a class="el" href="value_8h_source.html#l00045">Json::objectValue</a>.</p>
 
@@ -1304,7 +1304,7 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01266">1266</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01276">1276</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 </div>
 </div>
@@ -1321,7 +1321,7 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01264">1264</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01274">1274</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 </div>
 </div>
@@ -1339,9 +1339,9 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01250">1250</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01260">1260</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l01254">getComment()</a>.</p>
+<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l01264">getComment()</a>.</p>
 
 </div>
 </div>
@@ -1358,11 +1358,11 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01236">1236</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01246">1246</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 <p>References <a class="el" href="value_8h_source.html#l00044">Json::arrayValue</a>.</p>
 
-<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00851">empty()</a>, <a class="el" href="json__value_8cpp_source.html#l01515">Json::Path::make()</a>, <a class="el" href="json__reader_8cpp_source.html#l00104">Json::Reader::parse()</a>, and <a class="el" href="json__value_8cpp_source.html#l01473">Json::Path::resolve()</a>.</p>
+<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00861">empty()</a>, <a class="el" href="json__value_8cpp_source.html#l01525">Json::Path::make()</a>, <a class="el" href="json__reader_8cpp_source.html#l00104">Json::Reader::parse()</a>, and <a class="el" href="json__value_8cpp_source.html#l01483">Json::Path::resolve()</a>.</p>
 
 </div>
 </div>
@@ -1379,7 +1379,7 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01150">1150</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01160">1160</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 <p>References <a class="el" href="value_8h_source.html#l00043">Json::booleanValue</a>.</p>
 
@@ -1399,9 +1399,9 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00787">787</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00797">797</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
-<p>References <a class="el" href="value_8h_source.html#l00044">Json::arrayValue</a>, <a class="el" href="json__value_8cpp_source.html#l00725">asDouble()</a>, <a class="el" href="json__value_8cpp_source.html#l00595">asString()</a>, <a class="el" href="value_8h_source.html#l00043">Json::booleanValue</a>, <a class="el" href="json__value_8cpp_source.html#l00050">Json::InRange()</a>, <a class="el" href="value_8h_source.html#l00039">Json::intValue</a>, <a class="el" href="json__value_8cpp_source.html#l01152">isInt()</a>, <a class="el" href="json__value_8cpp_source.html#l01232">isNumeric()</a>, <a class="el" href="json__value_8cpp_source.html#l01167">isUInt()</a>, <a class="el" href="json__value_8cpp_source.html#l00024">JSON_ASSERT_UNREACHABLE</a>, <a class="el" href="value_8h_source.html#l00147">maxInt</a>, <a class="el" href="value_8h_source.html#l00149">maxUInt</a>, <a class="el" href="value_8h_source.html#l00145">minInt</a>, <a class="el" href="value_8h_source.html#l00038">Json::nullValue</a>, <a class="el" href="value_8h_source.html#l00045">Json::objectValue</a>, <a class="el" href="value_8h_source.html#l00041">Json::realValue</a>, <a class="el" href="value_8h_source.html#l00042">Json::stringValue</a>, and <a class="el" href="value_8h_source.html#l00040">Json::uintValue</a>.</p>
+<p>References <a class="el" href="value_8h_source.html#l00044">Json::arrayValue</a>, <a class="el" href="json__value_8cpp_source.html#l00735">asDouble()</a>, <a class="el" href="json__value_8cpp_source.html#l00605">asString()</a>, <a class="el" href="value_8h_source.html#l00043">Json::booleanValue</a>, <a class="el" href="json__value_8cpp_source.html#l00060">Json::InRange()</a>, <a class="el" href="value_8h_source.html#l00039">Json::intValue</a>, <a class="el" href="json__value_8cpp_source.html#l01162">isInt()</a>, <a class="el" href="json__value_8cpp_source.html#l01242">isNumeric()</a>, <a class="el" href="json__value_8cpp_source.html#l01177">isUInt()</a>, <a class="el" href="json__value_8cpp_source.html#l00024">JSON_ASSERT_UNREACHABLE</a>, <a class="el" href="value_8h_source.html#l00147">maxInt</a>, <a class="el" href="value_8h_source.html#l00149">maxUInt</a>, <a class="el" href="value_8h_source.html#l00145">minInt</a>, <a class="el" href="value_8h_source.html#l00038">Json::nullValue</a>, <a class="el" href="value_8h_source.html#l00045">Json::objectValue</a>, <a class="el" href="value_8h_source.html#l00041">Json::realValue</a>, <a class="el" href="value_8h_source.html#l00042">Json::stringValue</a>, and <a class="el" href="value_8h_source.html#l00040">Json::uintValue</a>.</p>
 
 </div>
 </div>
@@ -1418,11 +1418,11 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01230">1230</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01240">1240</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
-<p>References <a class="el" href="json__value_8cpp_source.html#l01222">isIntegral()</a>, and <a class="el" href="value_8h_source.html#l00041">Json::realValue</a>.</p>
+<p>References <a class="el" href="json__value_8cpp_source.html#l01232">isIntegral()</a>, and <a class="el" href="value_8h_source.html#l00041">Json::realValue</a>.</p>
 
-<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l01232">isNumeric()</a>.</p>
+<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l01242">isNumeric()</a>.</p>
 
 </div>
 </div>
@@ -1439,11 +1439,11 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01152">1152</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01162">1162</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
-<p>References <a class="el" href="value_8h_source.html#l00039">Json::intValue</a>, <a class="el" href="json__value_8cpp_source.html#l01143">Json::IsIntegral()</a>, <a class="el" href="value_8h_source.html#l00147">maxInt</a>, <a class="el" href="value_8h_source.html#l00145">minInt</a>, <a class="el" href="value_8h_source.html#l00041">Json::realValue</a>, and <a class="el" href="value_8h_source.html#l00040">Json::uintValue</a>.</p>
+<p>References <a class="el" href="value_8h_source.html#l00039">Json::intValue</a>, <a class="el" href="json__value_8cpp_source.html#l01153">Json::IsIntegral()</a>, <a class="el" href="value_8h_source.html#l00147">maxInt</a>, <a class="el" href="value_8h_source.html#l00145">minInt</a>, <a class="el" href="value_8h_source.html#l00041">Json::realValue</a>, and <a class="el" href="value_8h_source.html#l00040">Json::uintValue</a>.</p>
 
-<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00620">asInt()</a>, <a class="el" href="json__value_8cpp_source.html#l00787">isConvertibleTo()</a>, and <a class="el" href="json__value_8cpp_source.html#l01222">isIntegral()</a>.</p>
+<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00630">asInt()</a>, <a class="el" href="json__value_8cpp_source.html#l00797">isConvertibleTo()</a>, and <a class="el" href="json__value_8cpp_source.html#l01232">isIntegral()</a>.</p>
 
 </div>
 </div>
@@ -1460,11 +1460,11 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01182">1182</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01192">1192</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
-<p>References <a class="el" href="value_8h_source.html#l00039">Json::intValue</a>, <a class="el" href="json__value_8cpp_source.html#l01143">Json::IsIntegral()</a>, <a class="el" href="value_8h_source.html#l00155">maxInt64</a>, <a class="el" href="value_8h_source.html#l00153">minInt64</a>, <a class="el" href="value_8h_source.html#l00041">Json::realValue</a>, and <a class="el" href="value_8h_source.html#l00040">Json::uintValue</a>.</p>
+<p>References <a class="el" href="value_8h_source.html#l00039">Json::intValue</a>, <a class="el" href="json__value_8cpp_source.html#l01153">Json::IsIntegral()</a>, <a class="el" href="value_8h_source.html#l00155">maxInt64</a>, <a class="el" href="value_8h_source.html#l00153">minInt64</a>, <a class="el" href="value_8h_source.html#l00041">Json::realValue</a>, and <a class="el" href="value_8h_source.html#l00040">Json::uintValue</a>.</p>
 
-<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00666">asInt64()</a>, and <a class="el" href="json__value_8cpp_source.html#l01222">isIntegral()</a>.</p>
+<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00676">asInt64()</a>, and <a class="el" href="json__value_8cpp_source.html#l01232">isIntegral()</a>.</p>
 
 </div>
 </div>
@@ -1481,11 +1481,11 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01222">1222</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01232">1232</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
-<p>References <a class="el" href="json__value_8cpp_source.html#l01152">isInt()</a>, <a class="el" href="json__value_8cpp_source.html#l01182">isInt64()</a>, <a class="el" href="json__value_8cpp_source.html#l01167">isUInt()</a>, and <a class="el" href="json__value_8cpp_source.html#l01202">isUInt64()</a>.</p>
+<p>References <a class="el" href="json__value_8cpp_source.html#l01162">isInt()</a>, <a class="el" href="json__value_8cpp_source.html#l01192">isInt64()</a>, <a class="el" href="json__value_8cpp_source.html#l01177">isUInt()</a>, and <a class="el" href="json__value_8cpp_source.html#l01212">isUInt64()</a>.</p>
 
-<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l01230">isDouble()</a>, and <a class="el" href="json__value_8cpp_source.html#l01232">isNumeric()</a>.</p>
+<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l01240">isDouble()</a>, and <a class="el" href="json__value_8cpp_source.html#l01242">isNumeric()</a>.</p>
 
 </div>
 </div>
@@ -1505,11 +1505,11 @@ Another Value can then be set to this one by assignment.
 
 <p>Return true if the object has a member named key. </p>
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01079">1079</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01089">1089</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 <p>References <a class="el" href="value_8h_source.html#l00136">null</a>.</p>
 
-<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l01084">isMember()</a>.</p>
+<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l01094">isMember()</a>.</p>
 
 </div>
 </div>
@@ -1529,9 +1529,9 @@ Another Value can then be set to this one by assignment.
 
 <p>Return true if the object has a member named key. </p>
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01084">1084</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01094">1094</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
-<p>References <a class="el" href="json__value_8cpp_source.html#l01079">isMember()</a>.</p>
+<p>References <a class="el" href="json__value_8cpp_source.html#l01089">isMember()</a>.</p>
 
 </div>
 </div>
@@ -1548,11 +1548,11 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01148">1148</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01158">1158</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 <p>References <a class="el" href="value_8h_source.html#l00038">Json::nullValue</a>.</p>
 
-<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00851">empty()</a>, and <a class="el" href="json__value_8cpp_source.html#l00858">operator!()</a>.</p>
+<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00861">empty()</a>, and <a class="el" href="json__value_8cpp_source.html#l00868">operator!()</a>.</p>
 
 </div>
 </div>
@@ -1569,11 +1569,11 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01232">1232</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01242">1242</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
-<p>References <a class="el" href="json__value_8cpp_source.html#l01230">isDouble()</a>, and <a class="el" href="json__value_8cpp_source.html#l01222">isIntegral()</a>.</p>
+<p>References <a class="el" href="json__value_8cpp_source.html#l01240">isDouble()</a>, and <a class="el" href="json__value_8cpp_source.html#l01232">isIntegral()</a>.</p>
 
-<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00787">isConvertibleTo()</a>.</p>
+<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00797">isConvertibleTo()</a>.</p>
 
 </div>
 </div>
@@ -1590,11 +1590,11 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01238">1238</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01248">1248</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 <p>References <a class="el" href="value_8h_source.html#l00045">Json::objectValue</a>.</p>
 
-<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00851">empty()</a>, <a class="el" href="json__value_8cpp_source.html#l01515">Json::Path::make()</a>, <a class="el" href="json__reader_8cpp_source.html#l00104">Json::Reader::parse()</a>, and <a class="el" href="json__value_8cpp_source.html#l01473">Json::Path::resolve()</a>.</p>
+<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00861">empty()</a>, <a class="el" href="json__value_8cpp_source.html#l01525">Json::Path::make()</a>, <a class="el" href="json__reader_8cpp_source.html#l00104">Json::Reader::parse()</a>, and <a class="el" href="json__value_8cpp_source.html#l01483">Json::Path::resolve()</a>.</p>
 
 </div>
 </div>
@@ -1611,7 +1611,7 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01234">1234</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01244">1244</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 <p>References <a class="el" href="value_8h_source.html#l00042">Json::stringValue</a>.</p>
 
@@ -1630,11 +1630,11 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01167">1167</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01177">1177</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
-<p>References <a class="el" href="value_8h_source.html#l00039">Json::intValue</a>, <a class="el" href="json__value_8cpp_source.html#l01143">Json::IsIntegral()</a>, <a class="el" href="value_8h_source.html#l00149">maxUInt</a>, <a class="el" href="value_8h_source.html#l00041">Json::realValue</a>, and <a class="el" href="value_8h_source.html#l00040">Json::uintValue</a>.</p>
+<p>References <a class="el" href="value_8h_source.html#l00039">Json::intValue</a>, <a class="el" href="json__value_8cpp_source.html#l01153">Json::IsIntegral()</a>, <a class="el" href="value_8h_source.html#l00149">maxUInt</a>, <a class="el" href="value_8h_source.html#l00041">Json::realValue</a>, and <a class="el" href="value_8h_source.html#l00040">Json::uintValue</a>.</p>
 
-<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00642">asUInt()</a>, <a class="el" href="json__value_8cpp_source.html#l00787">isConvertibleTo()</a>, and <a class="el" href="json__value_8cpp_source.html#l01222">isIntegral()</a>.</p>
+<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00652">asUInt()</a>, <a class="el" href="json__value_8cpp_source.html#l00797">isConvertibleTo()</a>, and <a class="el" href="json__value_8cpp_source.html#l01232">isIntegral()</a>.</p>
 
 </div>
 </div>
@@ -1651,11 +1651,11 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01202">1202</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01212">1212</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
-<p>References <a class="el" href="value_8h_source.html#l00039">Json::intValue</a>, <a class="el" href="json__value_8cpp_source.html#l01143">Json::IsIntegral()</a>, <a class="el" href="json__value_8cpp_source.html#l00039">Json::maxUInt64AsDouble</a>, <a class="el" href="value_8h_source.html#l00041">Json::realValue</a>, and <a class="el" href="value_8h_source.html#l00040">Json::uintValue</a>.</p>
+<p>References <a class="el" href="value_8h_source.html#l00039">Json::intValue</a>, <a class="el" href="json__value_8cpp_source.html#l01153">Json::IsIntegral()</a>, <a class="el" href="json__value_8cpp_source.html#l00049">Json::maxUInt64AsDouble</a>, <a class="el" href="value_8h_source.html#l00041">Json::realValue</a>, and <a class="el" href="value_8h_source.html#l00040">Json::uintValue</a>.</p>
 
-<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00687">asUInt64()</a>, and <a class="el" href="json__value_8cpp_source.html#l01222">isIntegral()</a>.</p>
+<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00697">asUInt64()</a>, and <a class="el" href="json__value_8cpp_source.html#l01232">isIntegral()</a>.</p>
 
 </div>
 </div>
@@ -1675,11 +1675,11 @@ Another Value can then be set to this one by assignment.
 
 <p>Return true if index &lt; <a class="el" href="class_json_1_1_value.html#a4ca8ee6c48a34ca6c2f131956bab5e05" title="Number of values in array or object. ">size()</a>. </p>
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00990">990</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01000">1000</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
-<p>References <a class="el" href="json__value_8cpp_source.html#l00821">size()</a>.</p>
+<p>References <a class="el" href="json__value_8cpp_source.html#l00831">size()</a>.</p>
 
-<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l01473">Json::Path::resolve()</a>.</p>
+<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l01483">Json::Path::resolve()</a>.</p>
 
 </div>
 </div>
@@ -1698,9 +1698,9 @@ Another Value can then be set to this one by assignment.
 
 <p>Return <a class="el" href="class_json_1_1_value.html#aeb9ad8b1bb91bdd72203dc884b3f4362">isNull()</a> </p>
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00858">858</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00868">868</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
-<p>References <a class="el" href="json__value_8cpp_source.html#l01148">isNull()</a>.</p>
+<p>References <a class="el" href="json__value_8cpp_source.html#l01158">isNull()</a>.</p>
 
 </div>
 </div>
@@ -1718,7 +1718,7 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00587">587</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00597">597</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 </div>
 </div>
@@ -1736,7 +1736,7 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00502">502</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00512">512</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 <p>References <a class="el" href="value_8h_source.html#l00044">Json::arrayValue</a>, <a class="el" href="value_8h_source.html#l00043">Json::booleanValue</a>, <a class="el" href="value_8h_source.html#l00039">Json::intValue</a>, <a class="el" href="json__value_8cpp_source.html#l00024">JSON_ASSERT_UNREACHABLE</a>, <a class="el" href="value_8h_source.html#l00038">Json::nullValue</a>, <a class="el" href="value_8h_source.html#l00045">Json::objectValue</a>, <a class="el" href="value_8h_source.html#l00041">Json::realValue</a>, <a class="el" href="value_8h_source.html#l00042">Json::stringValue</a>, and <a class="el" href="value_8h_source.html#l00040">Json::uintValue</a>.</p>
 
@@ -1756,7 +1756,7 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00541">541</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00551">551</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 </div>
 </div>
@@ -1774,9 +1774,9 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00474">474</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00484">484</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
-<p>References <a class="el" href="json__value_8cpp_source.html#l00480">swap()</a>.</p>
+<p>References <a class="el" href="json__value_8cpp_source.html#l00490">swap()</a>.</p>
 
 </div>
 </div>
@@ -1794,7 +1794,7 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00547">547</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00557">557</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 <p>References <a class="el" href="value_8h_source.html#l00044">Json::arrayValue</a>, <a class="el" href="value_8h_source.html#l00043">Json::booleanValue</a>, <a class="el" href="value_8h_source.html#l00039">Json::intValue</a>, <a class="el" href="json__value_8cpp_source.html#l00024">JSON_ASSERT_UNREACHABLE</a>, <a class="el" href="value_8h_source.html#l00038">Json::nullValue</a>, <a class="el" href="value_8h_source.html#l00045">Json::objectValue</a>, <a class="el" href="value_8h_source.html#l00041">Json::realValue</a>, <a class="el" href="value_8h_source.html#l00042">Json::stringValue</a>, and <a class="el" href="value_8h_source.html#l00040">Json::uintValue</a>.</p>
 
@@ -1814,7 +1814,7 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00545">545</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00555">555</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 </div>
 </div>
@@ -1832,7 +1832,7 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00543">543</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00553">553</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 </div>
 </div>
@@ -1853,9 +1853,9 @@ Another Value can then be set to this one by assignment.
 <p>Access an array element (zero based index ). </p>
 <p>If the array contains less than index element, then null value are inserted in the array so that its size is index+1. (You may need to say 'value[0u]' to get your compiler to distinguish this from the operator[] which takes a string.) </p>
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00907">907</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00917">917</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
-<p>References <a class="el" href="value_8h_source.html#l00044">Json::arrayValue</a>, <a class="el" href="assertions_8h_source.html#l00036">JSON_ASSERT_MESSAGE</a>, <a class="el" href="value_8h_source.html#l00136">null</a>, <a class="el" href="value_8h_source.html#l00038">Json::nullValue</a>, and <a class="el" href="json__value_8cpp_source.html#l00221">Value()</a>.</p>
+<p>References <a class="el" href="value_8h_source.html#l00044">Json::arrayValue</a>, <a class="el" href="assertions_8h_source.html#l00036">JSON_ASSERT_MESSAGE</a>, <a class="el" href="value_8h_source.html#l00136">null</a>, <a class="el" href="value_8h_source.html#l00038">Json::nullValue</a>, and <a class="el" href="json__value_8cpp_source.html#l00231">Value()</a>.</p>
 
 </div>
 </div>
@@ -1876,7 +1876,7 @@ Another Value can then be set to this one by assignment.
 <p>Access an array element (zero based index ). </p>
 <p>If the array contains less than index element, then null value are inserted in the array so that its size is index+1. (You may need to say 'value[0u]' to get your compiler to distinguish this from the operator[] which takes a string.) </p>
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00927">927</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00937">937</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 <p>References <a class="el" href="assertions_8h_source.html#l00036">JSON_ASSERT_MESSAGE</a>.</p>
 
@@ -1898,7 +1898,7 @@ Another Value can then be set to this one by assignment.
 
 <p>Access an array element (zero based index ) (You may need to say 'value[0u]' to get your compiler to distinguish this from the operator[] which takes a string.) </p>
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00934">934</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00944">944</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 <p>References <a class="el" href="value_8h_source.html#l00044">Json::arrayValue</a>, <a class="el" href="assertions_8h_source.html#l00036">JSON_ASSERT_MESSAGE</a>, <a class="el" href="value_8h_source.html#l00136">null</a>, and <a class="el" href="value_8h_source.html#l00038">Json::nullValue</a>.</p>
 
@@ -1920,7 +1920,7 @@ Another Value can then be set to this one by assignment.
 
 <p>Access an array element (zero based index ) (You may need to say 'value[0u]' to get your compiler to distinguish this from the operator[] which takes a string.) </p>
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00952">952</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00962">962</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 <p>References <a class="el" href="assertions_8h_source.html#l00036">JSON_ASSERT_MESSAGE</a>.</p>
 
@@ -1942,7 +1942,7 @@ Another Value can then be set to this one by assignment.
 
 <p>Access an object value by name, create a null member if it does not exist. </p>
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00959">959</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00969">969</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 </div>
 </div>
@@ -1962,7 +1962,7 @@ Another Value can then be set to this one by assignment.
 
 <p>Access an object value by name, returns null if there is no member with that name. </p>
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00992">992</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01002">1002</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 <p>References <a class="el" href="assertions_8h_source.html#l00036">JSON_ASSERT_MESSAGE</a>, <a class="el" href="value_8h_source.html#l00136">null</a>, <a class="el" href="value_8h_source.html#l00038">Json::nullValue</a>, and <a class="el" href="value_8h_source.html#l00045">Json::objectValue</a>.</p>
 
@@ -1984,7 +1984,7 @@ Another Value can then be set to this one by assignment.
 
 <p>Access an object value by name, create a null member if it does not exist. </p>
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01010">1010</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01020">1020</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 </div>
 </div>
@@ -2004,7 +2004,7 @@ Another Value can then be set to this one by assignment.
 
 <p>Access an object value by name, returns null if there is no member with that name. </p>
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01014">1014</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01024">1024</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 </div>
 </div>
@@ -2029,7 +2029,7 @@ Another Value can then be set to this one by assignment.
 <div class="line">* <span class="keywordtype">object</span>[code] = 1234;</div>
 <div class="line">* </div>
 </div><!-- fragment --> 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01018">1018</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01028">1028</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 </div>
 </div>
@@ -2053,11 +2053,11 @@ Another Value can then be set to this one by assignment.
 <dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="class_json_1_1_value.html#a695ef31fad36b4712918b3ff80158479">type()</a> is objectValue or nullValue </dd></dl>
 <dl class="section post"><dt>Postcondition</dt><dd><a class="el" href="class_json_1_1_value.html#a695ef31fad36b4712918b3ff80158479">type()</a> is unchanged </dd></dl>
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01043">1043</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01053">1053</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 <p>References <a class="el" href="assertions_8h_source.html#l00036">JSON_ASSERT_MESSAGE</a>, <a class="el" href="value_8h_source.html#l00136">null</a>, <a class="el" href="value_8h_source.html#l00038">Json::nullValue</a>, and <a class="el" href="value_8h_source.html#l00045">Json::objectValue</a>.</p>
 
-<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l01068">removeMember()</a>.</p>
+<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l01078">removeMember()</a>.</p>
 
 </div>
 </div>
@@ -2077,9 +2077,9 @@ Another Value can then be set to this one by assignment.
 
 <p>Same as <a class="el" href="class_json_1_1_value.html#aa52f7873b95d29627d6e83ba96f69aaa" title="Remove and return the named member. ">removeMember(const char*)</a> </p>
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01068">1068</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01078">1078</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
-<p>References <a class="el" href="json__value_8cpp_source.html#l01043">removeMember()</a>.</p>
+<p>References <a class="el" href="json__value_8cpp_source.html#l01053">removeMember()</a>.</p>
 
 </div>
 </div>
@@ -2102,9 +2102,9 @@ Another Value can then be set to this one by assignment.
 <dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="class_json_1_1_value.html#a695ef31fad36b4712918b3ff80158479">type()</a> is arrayValue or nullValue </dd></dl>
 <dl class="section post"><dt>Postcondition</dt><dd><a class="el" href="class_json_1_1_value.html#a695ef31fad36b4712918b3ff80158479">type()</a> is arrayValue </dd></dl>
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00885">885</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00895">895</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
-<p>References <a class="el" href="value_8h_source.html#l00044">Json::arrayValue</a>, <a class="el" href="json__value_8cpp_source.html#l00860">clear()</a>, <a class="el" href="assertions_8h_source.html#l00036">JSON_ASSERT_MESSAGE</a>, <a class="el" href="value_8h_source.html#l00038">Json::nullValue</a>, <a class="el" href="json__value_8cpp_source.html#l00821">size()</a>, and <a class="el" href="json__value_8cpp_source.html#l00221">Value()</a>.</p>
+<p>References <a class="el" href="value_8h_source.html#l00044">Json::arrayValue</a>, <a class="el" href="json__value_8cpp_source.html#l00870">clear()</a>, <a class="el" href="assertions_8h_source.html#l00036">JSON_ASSERT_MESSAGE</a>, <a class="el" href="value_8h_source.html#l00038">Json::nullValue</a>, <a class="el" href="json__value_8cpp_source.html#l00831">size()</a>, and <a class="el" href="json__value_8cpp_source.html#l00231">Value()</a>.</p>
 
 </div>
 </div>
@@ -2134,11 +2134,11 @@ Another Value can then be set to this one by assignment.
 
 <p>Comments must be //... or /* ... */. </p>
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01240">1240</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01250">1250</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 <p>References <a class="el" href="value_8h_source.html#l00053">Json::numberOfCommentPlacement</a>.</p>
 
-<p>Referenced by <a class="el" href="json__reader_8cpp_source.html#l00104">Json::Reader::parse()</a>, and <a class="el" href="json__value_8cpp_source.html#l01246">setComment()</a>.</p>
+<p>Referenced by <a class="el" href="json__reader_8cpp_source.html#l00104">Json::Reader::parse()</a>, and <a class="el" href="json__value_8cpp_source.html#l01256">setComment()</a>.</p>
 
 </div>
 </div>
@@ -2168,9 +2168,9 @@ Another Value can then be set to this one by assignment.
 
 <p>Comments must be //... or /* ... */. </p>
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01246">1246</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01256">1256</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
-<p>References <a class="el" href="json__value_8cpp_source.html#l01240">setComment()</a>.</p>
+<p>References <a class="el" href="json__value_8cpp_source.html#l01250">setComment()</a>.</p>
 
 </div>
 </div>
@@ -2188,7 +2188,7 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01262">1262</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01272">1272</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 </div>
 </div>
@@ -2206,7 +2206,7 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01260">1260</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01270">1270</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 </div>
 </div>
@@ -2225,11 +2225,11 @@ Another Value can then be set to this one by assignment.
 
 <p>Number of values in array or object. </p>
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00821">821</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00831">831</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 <p>References <a class="el" href="value_8h_source.html#l00044">Json::arrayValue</a>, <a class="el" href="value_8h_source.html#l00043">Json::booleanValue</a>, <a class="el" href="value_8h_source.html#l00039">Json::intValue</a>, <a class="el" href="json__value_8cpp_source.html#l00024">JSON_ASSERT_UNREACHABLE</a>, <a class="el" href="value_8h_source.html#l00038">Json::nullValue</a>, <a class="el" href="value_8h_source.html#l00045">Json::objectValue</a>, <a class="el" href="value_8h_source.html#l00041">Json::realValue</a>, <a class="el" href="value_8h_source.html#l00042">Json::stringValue</a>, and <a class="el" href="value_8h_source.html#l00040">Json::uintValue</a>.</p>
 
-<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l01032">append()</a>, <a class="el" href="json__value_8cpp_source.html#l00851">empty()</a>, <a class="el" href="json__value_8cpp_source.html#l00990">isValidIndex()</a>, and <a class="el" href="json__value_8cpp_source.html#l00885">resize()</a>.</p>
+<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l01042">append()</a>, <a class="el" href="json__value_8cpp_source.html#l00861">empty()</a>, <a class="el" href="json__value_8cpp_source.html#l01000">isValidIndex()</a>, and <a class="el" href="json__value_8cpp_source.html#l00895">resize()</a>.</p>
 
 </div>
 </div>
@@ -2250,9 +2250,9 @@ Another Value can then be set to this one by assignment.
 <p>Swap values. </p>
 <dl class="section note"><dt>Note</dt><dd>Currently, comments are intentionally not swapped, for both logic and efficiency. </dd></dl>
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00480">480</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00490">490</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="json__internalmap_8inl_source.html#l00364">Json::ValueInternalMap::doActualRemove()</a>, and <a class="el" href="json__value_8cpp_source.html#l00474">operator=()</a>.</p>
+<p>Referenced by <a class="el" href="json__internalmap_8inl_source.html#l00364">Json::ValueInternalMap::doActualRemove()</a>, and <a class="el" href="json__value_8cpp_source.html#l00484">operator=()</a>.</p>
 
 </div>
 </div>
@@ -2269,9 +2269,9 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01268">1268</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01278">1278</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
-<p>References <a class="el" href="json__writer_8cpp_source.html#l00216">Json::StyledWriter::write()</a>.</p>
+<p>References <a class="el" href="json__writer_8cpp_source.html#l00223">Json::StyledWriter::write()</a>.</p>
 
 </div>
 </div>
@@ -2288,7 +2288,7 @@ Another Value can then be set to this one by assignment.
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00492">492</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00502">502</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
 </div>
 </div>
@@ -2382,7 +2382,7 @@ Another Value can then be set to this one by assignment.
 
 <p>Definition at line <a class="el" href="value_8h_source.html#l00147">147</a> of file <a class="el" href="value_8h_source.html">value.h</a>.</p>
 
-<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00620">asInt()</a>, <a class="el" href="json__value_8cpp_source.html#l00075">Json::duplicateStringValue()</a>, <a class="el" href="json__value_8cpp_source.html#l00787">isConvertibleTo()</a>, and <a class="el" href="json__value_8cpp_source.html#l01152">isInt()</a>.</p>
+<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00630">asInt()</a>, <a class="el" href="json__value_8cpp_source.html#l00085">Json::duplicateStringValue()</a>, <a class="el" href="json__value_8cpp_source.html#l00797">isConvertibleTo()</a>, and <a class="el" href="json__value_8cpp_source.html#l01162">isInt()</a>.</p>
 
 </div>
 </div>
@@ -2408,7 +2408,7 @@ Another Value can then be set to this one by assignment.
 
 <p>Definition at line <a class="el" href="value_8h_source.html#l00155">155</a> of file <a class="el" href="value_8h_source.html">value.h</a>.</p>
 
-<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00666">asInt64()</a>, and <a class="el" href="json__value_8cpp_source.html#l01182">isInt64()</a>.</p>
+<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00676">asInt64()</a>, and <a class="el" href="json__value_8cpp_source.html#l01192">isInt64()</a>.</p>
 
 </div>
 </div>
@@ -2482,7 +2482,7 @@ Another Value can then be set to this one by assignment.
 
 <p>Definition at line <a class="el" href="value_8h_source.html#l00149">149</a> of file <a class="el" href="value_8h_source.html">value.h</a>.</p>
 
-<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00642">asUInt()</a>, <a class="el" href="json__value_8cpp_source.html#l00787">isConvertibleTo()</a>, and <a class="el" href="json__value_8cpp_source.html#l01167">isUInt()</a>.</p>
+<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00652">asUInt()</a>, <a class="el" href="json__value_8cpp_source.html#l00797">isConvertibleTo()</a>, and <a class="el" href="json__value_8cpp_source.html#l01177">isUInt()</a>.</p>
 
 </div>
 </div>
@@ -2508,7 +2508,7 @@ Another Value can then be set to this one by assignment.
 
 <p>Definition at line <a class="el" href="value_8h_source.html#l00157">157</a> of file <a class="el" href="value_8h_source.html">value.h</a>.</p>
 
-<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00687">asUInt64()</a>.</p>
+<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00697">asUInt64()</a>.</p>
 
 </div>
 </div>
@@ -2534,7 +2534,7 @@ Another Value can then be set to this one by assignment.
 
 <p>Definition at line <a class="el" href="value_8h_source.html#l00145">145</a> of file <a class="el" href="value_8h_source.html">value.h</a>.</p>
 
-<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00620">asInt()</a>, <a class="el" href="json__value_8cpp_source.html#l00787">isConvertibleTo()</a>, and <a class="el" href="json__value_8cpp_source.html#l01152">isInt()</a>.</p>
+<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00630">asInt()</a>, <a class="el" href="json__value_8cpp_source.html#l00797">isConvertibleTo()</a>, and <a class="el" href="json__value_8cpp_source.html#l01162">isInt()</a>.</p>
 
 </div>
 </div>
@@ -2560,7 +2560,7 @@ Another Value can then be set to this one by assignment.
 
 <p>Definition at line <a class="el" href="value_8h_source.html#l00153">153</a> of file <a class="el" href="value_8h_source.html">value.h</a>.</p>
 
-<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00666">asInt64()</a>, and <a class="el" href="json__value_8cpp_source.html#l01182">isInt64()</a>.</p>
+<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00676">asInt64()</a>, and <a class="el" href="json__value_8cpp_source.html#l01192">isInt64()</a>.</p>
 
 </div>
 </div>
@@ -2588,7 +2588,7 @@ Another Value can then be set to this one by assignment.
 
 </div>
 </div>
-<a class="anchor" id="a57d8e12306732c80d1719206fcc59b22"></a>
+<a class="anchor" id="a6d6e9ea6807e46d5b7ded66d3032f607"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -2596,7 +2596,7 @@ Another Value can then be set to this one by assignment.
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_json_1_1_value.html">Value</a> Json::Value::null</td>
+          <td class="memname">const <a class="el" href="class_json_1_1_value.html">Value</a> &amp; Json::Value::null = reinterpret_cast&lt;const <a class="el" href="class_json_1_1_value.html">Value</a>&amp;&gt;(<a class="el" href="namespace_json.html#a6b6386a40e6c4df0fa209e338b7dfd2e">kNull</a>)</td>
         </tr>
       </table>
   </td>
@@ -2608,7 +2608,7 @@ Another Value can then be set to this one by assignment.
 
 <p>Definition at line <a class="el" href="value_8h_source.html#l00136">136</a> of file <a class="el" href="value_8h_source.html">value.h</a>.</p>
 
-<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00985">get()</a>, <a class="el" href="json__value_8cpp_source.html#l01079">isMember()</a>, <a class="el" href="json__value_8cpp_source.html#l00907">operator[]()</a>, <a class="el" href="json__value_8cpp_source.html#l01043">removeMember()</a>, and <a class="el" href="json__value_8cpp_source.html#l01473">Json::Path::resolve()</a>.</p>
+<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00995">get()</a>, <a class="el" href="json__value_8cpp_source.html#l01089">isMember()</a>, <a class="el" href="json__value_8cpp_source.html#l00917">operator[]()</a>, <a class="el" href="json__value_8cpp_source.html#l01053">removeMember()</a>, and <a class="el" href="json__value_8cpp_source.html#l01483">Json::Path::resolve()</a>.</p>
 
 </div>
 </div>

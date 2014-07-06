@@ -217,6 +217,8 @@ Json::DummyArrayAllocatorInitializer&#160;</td><td class="memItemRight" valign="
 <tr class="memitem:a060c4f6e47f63309d422aa9051c85f0f"><td class="memItemLeft" align="right" valign="top">static struct <br class="typebreak"/>
 Json::DummyMapAllocatorInitializer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_json.html#a060c4f6e47f63309d422aa9051c85f0f">dummyMapAllocatorInitializer</a></td></tr>
 <tr class="separator:a060c4f6e47f63309d422aa9051c85f0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b6386a40e6c4df0fa209e338b7dfd2e"><td class="memItemLeft" align="right" valign="top">static const unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_json.html#a6b6386a40e6c4df0fa209e338b7dfd2e">kNull</a> [sizeof(<a class="el" href="class_json_1_1_value.html">Value</a>)] = {0}</td></tr>
+<tr class="separator:a6b6386a40e6c4df0fa209e338b7dfd2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aecc0306aa526f25c5156f842182fb7fb"><td class="memItemLeft" align="right" valign="top">static const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_json.html#aecc0306aa526f25c5156f842182fb7fb">maxUInt64AsDouble</a> = 18446744073709551615.0</td></tr>
 <tr class="separator:aecc0306aa526f25c5156f842182fb7fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54414e1e582b6a3769a61e049103fd11"><td class="memItemLeft" align="right" valign="top">static const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_json.html#a54414e1e582b6a3769a61e049103fd11">unknown</a> = (unsigned)-1</td></tr>
@@ -452,7 +454,7 @@ Json::DummyMapAllocatorInitializer&#160;</td><td class="memItemRight" valign="bo
 
 <p>Definition at line <a class="el" href="json__internalarray_8inl_source.html#l00146">146</a> of file <a class="el" href="json__internalarray_8inl_source.html">json_internalarray.inl</a>.</p>
 
-<p>Referenced by <a class="el" href="json__internalarray_8inl_source.html#l00335">Json::ValueInternalArray::resize()</a>, <a class="el" href="json__value_8cpp_source.html#l00221">Json::Value::Value()</a>, <a class="el" href="json__internalarray_8inl_source.html#l00257">Json::ValueInternalArray::ValueInternalArray()</a>, <a class="el" href="json__value_8cpp_source.html#l00441">Json::Value::~Value()</a>, and <a class="el" href="json__internalarray_8inl_source.html#l00291">Json::ValueInternalArray::~ValueInternalArray()</a>.</p>
+<p>Referenced by <a class="el" href="json__internalarray_8inl_source.html#l00335">Json::ValueInternalArray::resize()</a>, <a class="el" href="json__value_8cpp_source.html#l00231">Json::Value::Value()</a>, <a class="el" href="json__internalarray_8inl_source.html#l00257">Json::ValueInternalArray::ValueInternalArray()</a>, <a class="el" href="json__value_8cpp_source.html#l00451">Json::Value::~Value()</a>, and <a class="el" href="json__internalarray_8inl_source.html#l00291">Json::ValueInternalArray::~ValueInternalArray()</a>.</p>
 
 </div>
 </div>
@@ -510,7 +512,7 @@ Json::DummyMapAllocatorInitializer&#160;</td><td class="memItemRight" valign="bo
 
 <p>References <a class="el" href="json__tool_8h_source.html#l00047">isControlCharacter()</a>.</p>
 
-<p>Referenced by <a class="el" href="json__writer_8cpp_source.html#l00079">valueToQuotedString()</a>.</p>
+<p>Referenced by <a class="el" href="json__writer_8cpp_source.html#l00086">valueToQuotedString()</a>.</p>
 
 </div>
 </div>
@@ -592,11 +594,11 @@ Json::DummyMapAllocatorInitializer&#160;</td><td class="memItemRight" valign="bo
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Pointer on the duplicate instance of string. </dd></dl>
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00075">75</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00085">85</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
-<p>References <a class="el" href="assertions_8h_source.html#l00036">JSON_ASSERT_MESSAGE</a>, <a class="el" href="value_8h_source.html#l00147">Json::Value::maxInt</a>, and <a class="el" href="json__value_8cpp_source.html#l00046">unknown</a>.</p>
+<p>References <a class="el" href="assertions_8h_source.html#l00036">JSON_ASSERT_MESSAGE</a>, <a class="el" href="value_8h_source.html#l00147">Json::Value::maxInt</a>, and <a class="el" href="json__value_8cpp_source.html#l00056">unknown</a>.</p>
 
-<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00320">Json::Value::Value()</a>.</p>
+<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00330">Json::Value::Value()</a>.</p>
 
 </div>
 </div>
@@ -652,7 +654,7 @@ Json::DummyMapAllocatorInitializer&#160;</td><td class="memItemRight" valign="bo
 
 <p>Definition at line <a class="el" href="json__reader_8cpp_source.html#l00046">46</a> of file <a class="el" href="json__reader_8cpp_source.html">json_reader.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l01410">Json::Path::Path()</a>.</p>
+<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l01420">Json::Path::Path()</a>.</p>
 
 </div>
 </div>
@@ -756,9 +758,9 @@ template&lt;typename T , typename U &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00050">50</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00060">60</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00620">Json::Value::asInt()</a>, <a class="el" href="json__value_8cpp_source.html#l00666">Json::Value::asInt64()</a>, <a class="el" href="json__value_8cpp_source.html#l00642">Json::Value::asUInt()</a>, <a class="el" href="json__value_8cpp_source.html#l00687">Json::Value::asUInt64()</a>, and <a class="el" href="json__value_8cpp_source.html#l00787">Json::Value::isConvertibleTo()</a>.</p>
+<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00630">Json::Value::asInt()</a>, <a class="el" href="json__value_8cpp_source.html#l00676">Json::Value::asInt64()</a>, <a class="el" href="json__value_8cpp_source.html#l00652">Json::Value::asUInt()</a>, <a class="el" href="json__value_8cpp_source.html#l00697">Json::Value::asUInt64()</a>, and <a class="el" href="json__value_8cpp_source.html#l00797">Json::Value::isConvertibleTo()</a>.</p>
 
 </div>
 </div>
@@ -788,7 +790,7 @@ template&lt;typename T , typename U &gt; </div>
 
 <p>Definition at line <a class="el" href="json__tool_8h_source.html#l00047">47</a> of file <a class="el" href="json__tool_8h_source.html">json_tool.h</a>.</p>
 
-<p>Referenced by <a class="el" href="json__writer_8cpp_source.html#l00024">containsControlCharacter()</a>, and <a class="el" href="json__writer_8cpp_source.html#l00079">valueToQuotedString()</a>.</p>
+<p>Referenced by <a class="el" href="json__writer_8cpp_source.html#l00024">containsControlCharacter()</a>, and <a class="el" href="json__writer_8cpp_source.html#l00086">valueToQuotedString()</a>.</p>
 
 </div>
 </div>
@@ -814,9 +816,9 @@ template&lt;typename T , typename U &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01143">1143</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l01153">1153</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l01152">Json::Value::isInt()</a>, <a class="el" href="json__value_8cpp_source.html#l01182">Json::Value::isInt64()</a>, <a class="el" href="json__value_8cpp_source.html#l01167">Json::Value::isUInt()</a>, and <a class="el" href="json__value_8cpp_source.html#l01202">Json::Value::isUInt64()</a>.</p>
+<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l01162">Json::Value::isInt()</a>, <a class="el" href="json__value_8cpp_source.html#l01192">Json::Value::isInt64()</a>, <a class="el" href="json__value_8cpp_source.html#l01177">Json::Value::isUInt()</a>, and <a class="el" href="json__value_8cpp_source.html#l01212">Json::Value::isUInt64()</a>.</p>
 
 </div>
 </div>
@@ -843,7 +845,7 @@ template&lt;typename T , typename U &gt; </div>
 
 <p>Definition at line <a class="el" href="json__internalmap_8inl_source.html#l00142">142</a> of file <a class="el" href="json__internalmap_8inl_source.html">json_internalmap.inl</a>.</p>
 
-<p>Referenced by <a class="el" href="json__internalmap_8inl_source.html#l00364">Json::ValueInternalMap::doActualRemove()</a>, <a class="el" href="json__internalmap_8inl_source.html#l00265">Json::ValueInternalMap::reserve()</a>, <a class="el" href="json__internalmap_8inl_source.html#l00434">Json::ValueInternalMap::unsafeAdd()</a>, <a class="el" href="json__value_8cpp_source.html#l00221">Json::Value::Value()</a>, <a class="el" href="json__value_8cpp_source.html#l00441">Json::Value::~Value()</a>, and <a class="el" href="json__internalmap_8inl_source.html#l00207">Json::ValueInternalMap::~ValueInternalMap()</a>.</p>
+<p>Referenced by <a class="el" href="json__internalmap_8inl_source.html#l00364">Json::ValueInternalMap::doActualRemove()</a>, <a class="el" href="json__internalmap_8inl_source.html#l00265">Json::ValueInternalMap::reserve()</a>, <a class="el" href="json__internalmap_8inl_source.html#l00434">Json::ValueInternalMap::unsafeAdd()</a>, <a class="el" href="json__value_8cpp_source.html#l00231">Json::Value::Value()</a>, <a class="el" href="json__value_8cpp_source.html#l00451">Json::Value::~Value()</a>, and <a class="el" href="json__internalmap_8inl_source.html#l00207">Json::ValueInternalMap::~ValueInternalMap()</a>.</p>
 
 </div>
 </div>
@@ -874,9 +876,9 @@ template&lt;typename T , typename U &gt; </div>
 <p>Output using the <a class="el" href="class_json_1_1_styled_stream_writer.html" title="Writes a Value in JSON format in a human friendly way, to a stream rather than to a string...">StyledStreamWriter</a>. </p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="namespace_json.html#a4d245ef719cc0853e8e78eb5f99c16e5" title="Read from &#39;sin&#39; into &#39;root&#39;. ">Json::operator&gt;&gt;()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="json__writer_8cpp_source.html#l00650">650</a> of file <a class="el" href="json__writer_8cpp_source.html">json_writer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__writer_8cpp_source.html#l00655">655</a> of file <a class="el" href="json__writer_8cpp_source.html">json_writer.cpp</a>.</p>
 
-<p>References <a class="el" href="json__writer_8cpp_source.html#l00440">Json::StyledStreamWriter::write()</a>.</p>
+<p>References <a class="el" href="json__writer_8cpp_source.html#l00446">Json::StyledStreamWriter::write()</a>.</p>
 
 </div>
 </div>
@@ -956,9 +958,9 @@ template&lt;typename T , typename U &gt; </div>
 
 <p>Free the string duplicated by <a class="el" href="namespace_json.html#a9e2c18331f84669e6194dcfc124afcd2" title="Duplicates the specified string value. ">duplicateStringValue()</a>. </p>
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00096">96</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00106">106</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00441">Json::Value::~Value()</a>.</p>
+<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00451">Json::Value::~Value()</a>.</p>
 
 </div>
 </div>
@@ -1023,7 +1025,7 @@ template&lt;typename T , typename U &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__writer_8cpp_source.html#l00079">79</a> of file <a class="el" href="json__writer_8cpp_source.html">json_writer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__writer_8cpp_source.html#l00086">86</a> of file <a class="el" href="json__writer_8cpp_source.html">json_writer.cpp</a>.</p>
 
 <p>References <a class="el" href="json__writer_8cpp_source.html#l00024">containsControlCharacter()</a>, and <a class="el" href="json__tool_8h_source.html#l00047">isControlCharacter()</a>.</p>
 
@@ -1045,7 +1047,7 @@ template&lt;typename T , typename U &gt; </div>
 
 <p>Definition at line <a class="el" href="json__writer_8cpp_source.html#l00055">55</a> of file <a class="el" href="json__writer_8cpp_source.html">json_writer.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00595">Json::Value::asString()</a>, and <a class="el" href="json__writer_8cpp_source.html#l00059">valueToString()</a>.</p>
+<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00605">Json::Value::asString()</a>, and <a class="el" href="json__writer_8cpp_source.html#l00059">valueToString()</a>.</p>
 
 </div>
 </div>
@@ -1141,7 +1143,7 @@ template&lt;typename T , typename U &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__writer_8cpp_source.html#l00077">77</a> of file <a class="el" href="json__writer_8cpp_source.html">json_writer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__writer_8cpp_source.html#l00084">84</a> of file <a class="el" href="json__writer_8cpp_source.html">json_writer.cpp</a>.</p>
 
 </div>
 </div>
@@ -1186,6 +1188,28 @@ template&lt;typename T , typename U &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a6b6386a40e6c4df0fa209e338b7dfd2e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned char Json::kNull[sizeof(<a class="el" href="class_json_1_1_value.html">Value</a>)] = {0}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00036">36</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="aecc0306aa526f25c5156f842182fb7fb"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1204,9 +1228,9 @@ template&lt;typename T , typename U &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00039">39</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00049">49</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l01202">Json::Value::isUInt64()</a>.</p>
+<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l01212">Json::Value::isUInt64()</a>.</p>
 
 </div>
 </div>
@@ -1230,9 +1254,9 @@ template&lt;typename T , typename U &gt; </div>
 
 <p>Unknown size marker. </p>
 
-<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00046">46</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__value_8cpp_source.html#l00056">56</a> of file <a class="el" href="json__value_8cpp_source.html">json_value.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00075">duplicateStringValue()</a>.</p>
+<p>Referenced by <a class="el" href="json__value_8cpp_source.html#l00085">duplicateStringValue()</a>.</p>
 
 </div>
 </div>
