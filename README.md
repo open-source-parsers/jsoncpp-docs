@@ -14,7 +14,7 @@ Here is how to generate Doxygen documention.
 ```bash
 git clone https://github.com/open-source-parsers/jsoncpp.git
 git clone https://github.com/open-source-parsers/jsoncpp-docs.git
-cd jsoncpp; python doxybuild.py --doxygen=$(which oxygen)
+cd jsoncpp; python doxybuild.py --doxygen=$(which doxygen)
 cd ../json-cpp
 rsync -av ../jsoncpp/dist/doxygen/jsoncpp*/ doxygen/
 git commit -a doxygen/
