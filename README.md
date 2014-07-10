@@ -15,12 +15,13 @@ Here is how to generate Doxygen documention.
 git clone https://github.com/open-source-parsers/jsoncpp.git
 git clone https://github.com/open-source-parsers/jsoncpp-docs.git
 cd jsoncpp; python doxybuild.py --doxygen=$(which doxygen)
-cd ../json-cpp
+cd ../jsoncpp-docs
 rsync -av ../jsoncpp/dist/doxygen/jsoncpp*/ doxygen/
-git commit -a doxygen/
+git add doxygen/
+git commit -m latest
 git push
 ```
 
-## `jsoncpp` v. `json-cpp`
+## `jsoncpp` v. `jsoncpp-docs`
 We store the static HTML in a different repo, `jsonp-docs` instead of `jsoncpp`, in order to reduce the total size of the jsoncpp project. The main project page is at:
 * https://github.com/open-source-parsers/jsoncpp
