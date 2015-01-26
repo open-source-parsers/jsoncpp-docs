@@ -73,7 +73,7 @@ Public Types</h2></td></tr>
 <a class="el" href="class_json_1_1_stream_writer.html#a7c3463a901929c88e80f0742e59278a7a08781b29d5ac13d64089d3da1902d0cd">CommentStyle::Most</a>, 
 <a class="el" href="class_json_1_1_stream_writer.html#a7c3463a901929c88e80f0742e59278a7ab1c94ca2fbc3e78fc30069c8d0f01680">CommentStyle::All</a>
  }</td></tr>
-<tr class="memdesc:a7c3463a901929c88e80f0742e59278a7"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>All</code>: Keep all comments.  <a href="class_json_1_1_stream_writer.html#a7c3463a901929c88e80f0742e59278a7">More...</a><br /></td></tr>
+<tr class="memdesc:a7c3463a901929c88e80f0742e59278a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decide whether to write comments.  <a href="class_json_1_1_stream_writer.html#a7c3463a901929c88e80f0742e59278a7">More...</a><br /></td></tr>
 <tr class="separator:a7c3463a901929c88e80f0742e59278a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -94,9 +94,16 @@ Protected Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Usage: </p>
-<p>using namespace <a class="el" href="namespace_json.html" title="JSON (JavaScript Object Notation). ">Json</a>; <a class="el" href="class_json_1_1_value.html" title="Represents a JSON value. ">Value</a> value; <a class="el" href="class_json_1_1_stream_writer_1_1_builder.html" title="Because this Builder is non-virtual, we can safely add methods without a major version bump...">StreamWriter::Builder</a> builder; builder.withCommentStyle(StreamWriter::CommentStyle::None); std::shared_ptr&lt;StreamWriter&gt; writer( builder.newStreamWriter(&amp;std::cout)); writer-&gt;write(value); std::cout.flush(); </p>
-
-<p>Definition at line <a class="el" href="writer_8h_source.html#l00040">40</a> of file <a class="el" href="writer_8h_source.html">writer.h</a>.</p>
+<div class="fragment"><div class="line"><span class="keyword">using namespace </span>Json;</div>
+<div class="line"><a class="code" href="class_json_1_1_value.html">Value</a> value;</div>
+<div class="line"><a class="code" href="class_json_1_1_stream_writer_1_1_builder.html">StreamWriter::Builder</a> builder;</div>
+<div class="line">builder.<a class="code" href="class_json_1_1_stream_writer_1_1_builder.html#a05347dbc2efa869b6f08c7dfb8b87a19">withCommentStyle</a>(<a class="code" href="class_json_1_1_stream_writer.html#a7c3463a901929c88e80f0742e59278a7a6adf97f83acf6453d4a6a4b1070f3754">StreamWriter::CommentStyle::None</a>);</div>
+<div class="line">std::shared_ptr&lt;StreamWriter&gt; writer(</div>
+<div class="line">  builder.newStreamWriter(&amp;std::cout));</div>
+<div class="line">writer-&gt;write(value);</div>
+<div class="line">std::cout.flush();</div>
+</div><!-- fragment --> 
+<p>Definition at line <a class="el" href="writer_8h_source.html#l00041">41</a> of file <a class="el" href="writer_8h_source.html">writer.h</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a class="anchor" id="a7c3463a901929c88e80f0742e59278a7"></a>
 <div class="memitem">
@@ -116,18 +123,20 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><code>All</code>: Keep all comments. </p>
-<p><code>None</code>: Drop all comments. Use <code>Most</code> to recover the odd behavior of previous versions. Only <code>All</code> is currently implemented. </p>
+<p>Decide whether to write comments. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a7c3463a901929c88e80f0742e59278a7a6adf97f83acf6453d4a6a4b1070f3754"></a>None&#160;</td><td class="fielddoc">
+<p>Drop all comments. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a7c3463a901929c88e80f0742e59278a7a08781b29d5ac13d64089d3da1902d0cd"></a>Most&#160;</td><td class="fielddoc">
+<p>Recover odd behavior of previous versions (not implemented yet). </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a7c3463a901929c88e80f0742e59278a7ab1c94ca2fbc3e78fc30069c8d0f01680"></a>All&#160;</td><td class="fielddoc">
+<p>Keep all comments. </p>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="writer_8h_source.html#l00048">48</a> of file <a class="el" href="writer_8h_source.html">writer.h</a>.</p>
+<p>Definition at line <a class="el" href="writer_8h_source.html#l00046">46</a> of file <a class="el" href="writer_8h_source.html">writer.h</a>.</p>
 
 </div>
 </div>
@@ -230,7 +239,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="writer_8h_source.html#l00042">42</a> of file <a class="el" href="writer_8h_source.html">writer.h</a>.</p>
+<p>Definition at line <a class="el" href="writer_8h_source.html#l00043">43</a> of file <a class="el" href="writer_8h_source.html">writer.h</a>.</p>
 
 </div>
 </div>
