@@ -95,9 +95,9 @@ Protected Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Usage: </p>
 <div class="fragment"><div class="line"><span class="keyword">using namespace </span>Json;</div>
-<div class="line"><span class="keywordtype">void</span> writeToStdout(StreamWriter::Builder <span class="keyword">const</span>&amp; builder, <a class="code" href="class_json_1_1_value.html">Value</a> <span class="keyword">const</span>&amp; value) {</div>
+<div class="line"><span class="keywordtype">void</span> writeToStdout(<a class="code" href="class_json_1_1_stream_writer_1_1_factory.html">StreamWriter::Factory</a> <span class="keyword">const</span>&amp; factory, <a class="code" href="class_json_1_1_value.html">Value</a> <span class="keyword">const</span>&amp; value) {</div>
 <div class="line">  std::unique_ptr&lt;StreamWriter&gt; <span class="keyword">const</span> writer(</div>
-<div class="line">    builder.newStreamWriter(&amp;std::cout));</div>
+<div class="line">    factory.<a class="code" href="class_json_1_1_stream_writer_1_1_factory.html#aa3d09c10a38e1a78ea38ee1f977b454b">newStreamWriter</a>(&amp;std::cout));</div>
 <div class="line">  writer-&gt;write(value);</div>
 <div class="line">  std::cout &lt;&lt; std::endl;  <span class="comment">// add lf and flush</span></div>
 <div class="line">}</div>
