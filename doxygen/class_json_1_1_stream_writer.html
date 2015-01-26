@@ -95,15 +95,14 @@ Protected Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Usage: </p>
 <div class="fragment"><div class="line"><span class="keyword">using namespace </span>Json;</div>
-<div class="line"><a class="code" href="class_json_1_1_value.html">Value</a> value;</div>
-<div class="line">StreamWriter::Builder builder;</div>
-<div class="line">builder.withCommentStyle(<a class="code" href="class_json_1_1_stream_writer.html#a7c3463a901929c88e80f0742e59278a7a6adf97f83acf6453d4a6a4b1070f3754">StreamWriter::CommentStyle::None</a>);</div>
-<div class="line">std::shared_ptr&lt;StreamWriter&gt; writer(</div>
-<div class="line">  builder.newStreamWriter(&amp;std::cout));</div>
-<div class="line">writer-&gt;write(value);</div>
-<div class="line">std::cout &lt;&lt; std::endl;  <span class="comment">// add lf and flush</span></div>
+<div class="line"><span class="keywordtype">void</span> writeToStdout(StreamWriter::Builder <span class="keyword">const</span>&amp; builder, <a class="code" href="class_json_1_1_value.html">Value</a> <span class="keyword">const</span>&amp; value) {</div>
+<div class="line">  std::unique_ptr&lt;StreamWriter&gt; <span class="keyword">const</span> writer(</div>
+<div class="line">    builder.newStreamWriter(&amp;std::cout));</div>
+<div class="line">  writer-&gt;write(value);</div>
+<div class="line">  std::cout &lt;&lt; std::endl;  <span class="comment">// add lf and flush</span></div>
+<div class="line">}</div>
 </div><!-- fragment --> 
-<p>Definition at line <a class="el" href="writer_8h_source.html#l00042">42</a> of file <a class="el" href="writer_8h_source.html">writer.h</a>.</p>
+<p>Definition at line <a class="el" href="writer_8h_source.html#l00040">40</a> of file <a class="el" href="writer_8h_source.html">writer.h</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a class="anchor" id="a7c3463a901929c88e80f0742e59278a7"></a>
 <div class="memitem">
@@ -136,7 +135,7 @@ Protected Attributes</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="writer_8h_source.html#l00047">47</a> of file <a class="el" href="writer_8h_source.html">writer.h</a>.</p>
+<p>Definition at line <a class="el" href="writer_8h_source.html#l00045">45</a> of file <a class="el" href="writer_8h_source.html">writer.h</a>.</p>
 
 </div>
 </div>
@@ -239,7 +238,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="writer_8h_source.html#l00044">44</a> of file <a class="el" href="writer_8h_source.html">writer.h</a>.</p>
+<p>Definition at line <a class="el" href="writer_8h_source.html#l00042">42</a> of file <a class="el" href="writer_8h_source.html">writer.h</a>.</p>
 
 </div>
 </div>
