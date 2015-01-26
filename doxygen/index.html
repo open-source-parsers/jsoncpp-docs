@@ -111,10 +111,10 @@ Code example</h1>
 <div class="line"><span class="comment">// Then build a StreamWriter.</span></div>
 <div class="line"><span class="comment">// (Of course, you can write to std::ostringstream if you prefer.)</span></div>
 <div class="line">std::shared_ptr&lt;Json::StreamWriter&gt; writer(</div>
-<div class="line">    builder.<a class="code" href="class_json_1_1_stream_writer_1_1_builder.html#a8ea073cfd538c9795e10c7343c659376">newStreamWriter</a>( &amp;std::cout );</div>
+<div class="line">    builder.<a class="code" href="class_json_1_1_stream_writer_1_1_builder.html#a8ea073cfd538c9795e10c7343c659376">newStreamWriter</a>( &amp;std::cout ) );</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Make a new JSON document for the configuration. Preserve original comments.</span></div>
-<div class="line">writer-&gt;<a class="code" href="class_json_1_1_stream_writer.html#acf70039dcbd4096a3d49e5942e590d15">write</a>( root );</div>
+<div class="line">writer-&gt;write( root );</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// If you like the defaults, you can insert directly into a stream.</span></div>
 <div class="line">std::cout &lt;&lt; root;</div>
