@@ -105,12 +105,12 @@ Code example</h1>
 <div class="line"></div>
 <div class="line"><span class="comment">// To write into a steam with minimal memory overhead,</span></div>
 <div class="line"><span class="comment">// create a Builder for a StreamWriter.</span></div>
-<div class="line">Json::StreamWriter::Builder builder;</div>
-<div class="line">builder.withIndentation(<span class="stringliteral">&quot;   &quot;</span>);  <span class="comment">// or whatever you like</span></div>
+<div class="line"><a class="code" href="class_json_1_1_stream_writer_builder.html">Json::StreamWriterBuilder</a> builder;</div>
+<div class="line">builder.<a class="code" href="class_json_1_1_stream_writer_builder.html#a6f5c378955e6b949d9d2888b2ab4d71a">indentation_</a> = <span class="stringliteral">&quot;   &quot;</span>;  <span class="comment">// or whatever you like</span></div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Then build a StreamWriter.</span></div>
 <div class="line">std::shared_ptr&lt;Json::StreamWriter&gt; writer(</div>
-<div class="line">    builder.newStreamWriter( &amp;std::cout ) );</div>
+<div class="line">    builder.<a class="code" href="class_json_1_1_stream_writer_builder.html#ab6531e97f9a58cc4e245c8f679dd8813">newStreamWriter</a>( &amp;std::cout ) );</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Make a new JSON document for the configuration. Preserve original comments.</span></div>
 <div class="line">writer-&gt;write( root );</div>
