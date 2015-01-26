@@ -60,6 +60,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_features.html">Features</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration passed to reader and writer.  <a href="class_json_1_1_features.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_old_compressing_stream_writer_builder.html">OldCompressingStreamWriterBuilder</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build a <a class="el" href="class_json_1_1_stream_writer.html" title="Usage: ">StreamWriter</a> implementation.  <a href="class_json_1_1_old_compressing_stream_writer_builder.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_path.html">Path</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Experimental and untested: represents a "path" to access a node.  <a href="class_json_1_1_path.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -74,6 +77,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_stream_writer.html">StreamWriter</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Usage:  <a href="class_json_1_1_stream_writer.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_stream_writer_builder.html">StreamWriterBuilder</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build a <a class="el" href="class_json_1_1_stream_writer.html" title="Usage: ">StreamWriter</a> implementation.  <a href="class_json_1_1_stream_writer_builder.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_styled_stream_writer.html">StyledStreamWriter</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a <a class="el" href="class_json_1_1_value.html" title="Represents a JSON value. ">Value</a> in <a href="http://www.json.org">JSON</a> format in a human friendly way, to a stream rather than to a string.  <a href="class_json_1_1_styled_stream_writer.html#details">More...</a><br /></td></tr>
@@ -162,9 +168,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a4d245ef719cc0853e8e78eb5f99c16e5"><td class="memItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_json.html#a4d245ef719cc0853e8e78eb5f99c16e5">operator&gt;&gt;</a> (std::istream &amp;, <a class="el" href="class_json_1_1_value.html">Value</a> &amp;)</td></tr>
 <tr class="memdesc:a4d245ef719cc0853e8e78eb5f99c16e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read from 'sin' into 'root'.  <a href="#a4d245ef719cc0853e8e78eb5f99c16e5">More...</a><br /></td></tr>
 <tr class="separator:a4d245ef719cc0853e8e78eb5f99c16e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a065e85f5e32b79d7501fb11071f04cc1"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_json.html#a065e85f5e32b79d7501fb11071f04cc1">writeString</a> (<a class="el" href="class_json_1_1_value.html">Value</a> const &amp;root, <a class="el" href="class_json_1_1_stream_writer_1_1_builder.html">StreamWriter::Builder</a> const &amp;builder)</td></tr>
-<tr class="memdesc:a065e85f5e32b79d7501fb11071f04cc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write into stringstream, then return string, for convenience.  <a href="#a065e85f5e32b79d7501fb11071f04cc1">More...</a><br /></td></tr>
-<tr class="separator:a065e85f5e32b79d7501fb11071f04cc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa79afe3cde18398cf80add6c9567387c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_json.html#aa79afe3cde18398cf80add6c9567387c">writeString</a> (<a class="el" href="class_json_1_1_value.html">Value</a> const &amp;root, <a class="el" href="class_json_1_1_stream_writer_1_1_factory.html">StreamWriter::Factory</a> const &amp;factory)</td></tr>
+<tr class="memdesc:aa79afe3cde18398cf80add6c9567387c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write into stringstream, then return string, for convenience.  <a href="#aa79afe3cde18398cf80add6c9567387c">More...</a><br /></td></tr>
+<tr class="separator:aa79afe3cde18398cf80add6c9567387c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d3eba6789f9a9c1ab563ff8b4a5090f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_json.html#a5d3eba6789f9a9c1ab563ff8b4a5090f">valueToString</a> (<a class="el" href="namespace_json.html#a08122e8005b706d982e48cca1e2119c7">Int</a> value)</td></tr>
 <tr class="separator:a5d3eba6789f9a9c1ab563ff8b4a5090f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d43b0ff222bd3975bcf1babca0b978f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_json.html#a4d43b0ff222bd3975bcf1babca0b978f">valueToString</a> (<a class="el" href="namespace_json.html#a800fb90eb6ee8d5d62b600c06f87f7d4">UInt</a> value)</td></tr>
@@ -847,9 +853,9 @@ template&lt;typename T , typename U &gt; </div>
 <p>Output using the <a class="el" href="class_json_1_1_styled_stream_writer.html" title="Writes a Value in JSON format in a human friendly way, to a stream rather than to a string...">StyledStreamWriter</a>. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="namespace_json.html#a4d245ef719cc0853e8e78eb5f99c16e5" title="Read from &#39;sin&#39; into &#39;root&#39;. ">Json::operator&gt;&gt;()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="json__writer_8cpp_source.html#l01098">1098</a> of file <a class="el" href="json__writer_8cpp_source.html">json_writer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__writer_8cpp_source.html#l01021">1021</a> of file <a class="el" href="json__writer_8cpp_source.html">json_writer.cpp</a>.</p>
 
-<p>References <a class="el" href="class_json_1_1_stream_writer.html#a7c3463a901929c88e80f0742e59278a7ab1c94ca2fbc3e78fc30069c8d0f01680">Json::StreamWriter::All</a>, <a class="el" href="json__writer_8cpp_source.html#l01086">Json::StreamWriter::Builder::newStreamWriter()</a>, <a class="el" href="json__writer_8cpp_source.html#l01061">Json::StreamWriter::Builder::withCommentStyle()</a>, and <a class="el" href="json__writer_8cpp_source.html#l01066">Json::StreamWriter::Builder::withIndentation()</a>.</p>
+<p>References <a class="el" href="json__writer_8cpp_source.html#l00964">Json::StreamWriterBuilder::newStreamWriter()</a>.</p>
 
 </div>
 </div>
@@ -1118,7 +1124,7 @@ template&lt;typename T , typename U &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a065e85f5e32b79d7501fb11071f04cc1"></a>
+<a class="anchor" id="aa79afe3cde18398cf80add6c9567387c"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1131,8 +1137,8 @@ template&lt;typename T , typename U &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">StreamWriter::Builder const &amp;&#160;</td>
-          <td class="paramname"><em>builder</em>&#160;</td>
+          <td class="paramtype">StreamWriter::Factory const &amp;&#160;</td>
+          <td class="paramname"><em>factory</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1144,9 +1150,9 @@ template&lt;typename T , typename U &gt; </div>
 
 <p>Write into stringstream, then return string, for convenience. </p>
 
-<p>Definition at line <a class="el" href="json__writer_8cpp_source.html#l01091">1091</a> of file <a class="el" href="json__writer_8cpp_source.html">json_writer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__writer_8cpp_source.html#l01014">1014</a> of file <a class="el" href="json__writer_8cpp_source.html">json_writer.cpp</a>.</p>
 
-<p>References <a class="el" href="json__writer_8cpp_source.html#l01086">Json::StreamWriter::Builder::newStreamWriter()</a>.</p>
+<p>References <a class="el" href="class_json_1_1_stream_writer_1_1_factory.html#aa3d09c10a38e1a78ea38ee1f977b454b">Json::StreamWriter::Factory::newStreamWriter()</a>.</p>
 
 </div>
 </div>
