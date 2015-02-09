@@ -55,7 +55,7 @@ JsonCpp - JSON data format manipulation library
 <p>Build a <a class="el" href="class_json_1_1_stream_writer.html" title="Usage: ">StreamWriter</a> implementation.  
  <a href="class_json_1_1_old_compressing_stream_writer_builder.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="writer_8h_source.html">json/writer.h</a>&gt;</code></p>
+<p><code>#include &lt;json/writer.h&gt;</code></p>
 
 <p>Inherits <a class="el" href="class_json_1_1_stream_writer_1_1_factory.html">Json::StreamWriter::Factory</a>.</p>
 <table class="memberdecls">
@@ -88,11 +88,9 @@ Public Attributes</h2></td></tr>
 <p>Comments are not written, and most whitespace is omitted. In addition, there are some special settings to allow compatibility with the old <a class="el" href="class_json_1_1_fast_writer.html" title="Outputs a Value in JSON format without formatting (not human friendly). ">FastWriter</a>. Usage: </p><div class="fragment"><div class="line"><a class="code" href="class_json_1_1_old_compressing_stream_writer_builder.html#a89b498ea63300330e819087768fb9257">OldCompressingStreamWriterBuilder</a> b;</div>
 <div class="line">b.dropNullPlaceHolders_ = <span class="keyword">true</span>; <span class="comment">// etc.</span></div>
 <div class="line">StreamWriter* w = b.newStreamWriter(&amp;std::cout);</div>
-<div class="line">w.write(value);</div>
+<div class="line">w-&gt;write(value);</div>
 <div class="line"><span class="keyword">delete</span> w;</div>
-</div><!-- fragment --> 
-<p>Definition at line <a class="el" href="writer_8h_source.html#l00127">127</a> of file <a class="el" href="writer_8h_source.html">writer.h</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a89b498ea63300330e819087768fb9257"></a>
 <div class="memitem">
 <div class="memproto">
@@ -113,8 +111,6 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="writer_8h_source.html#l00152">152</a> of file <a class="el" href="writer_8h_source.html">writer.h</a>.</p>
 
 </div>
 </div>
@@ -145,10 +141,6 @@ Public Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="class_json_1_1_stream_writer_1_1_factory.html#aa3d09c10a38e1a78ea38ee1f977b454b">Json::StreamWriter::Factory</a>.</p>
 
-<p>Definition at line <a class="el" href="json__writer_8cpp_source.html#l01004">1004</a> of file <a class="el" href="json__writer_8cpp_source.html">json_writer.cpp</a>.</p>
-
-<p>References <a class="el" href="writer_8h_source.html#l00138">dropNullPlaceholders_</a>, <a class="el" href="writer_8h_source.html#l00150">enableYAMLCompatibility_</a>, <a class="el" href="writer_8h_source.html#l00048">Json::StreamWriter::CommentStyle::None</a>, and <a class="el" href="writer_8h_source.html#l00142">omitEndingLineFeed_</a>.</p>
-
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -165,10 +157,6 @@ Public Attributes</h2></td></tr>
 <p>Drop the "null" string from the writer's output for nullValues. </p>
 <p>Strictly speaking, this is not valid JSON. But when the output is being fed to a browser's Javascript, it makes for smaller output and the browser can handle the output just fine. </p>
 
-<p>Definition at line <a class="el" href="writer_8h_source.html#l00138">138</a> of file <a class="el" href="writer_8h_source.html">writer.h</a>.</p>
-
-<p>Referenced by <a class="el" href="json__writer_8cpp_source.html#l01004">newStreamWriter()</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a9208b4bc2870913ba74abb7d3186fd0b"></a>
@@ -183,10 +171,6 @@ Public Attributes</h2></td></tr>
 
 <p>Add a space after ':'. </p>
 <p>If indentation is non-empty, we surround colon with whitespace, e.g. " : " This will add back the trailing space when there is no indentation. This seems dubious when the entire document is on a single line, but we leave this here to repduce the behavior of the old <code><a class="el" href="class_json_1_1_fast_writer.html" title="Outputs a Value in JSON format without formatting (not human friendly). ">FastWriter</a></code>. </p>
-
-<p>Definition at line <a class="el" href="writer_8h_source.html#l00150">150</a> of file <a class="el" href="writer_8h_source.html">writer.h</a>.</p>
-
-<p>Referenced by <a class="el" href="json__writer_8cpp_source.html#l01004">newStreamWriter()</a>.</p>
 
 </div>
 </div>
@@ -204,15 +188,11 @@ Public Attributes</h2></td></tr>
  at end of document. </p>
 <p>Normally, we add an extra newline, just because. </p>
 
-<p>Definition at line <a class="el" href="writer_8h_source.html#l00142">142</a> of file <a class="el" href="writer_8h_source.html">writer.h</a>.</p>
-
-<p>Referenced by <a class="el" href="json__writer_8cpp_source.html#l01004">newStreamWriter()</a>.</p>
-
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/json/<a class="el" href="writer_8h_source.html">writer.h</a></li>
-<li>src/lib_json/<a class="el" href="json__writer_8cpp_source.html">json_writer.cpp</a></li>
+<li>include/json/<a class="el" href="writer_8h.html">writer.h</a></li>
+<li>src/lib_json/<a class="el" href="json__writer_8cpp.html">json_writer.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <hr>

@@ -55,7 +55,7 @@ JsonCpp - JSON data format manipulation library
 <p>Build a <a class="el" href="class_json_1_1_stream_writer.html" title="Usage: ">StreamWriter</a> implementation.  
  <a href="class_json_1_1_stream_writer_builder.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="writer_8h_source.html">json/writer.h</a>&gt;</code></p>
+<p><code>#include &lt;json/writer.h&gt;</code></p>
 
 <p>Inherits <a class="el" href="class_json_1_1_stream_writer_1_1_factory.html">Json::StreamWriter::Factory</a>.</p>
 <table class="memberdecls">
@@ -87,13 +87,10 @@ Public Attributes</h2></td></tr>
 <div class="line"><a class="code" href="class_json_1_1_value.html">Value</a> value = ...;</div>
 <div class="line"><a class="code" href="class_json_1_1_stream_writer_builder.html">StreamWriterBuilder</a> builder;</div>
 <div class="line">builder.<a class="code" href="class_json_1_1_stream_writer_builder.html#a7078807730281b6370d316c5d4b35fef">cs_</a> = <a class="code" href="struct_json_1_1_stream_writer_1_1_comment_style.html#a780eb75a7a17125e4b15c32a3fc8b9dba8d0e613ab3a78a6356a046d424b8320f">StreamWriter::CommentStyle::None</a>;</div>
-<div class="line">std::shared_ptr&lt;StreamWriter&gt; writer(</div>
-<div class="line">  builder.newStreamWriter(&amp;std::cout));</div>
+<div class="line">builder.indentation_ = <span class="stringliteral">&quot;   &quot;</span>;  <span class="comment">// or whatever you like</span></div>
 <div class="line">writer-&gt;write(value);</div>
 <div class="line">std::cout &lt;&lt; std::endl;  <span class="comment">// add lf and flush</span></div>
-</div><!-- fragment --> 
-<p>Definition at line <a class="el" href="writer_8h_source.html#l00090">90</a> of file <a class="el" href="writer_8h_source.html">writer.h</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ab95b76179c152673ad14abc639a46ee4"></a>
 <div class="memitem">
 <div class="memproto">
@@ -106,8 +103,6 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="json__writer_8cpp_source.html#l00970">970</a> of file <a class="el" href="json__writer_8cpp_source.html">json_writer.cpp</a>.</p>
 
 </div>
 </div>
@@ -131,8 +126,6 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="json__writer_8cpp_source.html#l00974">974</a> of file <a class="el" href="json__writer_8cpp_source.html">json_writer.cpp</a>.</p>
 
 </div>
 </div>
@@ -163,12 +156,6 @@ Public Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="class_json_1_1_stream_writer_1_1_factory.html#aa3d09c10a38e1a78ea38ee1f977b454b">Json::StreamWriter::Factory</a>.</p>
 
-<p>Definition at line <a class="el" href="json__writer_8cpp_source.html#l00976">976</a> of file <a class="el" href="json__writer_8cpp_source.html">json_writer.cpp</a>.</p>
-
-<p>References <a class="el" href="writer_8h_source.html#l00098">cs_</a>, and <a class="el" href="writer_8h_source.html#l00105">indentation_</a>.</p>
-
-<p>Referenced by <a class="el" href="json__writer_8cpp_source.html#l01033">Json::operator&lt;&lt;()</a>.</p>
-
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -185,10 +172,6 @@ Public Attributes</h2></td></tr>
 <p>How to write comments. </p>
 <p>Default: All </p>
 
-<p>Definition at line <a class="el" href="writer_8h_source.html#l00098">98</a> of file <a class="el" href="writer_8h_source.html">writer.h</a>.</p>
-
-<p>Referenced by <a class="el" href="json__writer_8cpp_source.html#l00976">newStreamWriter()</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a6f5c378955e6b949d9d2888b2ab4d71a"></a>
@@ -204,15 +187,11 @@ Public Attributes</h2></td></tr>
 <p>Write in human-friendly style. </p>
 <p>If "", then skip all indentation and newlines. In that case, you probably want CommentStyle::None also. Default: "\t" </p>
 
-<p>Definition at line <a class="el" href="writer_8h_source.html#l00105">105</a> of file <a class="el" href="writer_8h_source.html">writer.h</a>.</p>
-
-<p>Referenced by <a class="el" href="json__writer_8cpp_source.html#l00976">newStreamWriter()</a>.</p>
-
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/json/<a class="el" href="writer_8h_source.html">writer.h</a></li>
-<li>src/lib_json/<a class="el" href="json__writer_8cpp_source.html">json_writer.cpp</a></li>
+<li>include/json/<a class="el" href="writer_8h.html">writer.h</a></li>
+<li>src/lib_json/<a class="el" href="json__writer_8cpp.html">json_writer.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <hr>

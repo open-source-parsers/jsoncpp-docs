@@ -56,7 +56,7 @@ JsonCpp - JSON data format manipulation library
 <p>A linked page based hash-table implementation used internally by <a class="el" href="class_json_1_1_value.html" title="Represents a JSON value. ">Value</a>.  
  <a href="class_json_1_1_value_internal_map.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="value_8h_source.html">json/value.h</a>&gt;</code></p>
+<p><code>#include &lt;json/value.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -117,8 +117,6 @@ Friends</h2></td></tr>
 <div class="textblock"><p>A linked page based hash-table implementation used internally by <a class="el" href="class_json_1_1_value.html" title="Represents a JSON value. ">Value</a>. </p>
 <p><a class="el" href="class_json_1_1_value_internal_map.html" title="A linked page based hash-table implementation used internally by Value. ">ValueInternalMap</a> is a tradional bucket based hash-table, with a linked list in each bucket to handle collision. There is an addional twist in that each node of the collision linked list is a page containing a fixed amount of value. This provides a better compromise between memory usage and speed.</p>
 <p>Each bucket is made up of a chained list of <a class="el" href="class_json_1_1_value_internal_link.html" title="ValueInternalMap hash-map bucket chain link (for internal use only). ">ValueInternalLink</a>. The last link of a given bucket can be found in the 'previous_' field of the following bucket. The last link of the last bucket is stored in tailLink_ as it has no following bucket. Only the last link of a bucket may contains 'available' item. The last link always contains at least one element unless is it the bucket one very first link. </p>
-
-<p>Definition at line <a class="el" href="value_8h_source.html#l00684">684</a> of file <a class="el" href="value_8h_source.html">value.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="a2d50018488ff4dfb6309652ff5ab0dc5"></a>
 <div class="memitem">
@@ -129,8 +127,6 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="value_8h_source.html#l00690">690</a> of file <a class="el" href="value_8h_source.html">value.h</a>.</p>
 
 </div>
 </div>
@@ -143,8 +139,6 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="value_8h_source.html#l00689">689</a> of file <a class="el" href="value_8h_source.html">value.h</a>.</p>
 
 </div>
 </div>
@@ -162,8 +156,6 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__internalmap_8inl_source.html#l00127">127</a> of file <a class="el" href="json__internalmap_8inl_source.html">json_internalmap.inl</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a2878273dc8422a7d3dd656942180a0fb"></a>
@@ -180,10 +172,6 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__internalmap_8inl_source.html#l00130">130</a> of file <a class="el" href="json__internalmap_8inl_source.html">json_internalmap.inl</a>.</p>
-
-<p>References <a class="el" href="json__internalmap_8inl_source.html#l00193">reserve()</a>, and <a class="el" href="json__internalmap_8inl_source.html#l00227">resolveReference()</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a507129e4f6c0314aee988f89e133da78"></a>
@@ -198,10 +186,6 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="json__internalmap_8inl_source.html#l00150">150</a> of file <a class="el" href="json__internalmap_8inl_source.html">json_internalmap.inl</a>.</p>
-
-<p>References <a class="el" href="json__internalmap_8inl_source.html#l00105">Json::mapAllocator()</a>, <a class="el" href="value_8h_source.html#l00664">Json::ValueInternalLink::next_</a>, <a class="el" href="class_json_1_1_value_map_allocator.html#a3efe9ec84f1ccef0e8b7fcf20616a334">Json::ValueMapAllocator::releaseMapBuckets()</a>, and <a class="el" href="class_json_1_1_value_map_allocator.html#a44b183cd506d7c5b130c551355246da8">Json::ValueMapAllocator::releaseMapLink()</a>.</p>
 
 </div>
 </div>
@@ -219,10 +203,6 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__internalmap_8inl_source.html#l00180">180</a> of file <a class="el" href="json__internalmap_8inl_source.html">json_internalmap.inl</a>.</p>
-
-<p>References <a class="el" href="json__internalmap_8inl_source.html#l00165">swap()</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a7ca5f3bef91f7be6f6eb55bfba6f2760"></a>
@@ -238,10 +218,6 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="json__internalmap_8inl_source.html#l00357">357</a> of file <a class="el" href="json__internalmap_8inl_source.html">json_internalmap.inl</a>.</p>
-
-<p>References <a class="el" href="json__value_8cpp_source.html#l00435">Json::Value::compare()</a>, and <a class="el" href="json__internalmap_8inl_source.html#l00204">find()</a>.</p>
 
 </div>
 </div>
@@ -275,12 +251,6 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__internalmap_8inl_source.html#l00267">267</a> of file <a class="el" href="json__internalmap_8inl_source.html">json_internalmap.inl</a>.</p>
-
-<p>References <a class="el" href="json__internalmap_8inl_source.html#l00306">getLastLinkInBucket()</a>, <a class="el" href="value_8h_source.html#l00650">Json::ValueInternalLink::itemPerLink</a>, <a class="el" href="value_8h_source.html#l00661">Json::ValueInternalLink::items_</a>, <a class="el" href="json__internalmap_8inl_source.html#l00105">Json::mapAllocator()</a>, <a class="el" href="value_8h_source.html#l00664">Json::ValueInternalLink::next_</a>, <a class="el" href="value_8h_source.html#l00663">Json::ValueInternalLink::previous_</a>, <a class="el" href="class_json_1_1_value_map_allocator.html#a44b183cd506d7c5b130c551355246da8">Json::ValueMapAllocator::releaseMapLink()</a>, and <a class="el" href="json__value_8cpp_source.html#l00426">Json::Value::swap()</a>.</p>
-
-<p>Referenced by <a class="el" href="json__internalmap_8inl_source.html#l00248">remove()</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a35a449536f6eb4459ded6b523e0969de"></a>
@@ -296,12 +266,6 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="json__internalmap_8inl_source.html#l00204">204</a> of file <a class="el" href="json__internalmap_8inl_source.html">json_internalmap.inl</a>.</p>
-
-<p>References <a class="el" href="json__internalmap_8inl_source.html#l00350">hash()</a>, <a class="el" href="value_8h_source.html#l00650">Json::ValueInternalLink::itemPerLink</a>, and <a class="el" href="value_8h_source.html#l00664">Json::ValueInternalLink::next_</a>.</p>
-
-<p>Referenced by <a class="el" href="json__internalmap_8inl_source.html#l00357">compare()</a>, and <a class="el" href="json__internalmap_8inl_source.html#l00222">find()</a>.</p>
 
 </div>
 </div>
@@ -319,10 +283,6 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__internalmap_8inl_source.html#l00222">222</a> of file <a class="el" href="json__internalmap_8inl_source.html">json_internalmap.inl</a>.</p>
-
-<p>References <a class="el" href="json__internalmap_8inl_source.html#l00204">find()</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a5da213238fe520317b104b8f45f70ffd"></a>
@@ -338,12 +298,6 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="json__internalmap_8inl_source.html#l00306">306</a> of file <a class="el" href="json__internalmap_8inl_source.html">json_internalmap.inl</a>.</p>
-
-<p>References <a class="el" href="value_8h_source.html#l00663">Json::ValueInternalLink::previous_</a>.</p>
-
-<p>Referenced by <a class="el" href="json__internalmap_8inl_source.html#l00267">doActualRemove()</a>, and <a class="el" href="json__internalmap_8inl_source.html#l00328">unsafeAdd()</a>.</p>
 
 </div>
 </div>
@@ -361,10 +315,6 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__internalmap_8inl_source.html#l00350">350</a> of file <a class="el" href="json__internalmap_8inl_source.html">json_internalmap.inl</a>.</p>
-
-<p>Referenced by <a class="el" href="json__internalmap_8inl_source.html#l00204">find()</a>, <a class="el" href="json__internalmap_8inl_source.html#l00248">remove()</a>, and <a class="el" href="json__internalmap_8inl_source.html#l00227">resolveReference()</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a53efa3e1d03da1c30af7bdeb0a03c4ee"></a>
@@ -380,10 +330,6 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="json__internalmap_8inl_source.html#l00145">145</a> of file <a class="el" href="json__internalmap_8inl_source.html">json_internalmap.inl</a>.</p>
-
-<p>References <a class="el" href="json__internalmap_8inl_source.html#l00165">swap()</a>.</p>
 
 </div>
 </div>
@@ -401,10 +347,6 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__internalmap_8inl_source.html#l00248">248</a> of file <a class="el" href="json__internalmap_8inl_source.html">json_internalmap.inl</a>.</p>
-
-<p>References <a class="el" href="json__internalmap_8inl_source.html#l00267">doActualRemove()</a>, <a class="el" href="json__internalmap_8inl_source.html#l00350">hash()</a>, <a class="el" href="value_8h_source.html#l00650">Json::ValueInternalLink::itemPerLink</a>, and <a class="el" href="value_8h_source.html#l00664">Json::ValueInternalLink::next_</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="aedeef1ded464d8fbe51f11218fef5628"></a>
@@ -421,12 +363,6 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__internalmap_8inl_source.html#l00193">193</a> of file <a class="el" href="json__internalmap_8inl_source.html">json_internalmap.inl</a>.</p>
-
-<p>References <a class="el" href="class_json_1_1_value_map_allocator.html#a0c6cf50918e13e20edd5dd81c7bd96dc">Json::ValueMapAllocator::allocateMapBuckets()</a>, and <a class="el" href="json__internalmap_8inl_source.html#l00105">Json::mapAllocator()</a>.</p>
-
-<p>Referenced by <a class="el" href="json__internalmap_8inl_source.html#l00189">reserveDelta()</a>, and <a class="el" href="json__internalmap_8inl_source.html#l00130">ValueInternalMap()</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a338949cd1b84b7590ed438347d7d1ecc"></a>
@@ -442,12 +378,6 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="json__internalmap_8inl_source.html#l00189">189</a> of file <a class="el" href="json__internalmap_8inl_source.html">json_internalmap.inl</a>.</p>
-
-<p>References <a class="el" href="json__internalmap_8inl_source.html#l00193">reserve()</a>.</p>
-
-<p>Referenced by <a class="el" href="json__internalmap_8inl_source.html#l00227">resolveReference()</a>.</p>
 
 </div>
 </div>
@@ -474,12 +404,6 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="json__internalmap_8inl_source.html#l00227">227</a> of file <a class="el" href="json__internalmap_8inl_source.html">json_internalmap.inl</a>.</p>
-
-<p>References <a class="el" href="json__internalmap_8inl_source.html#l00350">hash()</a>, <a class="el" href="value_8h_source.html#l00650">Json::ValueInternalLink::itemPerLink</a>, <a class="el" href="value_8h_source.html#l00664">Json::ValueInternalLink::next_</a>, <a class="el" href="json__internalmap_8inl_source.html#l00189">reserveDelta()</a>, <a class="el" href="json__internalmap_8inl_source.html#l00315">setNewItem()</a>, and <a class="el" href="json__internalmap_8inl_source.html#l00328">unsafeAdd()</a>.</p>
-
-<p>Referenced by <a class="el" href="json__internalmap_8inl_source.html#l00130">ValueInternalMap()</a>.</p>
 
 </div>
 </div>
@@ -519,12 +443,6 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__internalmap_8inl_source.html#l00315">315</a> of file <a class="el" href="json__internalmap_8inl_source.html">json_internalmap.inl</a>.</p>
-
-<p>References <a class="el" href="value_8h_source.html#l00661">Json::ValueInternalLink::items_</a>, and <a class="el" href="value_8h_source.html#l00662">Json::ValueInternalLink::keys_</a>.</p>
-
-<p>Referenced by <a class="el" href="json__internalmap_8inl_source.html#l00227">resolveReference()</a>, and <a class="el" href="json__internalmap_8inl_source.html#l00328">unsafeAdd()</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a3ecb48a02a131f6476115714b41534e0"></a>
@@ -539,8 +457,6 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="json__internalmap_8inl_source.html#l00185">185</a> of file <a class="el" href="json__internalmap_8inl_source.html">json_internalmap.inl</a>.</p>
 
 </div>
 </div>
@@ -557,10 +473,6 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="json__internalmap_8inl_source.html#l00165">165</a> of file <a class="el" href="json__internalmap_8inl_source.html">json_internalmap.inl</a>.</p>
-
-<p>Referenced by <a class="el" href="json__internalmap_8inl_source.html#l00180">clear()</a>, and <a class="el" href="json__internalmap_8inl_source.html#l00145">operator=()</a>.</p>
 
 </div>
 </div>
@@ -594,12 +506,6 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__internalmap_8inl_source.html#l00328">328</a> of file <a class="el" href="json__internalmap_8inl_source.html">json_internalmap.inl</a>.</p>
-
-<p>References <a class="el" href="class_json_1_1_value_map_allocator.html#ad1c75a6cb5bcbe9730dd825cc7e83b4d">Json::ValueMapAllocator::allocateMapLink()</a>, <a class="el" href="json__internalmap_8inl_source.html#l00306">getLastLinkInBucket()</a>, <a class="el" href="value_8h_source.html#l00650">Json::ValueInternalLink::itemPerLink</a>, <a class="el" href="value_8h_source.html#l00661">Json::ValueInternalLink::items_</a>, <a class="el" href="assertions_8h_source.html#l00037">JSON_ASSERT_MESSAGE</a>, <a class="el" href="json__internalmap_8inl_source.html#l00105">Json::mapAllocator()</a>, <a class="el" href="value_8h_source.html#l00664">Json::ValueInternalLink::next_</a>, and <a class="el" href="json__internalmap_8inl_source.html#l00315">setNewItem()</a>.</p>
-
-<p>Referenced by <a class="el" href="json__internalmap_8inl_source.html#l00227">resolveReference()</a>.</p>
-
 </div>
 </div>
 <h2 class="groupheader">Friends And Related Function Documentation</h2>
@@ -621,8 +527,6 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="value_8h_source.html#l00686">686</a> of file <a class="el" href="value_8h_source.html">value.h</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="ad016df56489e5d360735457afba2f649"></a>
@@ -643,13 +547,11 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="value_8h_source.html#l00685">685</a> of file <a class="el" href="value_8h_source.html">value.h</a>.</p>
-
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/json/<a class="el" href="value_8h_source.html">value.h</a></li>
-<li>src/lib_json/<a class="el" href="json__internalmap_8inl_source.html">json_internalmap.inl</a></li>
+<li>include/json/<a class="el" href="value_8h.html">value.h</a></li>
+<li>src/lib_json/<a class="el" href="json__internalmap_8inl.html">json_internalmap.inl</a></li>
 </ul>
 </div><!-- contents -->
 <hr>
