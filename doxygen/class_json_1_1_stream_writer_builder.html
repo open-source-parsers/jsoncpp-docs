@@ -63,7 +63,9 @@ JsonCpp - JSON data format manipulation library
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab95b76179c152673ad14abc639a46ee4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_stream_writer_builder.html#ab95b76179c152673ad14abc639a46ee4">StreamWriterBuilder</a> ()</td></tr>
 <tr class="separator:ab95b76179c152673ad14abc639a46ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6531e97f9a58cc4e245c8f679dd8813"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_json_1_1_stream_writer.html">StreamWriter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_stream_writer_builder.html#ab6531e97f9a58cc4e245c8f679dd8813">newStreamWriter</a> (std::ostream *sout) const </td></tr>
+<tr class="memitem:a0dadc1659528d6be355b2ecc6019a1b2"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_stream_writer_builder.html#a0dadc1659528d6be355b2ecc6019a1b2">~StreamWriterBuilder</a> ()</td></tr>
+<tr class="separator:a0dadc1659528d6be355b2ecc6019a1b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6531e97f9a58cc4e245c8f679dd8813"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_json_1_1_stream_writer.html">StreamWriter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_stream_writer_builder.html#ab6531e97f9a58cc4e245c8f679dd8813">newStreamWriter</a> (std::ostream *sout) const </td></tr>
 <tr class="memdesc:ab6531e97f9a58cc4e245c8f679dd8813"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do not take ownership of sout, but maintain a reference.  <a href="#ab6531e97f9a58cc4e245c8f679dd8813">More...</a><br /></td></tr>
 <tr class="separator:ab6531e97f9a58cc4e245c8f679dd8813"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_json_1_1_stream_writer_1_1_factory"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_json_1_1_stream_writer_1_1_factory')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_json_1_1_stream_writer_1_1_factory.html">Json::StreamWriter::Factory</a></td></tr>
@@ -72,9 +74,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ac9fa63baab8fa0868ef570508eb2f808"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_json_1_1_stream_writer.html#a7c3463a901929c88e80f0742e59278a7">StreamWriter::CommentStyle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_stream_writer_builder.html#ac9fa63baab8fa0868ef570508eb2f808">cs_</a></td></tr>
-<tr class="memdesc:ac9fa63baab8fa0868ef570508eb2f808"><td class="mdescLeft">&#160;</td><td class="mdescRight">How to write comments.  <a href="#ac9fa63baab8fa0868ef570508eb2f808">More...</a><br /></td></tr>
-<tr class="separator:ac9fa63baab8fa0868ef570508eb2f808"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7078807730281b6370d316c5d4b35fef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_json_1_1_stream_writer_1_1_comment_style.html#a780eb75a7a17125e4b15c32a3fc8b9db">StreamWriter::CommentStyle::Enum</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_stream_writer_builder.html#a7078807730281b6370d316c5d4b35fef">cs_</a></td></tr>
+<tr class="memdesc:a7078807730281b6370d316c5d4b35fef"><td class="mdescLeft">&#160;</td><td class="mdescRight">How to write comments.  <a href="#a7078807730281b6370d316c5d4b35fef">More...</a><br /></td></tr>
+<tr class="separator:a7078807730281b6370d316c5d4b35fef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f5c378955e6b949d9d2888b2ab4d71a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_stream_writer_builder.html#a6f5c378955e6b949d9d2888b2ab4d71a">indentation_</a></td></tr>
 <tr class="memdesc:a6f5c378955e6b949d9d2888b2ab4d71a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write in human-friendly style.  <a href="#a6f5c378955e6b949d9d2888b2ab4d71a">More...</a><br /></td></tr>
 <tr class="separator:a6f5c378955e6b949d9d2888b2ab4d71a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -84,13 +86,13 @@ Public Attributes</h2></td></tr>
 <p>Usage: </p><div class="fragment"><div class="line"><span class="keyword">using namespace </span>Json;</div>
 <div class="line"><a class="code" href="class_json_1_1_value.html">Value</a> value = ...;</div>
 <div class="line"><a class="code" href="class_json_1_1_stream_writer_builder.html">StreamWriterBuilder</a> builder;</div>
-<div class="line">builder.<a class="code" href="class_json_1_1_stream_writer_builder.html#ac9fa63baab8fa0868ef570508eb2f808">cs_</a> = <a class="code" href="class_json_1_1_stream_writer.html#a7c3463a901929c88e80f0742e59278a7a6adf97f83acf6453d4a6a4b1070f3754">StreamWriter::CommentStyle::None</a>;</div>
+<div class="line">builder.<a class="code" href="class_json_1_1_stream_writer_builder.html#a7078807730281b6370d316c5d4b35fef">cs_</a> = <a class="code" href="struct_json_1_1_stream_writer_1_1_comment_style.html#a780eb75a7a17125e4b15c32a3fc8b9dba8d0e613ab3a78a6356a046d424b8320f">StreamWriter::CommentStyle::None</a>;</div>
 <div class="line">std::shared_ptr&lt;StreamWriter&gt; writer(</div>
 <div class="line">  builder.newStreamWriter(&amp;std::cout));</div>
 <div class="line">writer-&gt;write(value);</div>
 <div class="line">std::cout &lt;&lt; std::endl;  <span class="comment">// add lf and flush</span></div>
 </div><!-- fragment --> 
-<p>Definition at line <a class="el" href="writer_8h_source.html#l00087">87</a> of file <a class="el" href="writer_8h_source.html">writer.h</a>.</p>
+<p>Definition at line <a class="el" href="writer_8h_source.html#l00090">90</a> of file <a class="el" href="writer_8h_source.html">writer.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ab95b76179c152673ad14abc639a46ee4"></a>
 <div class="memitem">
@@ -105,7 +107,32 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__writer_8cpp_source.html#l00964">964</a> of file <a class="el" href="json__writer_8cpp_source.html">json_writer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__writer_8cpp_source.html#l00970">970</a> of file <a class="el" href="json__writer_8cpp_source.html">json_writer.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0dadc1659528d6be355b2ecc6019a1b2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Json::StreamWriterBuilder::~StreamWriterBuilder </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="json__writer_8cpp_source.html#l00974">974</a> of file <a class="el" href="json__writer_8cpp_source.html">json_writer.cpp</a>.</p>
 
 </div>
 </div>
@@ -136,21 +163,21 @@ Public Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="class_json_1_1_stream_writer_1_1_factory.html#aa3d09c10a38e1a78ea38ee1f977b454b">Json::StreamWriter::Factory</a>.</p>
 
-<p>Definition at line <a class="el" href="json__writer_8cpp_source.html#l00968">968</a> of file <a class="el" href="json__writer_8cpp_source.html">json_writer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__writer_8cpp_source.html#l00976">976</a> of file <a class="el" href="json__writer_8cpp_source.html">json_writer.cpp</a>.</p>
 
-<p>References <a class="el" href="writer_8h_source.html#l00095">cs_</a>, and <a class="el" href="writer_8h_source.html#l00102">indentation_</a>.</p>
+<p>References <a class="el" href="writer_8h_source.html#l00098">cs_</a>, and <a class="el" href="writer_8h_source.html#l00105">indentation_</a>.</p>
 
-<p>Referenced by <a class="el" href="json__writer_8cpp_source.html#l01025">Json::operator&lt;&lt;()</a>.</p>
+<p>Referenced by <a class="el" href="json__writer_8cpp_source.html#l01033">Json::operator&lt;&lt;()</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="ac9fa63baab8fa0868ef570508eb2f808"></a>
+<a class="anchor" id="a7078807730281b6370d316c5d4b35fef"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_json_1_1_stream_writer.html#a7c3463a901929c88e80f0742e59278a7">StreamWriter::CommentStyle</a> Json::StreamWriterBuilder::cs_</td>
+          <td class="memname"><a class="el" href="struct_json_1_1_stream_writer_1_1_comment_style.html#a780eb75a7a17125e4b15c32a3fc8b9db">StreamWriter::CommentStyle::Enum</a> Json::StreamWriterBuilder::cs_</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -158,9 +185,9 @@ Public Attributes</h2></td></tr>
 <p>How to write comments. </p>
 <p>Default: All </p>
 
-<p>Definition at line <a class="el" href="writer_8h_source.html#l00095">95</a> of file <a class="el" href="writer_8h_source.html">writer.h</a>.</p>
+<p>Definition at line <a class="el" href="writer_8h_source.html#l00098">98</a> of file <a class="el" href="writer_8h_source.html">writer.h</a>.</p>
 
-<p>Referenced by <a class="el" href="json__writer_8cpp_source.html#l00968">newStreamWriter()</a>.</p>
+<p>Referenced by <a class="el" href="json__writer_8cpp_source.html#l00976">newStreamWriter()</a>.</p>
 
 </div>
 </div>
@@ -177,9 +204,9 @@ Public Attributes</h2></td></tr>
 <p>Write in human-friendly style. </p>
 <p>If "", then skip all indentation and newlines. In that case, you probably want CommentStyle::None also. Default: "\t" </p>
 
-<p>Definition at line <a class="el" href="writer_8h_source.html#l00102">102</a> of file <a class="el" href="writer_8h_source.html">writer.h</a>.</p>
+<p>Definition at line <a class="el" href="writer_8h_source.html#l00105">105</a> of file <a class="el" href="writer_8h_source.html">writer.h</a>.</p>
 
-<p>Referenced by <a class="el" href="json__writer_8cpp_source.html#l00968">newStreamWriter()</a>.</p>
+<p>Referenced by <a class="el" href="json__writer_8cpp_source.html#l00976">newStreamWriter()</a>.</p>
 
 </div>
 </div>

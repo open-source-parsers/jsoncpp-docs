@@ -110,7 +110,7 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Unserialize a <a href="http://www.json.org">JSON</a> document into a <a class="el" href="class_json_1_1_value.html" title="Represents a JSON value. ">Value</a>. </p>
 
-<p>Definition at line <a class="el" href="reader_8h_source.html#l00031">31</a> of file <a class="el" href="reader_8h_source.html">reader.h</a>.</p>
+<p>Definition at line <a class="el" href="reader_8h_source.html#l00032">32</a> of file <a class="el" href="reader_8h_source.html">reader.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="a3eec9118f3e9a672ba8348c3a79d0f45"></a>
 <div class="memitem">
@@ -122,7 +122,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="reader_8h_source.html#l00033">33</a> of file <a class="el" href="reader_8h_source.html">reader.h</a>.</p>
+<p>Definition at line <a class="el" href="reader_8h_source.html#l00034">34</a> of file <a class="el" href="reader_8h_source.html">reader.h</a>.</p>
 
 </div>
 </div>
@@ -136,7 +136,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="reader_8h_source.html#l00034">34</a> of file <a class="el" href="reader_8h_source.html">reader.h</a>.</p>
+<p>Definition at line <a class="el" href="reader_8h_source.html#l00035">35</a> of file <a class="el" href="reader_8h_source.html">reader.h</a>.</p>
 
 </div>
 </div>
@@ -156,7 +156,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Constructs a <a class="el" href="class_json_1_1_reader.html" title="Unserialize a JSON document into a Value. ">Reader</a> allowing all features for parsing. </p>
 
-<p>Definition at line <a class="el" href="json__reader_8cpp_source.html#l00060">60</a> of file <a class="el" href="json__reader_8cpp_source.html">json_reader.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__reader_8cpp_source.html#l00068">68</a> of file <a class="el" href="json__reader_8cpp_source.html">json_reader.cpp</a>.</p>
 
 </div>
 </div>
@@ -176,7 +176,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Constructs a <a class="el" href="class_json_1_1_reader.html" title="Unserialize a JSON document into a Value. ">Reader</a> allowing the specified feature set for parsing. </p>
 
-<p>Definition at line <a class="el" href="json__reader_8cpp_source.html#l00065">65</a> of file <a class="el" href="json__reader_8cpp_source.html">json_reader.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__reader_8cpp_source.html#l00073">73</a> of file <a class="el" href="json__reader_8cpp_source.html">json_reader.cpp</a>.</p>
 
 </div>
 </div>
@@ -198,9 +198,9 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Formatted error message with the list of errors with their location in the parsed document. An empty string is returned if no error occurred during parsing. </dd></dl>
 <dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">Deprecated:</a></b></dt><dd>Use <a class="el" href="class_json_1_1_reader.html#a95ab50aa789132e9dee0fc1475c85acf" title="Returns a user friendly string that list errors in the parsed document. ">getFormattedErrorMessages()</a> instead (typo fix). </dd></dl>
 
-<p>Definition at line <a class="el" href="json__reader_8cpp_source.html#l00811">811</a> of file <a class="el" href="json__reader_8cpp_source.html">json_reader.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__reader_8cpp_source.html#l00819">819</a> of file <a class="el" href="json__reader_8cpp_source.html">json_reader.cpp</a>.</p>
 
-<p>References <a class="el" href="json__reader_8cpp_source.html#l00815">getFormattedErrorMessages()</a>.</p>
+<p>References <a class="el" href="json__reader_8cpp_source.html#l00823">getFormattedErrorMessages()</a>.</p>
 
 </div>
 </div>
@@ -220,9 +220,9 @@ Public Member Functions</h2></td></tr>
 <p>Returns a user friendly string that list errors in the parsed document. </p>
 <dl class="section return"><dt>Returns</dt><dd>Formatted error message with the list of errors with their location in the parsed document. An empty string is returned if no error occurred during parsing. </dd></dl>
 
-<p>Definition at line <a class="el" href="json__reader_8cpp_source.html#l00815">815</a> of file <a class="el" href="json__reader_8cpp_source.html">json_reader.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__reader_8cpp_source.html#l00823">823</a> of file <a class="el" href="json__reader_8cpp_source.html">json_reader.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="json__reader_8cpp_source.html#l00811">getFormatedErrorMessages()</a>, and <a class="el" href="json__reader_8cpp_source.html#l00885">Json::operator&gt;&gt;()</a>.</p>
+<p>Referenced by <a class="el" href="json__reader_8cpp_source.html#l00819">getFormatedErrorMessages()</a>.</p>
 
 </div>
 </div>
@@ -242,9 +242,9 @@ Public Member Functions</h2></td></tr>
 <p>Returns a vector of structured erros encounted while parsing. </p>
 <dl class="section return"><dt>Returns</dt><dd>A (possibly empty) vector of <a class="el" href="struct_json_1_1_reader_1_1_structured_error.html" title="An error tagged with where in the JSON text it was encountered. ">StructuredError</a> objects. Currently only one error can be returned, but the caller should tolerate multiple errors. This can occur if the parser recovers from a non-fatal parse error and then encounters additional errors. </dd></dl>
 
-<p>Definition at line <a class="el" href="json__reader_8cpp_source.html#l00831">831</a> of file <a class="el" href="json__reader_8cpp_source.html">json_reader.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__reader_8cpp_source.html#l00839">839</a> of file <a class="el" href="json__reader_8cpp_source.html">json_reader.cpp</a>.</p>
 
-<p>References <a class="el" href="reader_8h_source.html#l00045">Json::Reader::StructuredError::message</a>, <a class="el" href="reader_8h_source.html#l00044">Json::Reader::StructuredError::offset_limit</a>, and <a class="el" href="reader_8h_source.html#l00043">Json::Reader::StructuredError::offset_start</a>.</p>
+<p>References <a class="el" href="reader_8h_source.html#l00046">Json::Reader::StructuredError::message</a>, <a class="el" href="reader_8h_source.html#l00045">Json::Reader::StructuredError::offset_limit</a>, and <a class="el" href="reader_8h_source.html#l00044">Json::Reader::StructuredError::offset_start</a>.</p>
 
 </div>
 </div>
@@ -264,7 +264,7 @@ Public Member Functions</h2></td></tr>
 <p>Return whether there are any errors. </p>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if there are no errors to report <code>false</code> if errors have occurred. </dd></dl>
 
-<p>Definition at line <a class="el" href="json__reader_8cpp_source.html#l00881">881</a> of file <a class="el" href="json__reader_8cpp_source.html">json_reader.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__reader_8cpp_source.html#l00889">889</a> of file <a class="el" href="json__reader_8cpp_source.html">json_reader.cpp</a>.</p>
 
 </div>
 </div>
@@ -309,9 +309,9 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the document was successfully parsed, <code>false</code> if an error occurred. </dd></dl>
 
-<p>Definition at line <a class="el" href="json__reader_8cpp_source.html#l00071">71</a> of file <a class="el" href="json__reader_8cpp_source.html">json_reader.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__reader_8cpp_source.html#l00079">79</a> of file <a class="el" href="json__reader_8cpp_source.html">json_reader.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="json__reader_8cpp_source.html#l00885">Json::operator&gt;&gt;()</a>, and <a class="el" href="json__reader_8cpp_source.html#l00078">parse()</a>.</p>
+<p>Referenced by <a class="el" href="json__reader_8cpp_source.html#l00086">parse()</a>.</p>
 
 </div>
 </div>
@@ -355,7 +355,7 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">beginDoc</td><td>Pointer on the beginning of the UTF-8 encoded string of the document to read. </td></tr>
-    <tr><td class="paramname">endDoc</td><td>Pointer on the end of the UTF-8 encoded string of the document to read. \ Must be &gt;= beginDoc. </td></tr>
+    <tr><td class="paramname">endDoc</td><td>Pointer on the end of the UTF-8 encoded string of the document to read. Must be &gt;= beginDoc. </td></tr>
     <tr><td class="paramname">root</td><td>[out] Contains the root value of the document if it was successfully parsed. </td></tr>
     <tr><td class="paramname">collectComments</td><td><code>true</code> to collect comment and allow writing them back during serialization, <code>false</code> to discard comments. This parameter is ignored if <a class="el" href="class_json_1_1_features.html#a33afd389719624b6bdb23950b3c346c9" title="true if comments are allowed. Default: true. ">Features::allowComments_</a> is <code>false</code>. </td></tr>
   </table>
@@ -363,7 +363,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the document was successfully parsed, <code>false</code> if an error occurred. </dd></dl>
 
-<p>Definition at line <a class="el" href="json__reader_8cpp_source.html#l00091">91</a> of file <a class="el" href="json__reader_8cpp_source.html">json_reader.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__reader_8cpp_source.html#l00099">99</a> of file <a class="el" href="json__reader_8cpp_source.html">json_reader.cpp</a>.</p>
 
 <p>References <a class="el" href="features_8h_source.html#l00042">Json::Features::allowComments_</a>, <a class="el" href="value_8h_source.html#l00051">Json::commentAfter</a>, <a class="el" href="json__value_8cpp_source.html#l01227">Json::Value::isArray()</a>, <a class="el" href="json__value_8cpp_source.html#l01229">Json::Value::isObject()</a>, <a class="el" href="json__value_8cpp_source.html#l01241">Json::Value::setComment()</a>, and <a class="el" href="features_8h_source.html#l00046">Json::Features::strictRoot_</a>.</p>
 
@@ -402,9 +402,9 @@ Public Member Functions</h2></td></tr>
 <p>Parse from input stream. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="namespace_json.html#a4d245ef719cc0853e8e78eb5f99c16e5" title="Read from &#39;sin&#39; into &#39;root&#39;. ">Json::operator&gt;&gt;(std::istream&amp;, Json::Value&amp;)</a>. </dd></dl>
 
-<p>Definition at line <a class="el" href="json__reader_8cpp_source.html#l00078">78</a> of file <a class="el" href="json__reader_8cpp_source.html">json_reader.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__reader_8cpp_source.html#l00086">86</a> of file <a class="el" href="json__reader_8cpp_source.html">json_reader.cpp</a>.</p>
 
-<p>References <a class="el" href="json__reader_8cpp_source.html#l00071">parse()</a>.</p>
+<p>References <a class="el" href="json__reader_8cpp_source.html#l00079">parse()</a>.</p>
 
 </div>
 </div>
@@ -442,7 +442,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the error was successfully added, <code>false</code> if the <a class="el" href="class_json_1_1_value.html" title="Represents a JSON value. ">Value</a> offset exceeds the document size. </dd></dl>
 
-<p>Definition at line <a class="el" href="json__reader_8cpp_source.html#l00846">846</a> of file <a class="el" href="json__reader_8cpp_source.html">json_reader.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__reader_8cpp_source.html#l00854">854</a> of file <a class="el" href="json__reader_8cpp_source.html">json_reader.cpp</a>.</p>
 
 <p>References <a class="el" href="json__value_8cpp_source.html#l01265">Json::Value::getOffsetLimit()</a>, and <a class="el" href="json__value_8cpp_source.html#l01263">Json::Value::getOffsetStart()</a>.</p>
 
@@ -489,7 +489,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the error was successfully added, <code>false</code> if either <a class="el" href="class_json_1_1_value.html" title="Represents a JSON value. ">Value</a> offset exceeds the document size. </dd></dl>
 
-<p>Definition at line <a class="el" href="json__reader_8cpp_source.html#l00863">863</a> of file <a class="el" href="json__reader_8cpp_source.html">json_reader.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__reader_8cpp_source.html#l00871">871</a> of file <a class="el" href="json__reader_8cpp_source.html">json_reader.cpp</a>.</p>
 
 <p>References <a class="el" href="json__value_8cpp_source.html#l01265">Json::Value::getOffsetLimit()</a>, and <a class="el" href="json__value_8cpp_source.html#l01263">Json::Value::getOffsetStart()</a>.</p>
 

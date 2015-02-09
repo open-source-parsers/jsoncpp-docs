@@ -62,165 +62,205 @@ JsonCpp - JSON data format manipulation library
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;iosfwd&gt;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;stack&gt;</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">// Disable warning C4251: &lt;data member&gt;: &lt;type&gt; needs to have dll-interface to</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">// be used by...</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#if defined(JSONCPP_DISABLE_DLL_INTERFACE_WARNING)</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#pragma warning(push)</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#pragma warning(disable : 4251)</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#endif // if defined(JSONCPP_DISABLE_DLL_INTERFACE_WARNING)</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span>Json {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_json_1_1_reader.html">   31</a></span>&#160;<span class="keyword">class </span><a class="code" href="config_8h.html#a1d61ffde86ce1a18fd83194ff0d9a206">JSON_API</a> <a class="code" href="class_json_1_1_reader.html">Reader</a> {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_json_1_1_reader.html#a3eec9118f3e9a672ba8348c3a79d0f45">   33</a></span>&#160;  <span class="keyword">typedef</span> <span class="keywordtype">char</span> <a class="code" href="class_json_1_1_reader.html#a3eec9118f3e9a672ba8348c3a79d0f45">Char</a>;</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_json_1_1_reader.html#a46795b5b272bf79a7730e406cb96375a">   34</a></span>&#160;  <span class="keyword">typedef</span> <span class="keyword">const</span> <a class="code" href="class_json_1_1_reader.html#a3eec9118f3e9a672ba8348c3a79d0f45">Char</a>* <a class="code" href="class_json_1_1_reader.html#a46795b5b272bf79a7730e406cb96375a">Location</a>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="struct_json_1_1_reader_1_1_structured_error.html">   42</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="struct_json_1_1_reader_1_1_structured_error.html">StructuredError</a> {</div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="struct_json_1_1_reader_1_1_structured_error.html#a160dae4eb3464a2209b743c755baf65f">   43</a></span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="struct_json_1_1_reader_1_1_structured_error.html#a160dae4eb3464a2209b743c755baf65f">offset_start</a>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="struct_json_1_1_reader_1_1_structured_error.html#a80747dae744bcc80a9bc81c94fd42e13">   44</a></span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="struct_json_1_1_reader_1_1_structured_error.html#a80747dae744bcc80a9bc81c94fd42e13">offset_limit</a>;</div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="struct_json_1_1_reader_1_1_structured_error.html#ab8755e5201b78c6ae077338f8819e6e6">   45</a></span>&#160;    std::string <a class="code" href="struct_json_1_1_reader_1_1_structured_error.html#ab8755e5201b78c6ae077338f8819e6e6">message</a>;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  };</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <a class="code" href="class_json_1_1_reader.html">Reader</a>();</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <a class="code" href="class_json_1_1_reader.html">Reader</a>(<span class="keyword">const</span> <a class="code" href="class_json_1_1_features.html">Features</a>&amp; features);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  parse(<span class="keyword">const</span> std::string&amp; document, <a class="code" href="class_json_1_1_value.html">Value</a>&amp; root, <span class="keywordtype">bool</span> collectComments = <span class="keyword">true</span>);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="keywordtype">bool</span> parse(<span class="keyword">const</span> <span class="keywordtype">char</span>* beginDoc,</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;             <span class="keyword">const</span> <span class="keywordtype">char</span>* endDoc,</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;             <a class="code" href="class_json_1_1_value.html">Value</a>&amp; root,</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;             <span class="keywordtype">bool</span> collectComments = <span class="keyword">true</span>);</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keywordtype">bool</span> parse(std::istream&amp; is, <a class="code" href="class_json_1_1_value.html">Value</a>&amp; root, <span class="keywordtype">bool</span> collectComments = <span class="keyword">true</span>);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <a class="code" href="config_8h.html#a6933a4321aa03c8a29016669073f1af6">JSONCPP_DEPRECATED</a>(<span class="stringliteral">&quot;Use getFormattedErrorMessages instead&quot;</span>)</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  std::<span class="keywordtype">string</span> getFormatedErrorMessages() const;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  std::<span class="keywordtype">string</span> getFormattedErrorMessages() const;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  std::vector&lt;<a class="code" href="struct_json_1_1_reader_1_1_structured_error.html">StructuredError</a>&gt; getStructuredErrors() const;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  <span class="keywordtype">bool</span> pushError(const <a class="code" href="class_json_1_1_value.html">Value</a>&amp; value, const std::<span class="keywordtype">string</span>&amp; message);</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  <span class="keywordtype">bool</span> pushError(const <a class="code" href="class_json_1_1_value.html">Value</a>&amp; value, const std::<span class="keywordtype">string</span>&amp; message, const <a class="code" href="class_json_1_1_value.html">Value</a>&amp; extra);</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <span class="keywordtype">bool</span> good() const;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;private:</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  enum TokenType {</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    tokenEndOfStream = 0,</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    tokenObjectBegin,</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    tokenObjectEnd,</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    tokenArrayBegin,</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    tokenArrayEnd,</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    tokenString,</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    tokenNumber,</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    tokenTrue,</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    tokenFalse,</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    tokenNull,</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    tokenArraySeparator,</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    tokenMemberSeparator,</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    tokenComment,</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    tokenError</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  };</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  <span class="keyword">class </span>Token {</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    TokenType type_;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    Location start_;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    Location end_;</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  };</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;  <span class="keyword">class </span>ErrorInfo {</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    Token token_;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    std::string message_;</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    Location extra_;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  };</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  <span class="keyword">typedef</span> std::deque&lt;ErrorInfo&gt; Errors;</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  <span class="keywordtype">bool</span> readToken(Token&amp; token);</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  <span class="keywordtype">void</span> skipSpaces();</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;  <span class="keywordtype">bool</span> match(Location pattern, <span class="keywordtype">int</span> patternLength);</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;  <span class="keywordtype">bool</span> readComment();</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  <span class="keywordtype">bool</span> readCStyleComment();</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  <span class="keywordtype">bool</span> readCppStyleComment();</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  <span class="keywordtype">bool</span> readString();</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  <span class="keywordtype">void</span> readNumber();</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  <span class="keywordtype">bool</span> readValue();</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  <span class="keywordtype">bool</span> readObject(Token&amp; token);</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  <span class="keywordtype">bool</span> readArray(Token&amp; token);</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  <span class="keywordtype">bool</span> decodeNumber(Token&amp; token);</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;  <span class="keywordtype">bool</span> decodeNumber(Token&amp; token, Value&amp; decoded);</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  <span class="keywordtype">bool</span> decodeString(Token&amp; token);</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  <span class="keywordtype">bool</span> decodeString(Token&amp; token, std::string&amp; decoded);</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  <span class="keywordtype">bool</span> decodeDouble(Token&amp; token);</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;  <span class="keywordtype">bool</span> decodeDouble(Token&amp; token, Value&amp; decoded);</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;  <span class="keywordtype">bool</span> decodeUnicodeCodePoint(Token&amp; token,</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                              Location&amp; current,</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                              Location end,</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                              <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>&amp; unicode);</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;  <span class="keywordtype">bool</span> decodeUnicodeEscapeSequence(Token&amp; token,</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                                   Location&amp; current,</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                                   Location end,</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                                   <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>&amp; unicode);</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;  <span class="keywordtype">bool</span> addError(<span class="keyword">const</span> std::string&amp; message, Token&amp; token, Location extra = 0);</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;  <span class="keywordtype">bool</span> recoverFromError(TokenType skipUntilToken);</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;  <span class="keywordtype">bool</span> addErrorAndRecover(<span class="keyword">const</span> std::string&amp; message,</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                          Token&amp; token,</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                          TokenType skipUntilToken);</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  <span class="keywordtype">void</span> skipUntilSpace();</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  Value&amp; currentValue();</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  Char getNextChar();</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;  <span class="keywordtype">void</span></div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;  getLocationLineAndColumn(Location location, <span class="keywordtype">int</span>&amp; line, <span class="keywordtype">int</span>&amp; column) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;  std::string getLocationLineAndColumn(Location location) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;  <span class="keywordtype">void</span> addComment(Location begin, Location end, <a class="code" href="namespace_json.html#a4fc417c23905b2ae9e2c47d197a45351">CommentPlacement</a> placement);</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;  <span class="keywordtype">void</span> skipCommentTokens(Token&amp; token);</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;  <span class="keyword">typedef</span> std::stack&lt;Value*&gt; Nodes;</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;  Nodes nodes_;</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;  Errors errors_;</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  std::string document_;</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  Location begin_;</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;  Location end_;</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;  Location current_;</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  Location lastValueEnd_;</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;  Value* lastValue_;</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;  std::string commentsBefore_;</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  Features features_;</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;  <span class="keywordtype">bool</span> collectComments_;</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;};</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;<a class="code" href="config_8h.html#a1d61ffde86ce1a18fd83194ff0d9a206">JSON_API</a> std::istream&amp; <a class="code" href="namespace_json.html#a4d245ef719cc0853e8e78eb5f99c16e5">operator&gt;&gt;</a>(std::istream&amp;, Value&amp;);</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;} <span class="comment">// namespace Json</span></div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="preprocessor">#if defined(JSONCPP_DISABLE_DLL_INTERFACE_WARNING)</span></div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="preprocessor">#pragma warning(pop)</span></div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="preprocessor">#endif // if defined(JSONCPP_DISABLE_DLL_INTERFACE_WARNING)</span></div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;<span class="preprocessor">#endif // CPPTL_JSON_READER_H_INCLUDED</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;istream&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">// Disable warning C4251: &lt;data member&gt;: &lt;type&gt; needs to have dll-interface to</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">// be used by...</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#if defined(JSONCPP_DISABLE_DLL_INTERFACE_WARNING)</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#pragma warning(push)</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#pragma warning(disable : 4251)</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#endif // if defined(JSONCPP_DISABLE_DLL_INTERFACE_WARNING)</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span>Json {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_json_1_1_reader.html">   32</a></span>&#160;<span class="keyword">class </span><a class="code" href="config_8h.html#a1d61ffde86ce1a18fd83194ff0d9a206">JSON_API</a> <a class="code" href="class_json_1_1_reader.html">Reader</a> {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_json_1_1_reader.html#a3eec9118f3e9a672ba8348c3a79d0f45">   34</a></span>&#160;  <span class="keyword">typedef</span> <span class="keywordtype">char</span> <a class="code" href="class_json_1_1_reader.html#a3eec9118f3e9a672ba8348c3a79d0f45">Char</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_json_1_1_reader.html#a46795b5b272bf79a7730e406cb96375a">   35</a></span>&#160;  <span class="keyword">typedef</span> <span class="keyword">const</span> <a class="code" href="class_json_1_1_reader.html#a3eec9118f3e9a672ba8348c3a79d0f45">Char</a>* <a class="code" href="class_json_1_1_reader.html#a46795b5b272bf79a7730e406cb96375a">Location</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="struct_json_1_1_reader_1_1_structured_error.html">   43</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="struct_json_1_1_reader_1_1_structured_error.html">StructuredError</a> {</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="struct_json_1_1_reader_1_1_structured_error.html#a160dae4eb3464a2209b743c755baf65f">   44</a></span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="struct_json_1_1_reader_1_1_structured_error.html#a160dae4eb3464a2209b743c755baf65f">offset_start</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="struct_json_1_1_reader_1_1_structured_error.html#a80747dae744bcc80a9bc81c94fd42e13">   45</a></span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="struct_json_1_1_reader_1_1_structured_error.html#a80747dae744bcc80a9bc81c94fd42e13">offset_limit</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="struct_json_1_1_reader_1_1_structured_error.html#ab8755e5201b78c6ae077338f8819e6e6">   46</a></span>&#160;    std::string <a class="code" href="struct_json_1_1_reader_1_1_structured_error.html#ab8755e5201b78c6ae077338f8819e6e6">message</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  };</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <a class="code" href="class_json_1_1_reader.html">Reader</a>();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <a class="code" href="class_json_1_1_reader.html">Reader</a>(<span class="keyword">const</span> <a class="code" href="class_json_1_1_features.html">Features</a>&amp; features);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  parse(<span class="keyword">const</span> std::string&amp; document, <a class="code" href="class_json_1_1_value.html">Value</a>&amp; root, <span class="keywordtype">bool</span> collectComments = <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="keywordtype">bool</span> parse(<span class="keyword">const</span> <span class="keywordtype">char</span>* beginDoc,</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;             <span class="keyword">const</span> <span class="keywordtype">char</span>* endDoc,</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;             <a class="code" href="class_json_1_1_value.html">Value</a>&amp; root,</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;             <span class="keywordtype">bool</span> collectComments = <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="keywordtype">bool</span> parse(std::istream&amp; is, <a class="code" href="class_json_1_1_value.html">Value</a>&amp; root, <span class="keywordtype">bool</span> collectComments = <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <a class="code" href="config_8h.html#a6933a4321aa03c8a29016669073f1af6">JSONCPP_DEPRECATED</a>(<span class="stringliteral">&quot;Use getFormattedErrorMessages instead&quot;</span>)</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  std::<span class="keywordtype">string</span> getFormatedErrorMessages() const;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  std::<span class="keywordtype">string</span> getFormattedErrorMessages() const;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  std::vector&lt;<a class="code" href="struct_json_1_1_reader_1_1_structured_error.html">StructuredError</a>&gt; getStructuredErrors() const;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  <span class="keywordtype">bool</span> pushError(const <a class="code" href="class_json_1_1_value.html">Value</a>&amp; value, const std::<span class="keywordtype">string</span>&amp; message);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  <span class="keywordtype">bool</span> pushError(const <a class="code" href="class_json_1_1_value.html">Value</a>&amp; value, const std::<span class="keywordtype">string</span>&amp; message, const <a class="code" href="class_json_1_1_value.html">Value</a>&amp; extra);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  <span class="keywordtype">bool</span> good() const;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;private:</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  enum TokenType {</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    tokenEndOfStream = 0,</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    tokenObjectBegin,</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    tokenObjectEnd,</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    tokenArrayBegin,</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    tokenArrayEnd,</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    tokenString,</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    tokenNumber,</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    tokenTrue,</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    tokenFalse,</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    tokenNull,</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    tokenArraySeparator,</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    tokenMemberSeparator,</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    tokenComment,</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    tokenError</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  };</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  <span class="keyword">class </span>Token {</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    TokenType type_;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    Location start_;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    Location end_;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  };</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  <span class="keyword">class </span>ErrorInfo {</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    Token token_;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    std::string message_;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    Location extra_;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  };</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  <span class="keyword">typedef</span> std::deque&lt;ErrorInfo&gt; Errors;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  <span class="keywordtype">bool</span> readToken(Token&amp; token);</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;  <span class="keywordtype">void</span> skipSpaces();</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;  <span class="keywordtype">bool</span> match(Location pattern, <span class="keywordtype">int</span> patternLength);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  <span class="keywordtype">bool</span> readComment();</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  <span class="keywordtype">bool</span> readCStyleComment();</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  <span class="keywordtype">bool</span> readCppStyleComment();</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  <span class="keywordtype">bool</span> readString();</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  <span class="keywordtype">void</span> readNumber();</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  <span class="keywordtype">bool</span> readValue();</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  <span class="keywordtype">bool</span> readObject(Token&amp; token);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  <span class="keywordtype">bool</span> readArray(Token&amp; token);</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;  <span class="keywordtype">bool</span> decodeNumber(Token&amp; token);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  <span class="keywordtype">bool</span> decodeNumber(Token&amp; token, Value&amp; decoded);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  <span class="keywordtype">bool</span> decodeString(Token&amp; token);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  <span class="keywordtype">bool</span> decodeString(Token&amp; token, std::string&amp; decoded);</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;  <span class="keywordtype">bool</span> decodeDouble(Token&amp; token);</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;  <span class="keywordtype">bool</span> decodeDouble(Token&amp; token, Value&amp; decoded);</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;  <span class="keywordtype">bool</span> decodeUnicodeCodePoint(Token&amp; token,</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                              Location&amp; current,</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                              Location end,</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                              <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>&amp; unicode);</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;  <span class="keywordtype">bool</span> decodeUnicodeEscapeSequence(Token&amp; token,</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                                   Location&amp; current,</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                                   Location end,</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                                   <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>&amp; unicode);</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;  <span class="keywordtype">bool</span> addError(<span class="keyword">const</span> std::string&amp; message, Token&amp; token, Location extra = 0);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;  <span class="keywordtype">bool</span> recoverFromError(TokenType skipUntilToken);</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;  <span class="keywordtype">bool</span> addErrorAndRecover(<span class="keyword">const</span> std::string&amp; message,</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                          Token&amp; token,</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                          TokenType skipUntilToken);</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  <span class="keywordtype">void</span> skipUntilSpace();</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  Value&amp; currentValue();</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;  Char getNextChar();</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;  <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;  getLocationLineAndColumn(Location location, <span class="keywordtype">int</span>&amp; line, <span class="keywordtype">int</span>&amp; column) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;  std::string getLocationLineAndColumn(Location location) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;  <span class="keywordtype">void</span> addComment(Location begin, Location end, <a class="code" href="namespace_json.html#a4fc417c23905b2ae9e2c47d197a45351">CommentPlacement</a> placement);</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  <span class="keywordtype">void</span> skipCommentTokens(Token&amp; token);</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;  <span class="keyword">typedef</span> std::stack&lt;Value*&gt; Nodes;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;  Nodes nodes_;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  Errors errors_;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  std::string document_;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;  Location begin_;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;  Location end_;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  Location current_;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;  Location lastValueEnd_;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;  Value* lastValue_;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  std::string commentsBefore_;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;  Features features_;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;  <span class="keywordtype">bool</span> collectComments_;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;};  <span class="comment">// Reader</span></div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;</div>
+<div class="line"><a name="l00246"></a><span class="lineno"><a class="line" href="class_json_1_1_char_reader.html">  246</a></span>&#160;<span class="keyword">class </span><a class="code" href="config_8h.html#a1d61ffde86ce1a18fd83194ff0d9a206">JSON_API</a> <a class="code" href="class_json_1_1_char_reader.html">CharReader</a> {</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00248"></a><span class="lineno"><a class="line" href="class_json_1_1_char_reader.html#acaa7b6ad04fe1cf2ddfca06e66550d7e">  248</a></span>&#160;  <span class="keyword">virtual</span> <a class="code" href="class_json_1_1_char_reader.html#acaa7b6ad04fe1cf2ddfca06e66550d7e">~CharReader</a>() {}</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> parse(</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;      <span class="keywordtype">char</span> <span class="keyword">const</span>* beginDoc, <span class="keywordtype">char</span> <span class="keyword">const</span>* endDoc,</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;      <a class="code" href="class_json_1_1_value.html">Value</a>* root, std::string* errs) = 0;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;</div>
+<div class="line"><a name="l00270"></a><span class="lineno"><a class="line" href="class_json_1_1_char_reader_1_1_factory.html">  270</a></span>&#160;  <span class="keyword">class </span><a class="code" href="class_json_1_1_char_reader_1_1_factory.html">Factory</a> {</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_json_1_1_char_reader.html">CharReader</a>* newCharReader() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  };  <span class="comment">// Factory</span></div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;};  <span class="comment">// CharReader</span></div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;</div>
+<div class="line"><a name="l00291"></a><span class="lineno"><a class="line" href="class_json_1_1_char_reader_builder.html">  291</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_json_1_1_char_reader_builder.html">CharReaderBuilder</a> : <span class="keyword">public</span> <a class="code" href="class_json_1_1_char_reader_1_1_factory.html">CharReader::Factory</a> {</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00293"></a><span class="lineno"><a class="line" href="class_json_1_1_char_reader_builder.html#aaf2bb842d775c1cc20c33367831f7416">  293</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="class_json_1_1_char_reader_builder.html#aaf2bb842d775c1cc20c33367831f7416">collectComments_</a>;</div>
+<div class="line"><a name="l00294"></a><span class="lineno"><a class="line" href="class_json_1_1_char_reader_builder.html#af0db7ea98b3fb395e543c5bc6044d76e">  294</a></span>&#160;  <a class="code" href="class_json_1_1_features.html">Features</a> <a class="code" href="class_json_1_1_char_reader_builder.html#af0db7ea98b3fb395e543c5bc6044d76e">features_</a>;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;  <a class="code" href="class_json_1_1_char_reader_builder.html#a6e197b69a2ede3d87b03b9c5c78ba46a">CharReaderBuilder</a>();</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="class_json_1_1_char_reader_builder.html#a5d97cc9e5864769def1c4e3b68e9d46f">~CharReaderBuilder</a>();</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="class_json_1_1_char_reader.html">CharReader</a>* <a class="code" href="class_json_1_1_char_reader_builder.html#a3e3c9f4aeb07023ef0c5f6255003078a">newCharReader</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;};</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="namespace_json.html#acfebeaf759a841173ddce34c4da22486">parseFromStream</a>(</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <a class="code" href="class_json_1_1_char_reader_1_1_factory.html">CharReader::Factory</a> <span class="keyword">const</span>&amp;,</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    std::istream&amp;,</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    <a class="code" href="class_json_1_1_value.html">Value</a>* root, std::string* errs);</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;<a class="code" href="config_8h.html#a1d61ffde86ce1a18fd83194ff0d9a206">JSON_API</a> std::istream&amp; <a class="code" href="namespace_json.html#a4d245ef719cc0853e8e78eb5f99c16e5">operator&gt;&gt;</a>(std::istream&amp;, <a class="code" href="class_json_1_1_value.html">Value</a>&amp;);</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;} <span class="comment">// namespace Json</span></div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;<span class="preprocessor">#if defined(JSONCPP_DISABLE_DLL_INTERFACE_WARNING)</span></div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;<span class="preprocessor">#pragma warning(pop)</span></div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;<span class="preprocessor">#endif // if defined(JSONCPP_DISABLE_DLL_INTERFACE_WARNING)</span></div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;<span class="preprocessor">#endif // CPPTL_JSON_READER_H_INCLUDED</span></div>
 <div class="ttc" id="config_8h_html_a6933a4321aa03c8a29016669073f1af6"><div class="ttname"><a href="config_8h.html#a6933a4321aa03c8a29016669073f1af6">JSONCPP_DEPRECATED</a></div><div class="ttdeci">#define JSONCPP_DEPRECATED(message)</div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00087">config.h:87</a></div></div>
 <div class="ttc" id="config_8h_html_a1d61ffde86ce1a18fd83194ff0d9a206"><div class="ttname"><a href="config_8h.html#a1d61ffde86ce1a18fd83194ff0d9a206">JSON_API</a></div><div class="ttdeci">#define JSON_API</div><div class="ttdoc">If defined, indicates that the source file is amalgated to prevent private header inclusion...</div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00062">config.h:62</a></div></div>
-<div class="ttc" id="struct_json_1_1_reader_1_1_structured_error_html_ab8755e5201b78c6ae077338f8819e6e6"><div class="ttname"><a href="struct_json_1_1_reader_1_1_structured_error.html#ab8755e5201b78c6ae077338f8819e6e6">Json::Reader::StructuredError::message</a></div><div class="ttdeci">std::string message</div><div class="ttdef"><b>Definition:</b> <a href="reader_8h_source.html#l00045">reader.h:45</a></div></div>
-<div class="ttc" id="namespace_json_html_a4d245ef719cc0853e8e78eb5f99c16e5"><div class="ttname"><a href="namespace_json.html#a4d245ef719cc0853e8e78eb5f99c16e5">Json::operator&gt;&gt;</a></div><div class="ttdeci">std::istream &amp; operator&gt;&gt;(std::istream &amp;, Value &amp;)</div><div class="ttdoc">Read from &#39;sin&#39; into &#39;root&#39;. </div><div class="ttdef"><b>Definition:</b> <a href="json__reader_8cpp_source.html#l00885">json_reader.cpp:885</a></div></div>
-<div class="ttc" id="class_json_1_1_reader_html_a3eec9118f3e9a672ba8348c3a79d0f45"><div class="ttname"><a href="class_json_1_1_reader.html#a3eec9118f3e9a672ba8348c3a79d0f45">Json::Reader::Char</a></div><div class="ttdeci">char Char</div><div class="ttdef"><b>Definition:</b> <a href="reader_8h_source.html#l00033">reader.h:33</a></div></div>
-<div class="ttc" id="struct_json_1_1_reader_1_1_structured_error_html"><div class="ttname"><a href="struct_json_1_1_reader_1_1_structured_error.html">Json::Reader::StructuredError</a></div><div class="ttdoc">An error tagged with where in the JSON text it was encountered. </div><div class="ttdef"><b>Definition:</b> <a href="reader_8h_source.html#l00042">reader.h:42</a></div></div>
+<div class="ttc" id="struct_json_1_1_reader_1_1_structured_error_html_ab8755e5201b78c6ae077338f8819e6e6"><div class="ttname"><a href="struct_json_1_1_reader_1_1_structured_error.html#ab8755e5201b78c6ae077338f8819e6e6">Json::Reader::StructuredError::message</a></div><div class="ttdeci">std::string message</div><div class="ttdef"><b>Definition:</b> <a href="reader_8h_source.html#l00046">reader.h:46</a></div></div>
+<div class="ttc" id="class_json_1_1_char_reader_builder_html_a3e3c9f4aeb07023ef0c5f6255003078a"><div class="ttname"><a href="class_json_1_1_char_reader_builder.html#a3e3c9f4aeb07023ef0c5f6255003078a">Json::CharReaderBuilder::newCharReader</a></div><div class="ttdeci">virtual CharReader * newCharReader() const </div><div class="ttdoc">Allocate a CharReader via operator new(). </div><div class="ttdef"><b>Definition:</b> <a href="json__reader_8cpp_source.html#l00920">json_reader.cpp:920</a></div></div>
+<div class="ttc" id="namespace_json_html_acfebeaf759a841173ddce34c4da22486"><div class="ttname"><a href="namespace_json.html#acfebeaf759a841173ddce34c4da22486">Json::parseFromStream</a></div><div class="ttdeci">bool parseFromStream(CharReader::Factory const &amp;, std::istream &amp;, Value *root, std::string *errs)</div><div class="ttdoc">Consume entire stream and use its begin/end. </div><div class="ttdef"><b>Definition:</b> <a href="json__reader_8cpp_source.html#l00928">json_reader.cpp:928</a></div></div>
+<div class="ttc" id="namespace_json_html_a4d245ef719cc0853e8e78eb5f99c16e5"><div class="ttname"><a href="namespace_json.html#a4d245ef719cc0853e8e78eb5f99c16e5">Json::operator&gt;&gt;</a></div><div class="ttdeci">std::istream &amp; operator&gt;&gt;(std::istream &amp;, Value &amp;)</div><div class="ttdoc">Read from &#39;sin&#39; into &#39;root&#39;. </div><div class="ttdef"><b>Definition:</b> <a href="json__reader_8cpp_source.html#l00942">json_reader.cpp:942</a></div></div>
+<div class="ttc" id="class_json_1_1_reader_html_a3eec9118f3e9a672ba8348c3a79d0f45"><div class="ttname"><a href="class_json_1_1_reader.html#a3eec9118f3e9a672ba8348c3a79d0f45">Json::Reader::Char</a></div><div class="ttdeci">char Char</div><div class="ttdef"><b>Definition:</b> <a href="reader_8h_source.html#l00034">reader.h:34</a></div></div>
+<div class="ttc" id="class_json_1_1_char_reader_builder_html_af0db7ea98b3fb395e543c5bc6044d76e"><div class="ttname"><a href="class_json_1_1_char_reader_builder.html#af0db7ea98b3fb395e543c5bc6044d76e">Json::CharReaderBuilder::features_</a></div><div class="ttdeci">Features features_</div><div class="ttdef"><b>Definition:</b> <a href="reader_8h_source.html#l00294">reader.h:294</a></div></div>
+<div class="ttc" id="struct_json_1_1_reader_1_1_structured_error_html"><div class="ttname"><a href="struct_json_1_1_reader_1_1_structured_error.html">Json::Reader::StructuredError</a></div><div class="ttdoc">An error tagged with where in the JSON text it was encountered. </div><div class="ttdef"><b>Definition:</b> <a href="reader_8h_source.html#l00043">reader.h:43</a></div></div>
+<div class="ttc" id="class_json_1_1_char_reader_builder_html_a6e197b69a2ede3d87b03b9c5c78ba46a"><div class="ttname"><a href="class_json_1_1_char_reader_builder.html#a6e197b69a2ede3d87b03b9c5c78ba46a">Json::CharReaderBuilder::CharReaderBuilder</a></div><div class="ttdeci">CharReaderBuilder()</div><div class="ttdef"><b>Definition:</b> <a href="json__reader_8cpp_source.html#l00914">json_reader.cpp:914</a></div></div>
 <div class="ttc" id="namespace_json_html_a4fc417c23905b2ae9e2c47d197a45351"><div class="ttname"><a href="namespace_json.html#a4fc417c23905b2ae9e2c47d197a45351">Json::CommentPlacement</a></div><div class="ttdeci">CommentPlacement</div><div class="ttdef"><b>Definition:</b> <a href="value_8h_source.html#l00048">value.h:48</a></div></div>
-<div class="ttc" id="class_json_1_1_reader_html_a46795b5b272bf79a7730e406cb96375a"><div class="ttname"><a href="class_json_1_1_reader.html#a46795b5b272bf79a7730e406cb96375a">Json::Reader::Location</a></div><div class="ttdeci">const Char * Location</div><div class="ttdef"><b>Definition:</b> <a href="reader_8h_source.html#l00034">reader.h:34</a></div></div>
-<div class="ttc" id="struct_json_1_1_reader_1_1_structured_error_html_a80747dae744bcc80a9bc81c94fd42e13"><div class="ttname"><a href="struct_json_1_1_reader_1_1_structured_error.html#a80747dae744bcc80a9bc81c94fd42e13">Json::Reader::StructuredError::offset_limit</a></div><div class="ttdeci">size_t offset_limit</div><div class="ttdef"><b>Definition:</b> <a href="reader_8h_source.html#l00044">reader.h:44</a></div></div>
-<div class="ttc" id="struct_json_1_1_reader_1_1_structured_error_html_a160dae4eb3464a2209b743c755baf65f"><div class="ttname"><a href="struct_json_1_1_reader_1_1_structured_error.html#a160dae4eb3464a2209b743c755baf65f">Json::Reader::StructuredError::offset_start</a></div><div class="ttdeci">size_t offset_start</div><div class="ttdef"><b>Definition:</b> <a href="reader_8h_source.html#l00043">reader.h:43</a></div></div>
+<div class="ttc" id="class_json_1_1_reader_html_a46795b5b272bf79a7730e406cb96375a"><div class="ttname"><a href="class_json_1_1_reader.html#a46795b5b272bf79a7730e406cb96375a">Json::Reader::Location</a></div><div class="ttdeci">const Char * Location</div><div class="ttdef"><b>Definition:</b> <a href="reader_8h_source.html#l00035">reader.h:35</a></div></div>
+<div class="ttc" id="class_json_1_1_char_reader_html_acaa7b6ad04fe1cf2ddfca06e66550d7e"><div class="ttname"><a href="class_json_1_1_char_reader.html#acaa7b6ad04fe1cf2ddfca06e66550d7e">Json::CharReader::~CharReader</a></div><div class="ttdeci">virtual ~CharReader()</div><div class="ttdef"><b>Definition:</b> <a href="reader_8h_source.html#l00248">reader.h:248</a></div></div>
+<div class="ttc" id="struct_json_1_1_reader_1_1_structured_error_html_a80747dae744bcc80a9bc81c94fd42e13"><div class="ttname"><a href="struct_json_1_1_reader_1_1_structured_error.html#a80747dae744bcc80a9bc81c94fd42e13">Json::Reader::StructuredError::offset_limit</a></div><div class="ttdeci">size_t offset_limit</div><div class="ttdef"><b>Definition:</b> <a href="reader_8h_source.html#l00045">reader.h:45</a></div></div>
+<div class="ttc" id="class_json_1_1_char_reader_html"><div class="ttname"><a href="class_json_1_1_char_reader.html">Json::CharReader</a></div><div class="ttdoc">Interface for reading JSON from a char array. </div><div class="ttdef"><b>Definition:</b> <a href="reader_8h_source.html#l00246">reader.h:246</a></div></div>
+<div class="ttc" id="struct_json_1_1_reader_1_1_structured_error_html_a160dae4eb3464a2209b743c755baf65f"><div class="ttname"><a href="struct_json_1_1_reader_1_1_structured_error.html#a160dae4eb3464a2209b743c755baf65f">Json::Reader::StructuredError::offset_start</a></div><div class="ttdeci">size_t offset_start</div><div class="ttdef"><b>Definition:</b> <a href="reader_8h_source.html#l00044">reader.h:44</a></div></div>
 <div class="ttc" id="class_json_1_1_value_html"><div class="ttname"><a href="class_json_1_1_value.html">Json::Value</a></div><div class="ttdoc">Represents a JSON value. </div><div class="ttdef"><b>Definition:</b> <a href="value_8h_source.html#l00116">value.h:116</a></div></div>
-<div class="ttc" id="class_json_1_1_reader_html"><div class="ttname"><a href="class_json_1_1_reader.html">Json::Reader</a></div><div class="ttdoc">Unserialize a JSON document into a Value. </div><div class="ttdef"><b>Definition:</b> <a href="reader_8h_source.html#l00031">reader.h:31</a></div></div>
+<div class="ttc" id="class_json_1_1_char_reader_builder_html_a5d97cc9e5864769def1c4e3b68e9d46f"><div class="ttname"><a href="class_json_1_1_char_reader_builder.html#a5d97cc9e5864769def1c4e3b68e9d46f">Json::CharReaderBuilder::~CharReaderBuilder</a></div><div class="ttdeci">virtual ~CharReaderBuilder()</div><div class="ttdef"><b>Definition:</b> <a href="json__reader_8cpp_source.html#l00918">json_reader.cpp:918</a></div></div>
+<div class="ttc" id="class_json_1_1_reader_html"><div class="ttname"><a href="class_json_1_1_reader.html">Json::Reader</a></div><div class="ttdoc">Unserialize a JSON document into a Value. </div><div class="ttdef"><b>Definition:</b> <a href="reader_8h_source.html#l00032">reader.h:32</a></div></div>
 <div class="ttc" id="value_8h_html"><div class="ttname"><a href="value_8h.html">value.h</a></div></div>
+<div class="ttc" id="class_json_1_1_char_reader_builder_html"><div class="ttname"><a href="class_json_1_1_char_reader_builder.html">Json::CharReaderBuilder</a></div><div class="ttdoc">Build a CharReader implementation. </div><div class="ttdef"><b>Definition:</b> <a href="reader_8h_source.html#l00291">reader.h:291</a></div></div>
+<div class="ttc" id="class_json_1_1_char_reader_1_1_factory_html"><div class="ttname"><a href="class_json_1_1_char_reader_1_1_factory.html">Json::CharReader::Factory</a></div><div class="ttdef"><b>Definition:</b> <a href="reader_8h_source.html#l00270">reader.h:270</a></div></div>
 <div class="ttc" id="features_8h_html"><div class="ttname"><a href="features_8h.html">features.h</a></div></div>
 <div class="ttc" id="class_json_1_1_features_html"><div class="ttname"><a href="class_json_1_1_features.html">Json::Features</a></div><div class="ttdoc">Configuration passed to reader and writer. </div><div class="ttdef"><b>Definition:</b> <a href="features_8h_source.html#l00019">features.h:19</a></div></div>
+<div class="ttc" id="class_json_1_1_char_reader_builder_html_aaf2bb842d775c1cc20c33367831f7416"><div class="ttname"><a href="class_json_1_1_char_reader_builder.html#aaf2bb842d775c1cc20c33367831f7416">Json::CharReaderBuilder::collectComments_</a></div><div class="ttdeci">bool collectComments_</div><div class="ttdef"><b>Definition:</b> <a href="reader_8h_source.html#l00293">reader.h:293</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <hr>
 </body> 

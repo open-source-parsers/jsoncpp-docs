@@ -74,16 +74,8 @@ Features</h1>
 <p>Notes: Comments used to be supported in JSON but were removed for portability (C like comments are not supported in Python). Since comments are useful in configuration/input file, this feature was preserved.</p>
 <h1><a class="anchor" id="_example"></a>
 Code example</h1>
-<div class="fragment"><div class="line"><a class="code" href="class_json_1_1_value.html">Json::Value</a> root;   <span class="comment">// will contain the root value after parsing.</span></div>
-<div class="line"><a class="code" href="class_json_1_1_reader.html">Json::Reader</a> reader;</div>
-<div class="line"><span class="keywordtype">bool</span> parsingSuccessful = reader.<a class="code" href="class_json_1_1_reader.html#af1da6c976ad1e96c742804c3853eef94">parse</a>( config_doc, root );</div>
-<div class="line"><span class="keywordflow">if</span> ( !parsingSuccessful )</div>
-<div class="line">{</div>
-<div class="line">    <span class="comment">// report to the user the failure and their locations in the document.</span></div>
-<div class="line">    std::cout  &lt;&lt; <span class="stringliteral">&quot;Failed to parse configuration\n&quot;</span></div>
-<div class="line">               &lt;&lt; reader.<a class="code" href="class_json_1_1_reader.html#a95ab50aa789132e9dee0fc1475c85acf">getFormattedErrorMessages</a>();</div>
-<div class="line">    <span class="keywordflow">return</span>;</div>
-<div class="line">}</div>
+<div class="fragment"><div class="line"><a class="code" href="class_json_1_1_value.html">Json::Value</a> root;   <span class="comment">// &#39;root&#39; will contain the root value after parsing.</span></div>
+<div class="line">std::cin &gt;&gt; root;   <span class="comment">// Or see CharReaderBuilder.</span></div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Get the value of the member of root named &#39;encoding&#39;, return &#39;UTF-8&#39; if there is no</span></div>
 <div class="line"><span class="comment">// such member.</span></div>
@@ -104,7 +96,7 @@ Code example</h1>
 <div class="line">root[<span class="stringliteral">&quot;indent&quot;</span>][<span class="stringliteral">&quot;use_space&quot;</span>] = getCurrentIndentUseSpace();</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// (NEW IN 1.4.0)</span></div>
-<div class="line"><span class="comment">// To write into a steam with minimal memory overhead,</span></div>
+<div class="line"><span class="comment">// To write into a stream with minimal memory overhead,</span></div>
 <div class="line"><span class="comment">// create a Builder for a StreamWriter.</span></div>
 <div class="line"><a class="code" href="class_json_1_1_stream_writer_builder.html">Json::StreamWriterBuilder</a> builder;</div>
 <div class="line">builder.<a class="code" href="class_json_1_1_stream_writer_builder.html#a6f5c378955e6b949d9d2888b2ab4d71a">indentation_</a> = <span class="stringliteral">&quot;   &quot;</span>;  <span class="comment">// or whatever you like</span></div>
@@ -157,6 +149,9 @@ License</h1>
 <p>See file <a href="https://github.com/open-source-parsers/jsoncpp/blob/master/LICENSE"><code>LICENSE</code></a> in the top-directory of the project.</p>
 <p>Basically JsonCpp is licensed under MIT license, or public domain if desired and recognized in your jurisdiction.</p>
 <dl class="section author"><dt>Author</dt><dd>Baptiste Lepilleur <a href="#" onclick="location.href='mai'+'lto:'+'ble'+'p@'+'use'+'rs'+'.so'+'ur'+'cef'+'or'+'ge.'+'ne'+'t'; return false;">blep@<span style="display: none;">.nosp@m.</span>user<span style="display: none;">.nosp@m.</span>s.sou<span style="display: none;">.nosp@m.</span>rcef<span style="display: none;">.nosp@m.</span>orge.<span style="display: none;">.nosp@m.</span>net</a> (originator) </dd></dl>
+<dl class="section version"><dt>Version</dt><dd><div class="fragment"><div class="line">1.4.0</div>
+</div><!-- fragment --> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="version_8h.html">version.h</a> </dd></dl>
 </div></div><!-- contents -->
 <hr>
 </body> 

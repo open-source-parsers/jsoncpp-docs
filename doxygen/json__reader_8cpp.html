@@ -45,6 +45,7 @@ JsonCpp - JSON data format manipulation library
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">json_reader.cpp File Reference</div>  </div>
@@ -59,6 +60,8 @@ JsonCpp - JSON data format manipulation library
 <code>#include &lt;cassert&gt;</code><br />
 <code>#include &lt;cstring&gt;</code><br />
 <code>#include &lt;istream&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
 </div>
 <p><a href="json__reader_8cpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -73,12 +76,20 @@ Macros</h2></td></tr>
 <tr class="memitem:aa367b75c5aed883fef5befbdf04835a4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__reader_8cpp.html#aa367b75c5aed883fef5befbdf04835a4">snprintf</a>&#160;&#160;&#160;_snprintf</td></tr>
 <tr class="separator:aa367b75c5aed883fef5befbdf04835a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a4724efb8d41614b47036cb8b54233837"><td class="memItemLeft" align="right" valign="top">typedef std::auto_ptr&lt; CharReader &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_json.html#a4724efb8d41614b47036cb8b54233837">Json::CharReaderPtr</a></td></tr>
+<tr class="separator:a4724efb8d41614b47036cb8b54233837"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a4d6ab0f651348832e5cc49b577a854d2"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_json.html#a4d6ab0f651348832e5cc49b577a854d2">Json::containsNewLine</a> (Reader::Location begin, Reader::Location end)</td></tr>
 <tr class="separator:a4d6ab0f651348832e5cc49b577a854d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e6b8616041876128cbef54b8c75da62"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_json.html#a2e6b8616041876128cbef54b8c75da62">Json::normalizeEOL</a> (Reader::Location begin, Reader::Location end)</td></tr>
 <tr class="separator:a2e6b8616041876128cbef54b8c75da62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfebeaf759a841173ddce34c4da22486"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_json.html#acfebeaf759a841173ddce34c4da22486">Json::parseFromStream</a> (CharReader::Factory const &amp;, std::istream &amp;, Value *root, std::string *errs)</td></tr>
+<tr class="memdesc:acfebeaf759a841173ddce34c4da22486"><td class="mdescLeft">&#160;</td><td class="mdescRight">Consume entire stream and use its begin/end.  <a href="#acfebeaf759a841173ddce34c4da22486">More...</a><br /></td></tr>
+<tr class="separator:acfebeaf759a841173ddce34c4da22486"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d245ef719cc0853e8e78eb5f99c16e5"><td class="memItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_json.html#a4d245ef719cc0853e8e78eb5f99c16e5">Json::operator&gt;&gt;</a> (std::istream &amp;, Value &amp;)</td></tr>
 <tr class="memdesc:a4d245ef719cc0853e8e78eb5f99c16e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read from 'sin' into 'root'.  <a href="#a4d245ef719cc0853e8e78eb5f99c16e5">More...</a><br /></td></tr>
 <tr class="separator:a4d245ef719cc0853e8e78eb5f99c16e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -94,7 +105,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="json__reader_8cpp_source.html#l00019">19</a> of file <a class="el" href="json__reader_8cpp_source.html">json_reader.cpp</a>.</p>
+<p>Definition at line <a class="el" href="json__reader_8cpp_source.html#l00021">21</a> of file <a class="el" href="json__reader_8cpp_source.html">json_reader.cpp</a>.</p>
 
 </div>
 </div>
