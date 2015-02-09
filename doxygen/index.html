@@ -75,7 +75,7 @@ Features</h1>
 <h1><a class="anchor" id="_example"></a>
 Code example</h1>
 <div class="fragment"><div class="line"><a class="code" href="class_json_1_1_value.html">Json::Value</a> root;   <span class="comment">// &#39;root&#39; will contain the root value after parsing.</span></div>
-<div class="line">std::cin &gt;&gt; root;   <span class="comment">// Or see Json::CharReaderBuilder.</span></div>
+<div class="line">std::cin &gt;&gt; root;</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Get the value of the member of root named &#39;encoding&#39;, return &#39;UTF-8&#39; if there is no</span></div>
 <div class="line"><span class="comment">// such member.</span></div>
@@ -96,14 +96,15 @@ Code example</h1>
 <div class="line">root[<span class="stringliteral">&quot;indent&quot;</span>][<span class="stringliteral">&quot;use_space&quot;</span>] = getCurrentIndentUseSpace();</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// If you like the defaults, you can insert directly into a stream.</span></div>
-<div class="line">std::cout &lt;&lt; root;  <span class="comment">// Or see Json::StreamWriterBuilder</span></div>
+<div class="line">std::cout &lt;&lt; root;</div>
+<div class="line"><span class="comment">// Of course, you can write to `std::ostringstream` if you prefer.</span></div>
 <div class="line"></div>
 <div class="line"><span class="comment">// If desired, remember to add a linefeed and flush.</span></div>
 <div class="line">std::cout &lt;&lt; std::endl;</div>
 </div><!-- fragment --><h1><a class="anchor" id="_advanced"></a>
 Advanced usage</h1>
-<div class="fragment"><div class="line"><span class="comment">// Of course, you can write to `std::ostringstream` if you prefer. Or</span></div>
-<div class="line"><span class="comment">// use `writeString()` for convenience, with a specialized builder.</span></div>
+<p>We are finalizing the new <em>Builder</em> API, which will be in versions <code>1.4.0</code> and <code>0.8.0</code> when released. Until then, you may continue to use the old API, include <code>Writer</code>, <code>Reader</code>, and <code>Feature</code>. </p><div class="fragment"><div class="line"><span class="comment">// EXPERIMENTAL</span></div>
+<div class="line"><span class="comment">// Or use `writeString()` for convenience, with a specialized builder.</span></div>
 <div class="line"><a class="code" href="class_json_1_1_stream_writer_builder.html">Json::StreamWriterBuilder</a> wbuilder;</div>
 <div class="line">builder.<a class="code" href="class_json_1_1_stream_writer_builder.html#a6f5c378955e6b949d9d2888b2ab4d71a">indentation_</a> = <span class="stringliteral">&quot;\t&quot;</span>;</div>
 <div class="line">std::string document = <a class="code" href="namespace_json.html#aa79afe3cde18398cf80add6c9567387c">Json::writeString</a>(root, wbuilder);</div>
@@ -111,6 +112,7 @@ Advanced usage</h1>
 <div class="line"><span class="comment">// You can also read into a particular sub-value.</span></div>
 <div class="line">std::cin &gt;&gt; root[<span class="stringliteral">&quot;subtree&quot;</span>];</div>
 <div class="line"></div>
+<div class="line"><span class="comment">// EXPERIMENTAL</span></div>
 <div class="line"><span class="comment">// Here we use a specialized Builder, discard comments, and</span></div>
 <div class="line"><span class="comment">// record errors.</span></div>
 <div class="line"><a class="code" href="class_json_1_1_char_reader_builder.html">Json::CharReaderBuilder</a> rbuilder;</div>
