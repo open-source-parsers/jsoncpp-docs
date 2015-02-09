@@ -72,20 +72,20 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:aaf2bb842d775c1cc20c33367831f7416"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_char_reader_builder.html#aaf2bb842d775c1cc20c33367831f7416">collectComments_</a></td></tr>
+<tr class="memdesc:aaf2bb842d775c1cc20c33367831f7416"><td class="mdescLeft">&#160;</td><td class="mdescRight">default: true  <a href="#aaf2bb842d775c1cc20c33367831f7416">More...</a><br /></td></tr>
 <tr class="separator:aaf2bb842d775c1cc20c33367831f7416"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0db7ea98b3fb395e543c5bc6044d76e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_json_1_1_features.html">Features</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_char_reader_builder.html#af0db7ea98b3fb395e543c5bc6044d76e">features_</a></td></tr>
+<tr class="memdesc:af0db7ea98b3fb395e543c5bc6044d76e"><td class="mdescLeft">&#160;</td><td class="mdescRight">default: all()  <a href="#af0db7ea98b3fb395e543c5bc6044d76e">More...</a><br /></td></tr>
 <tr class="separator:af0db7ea98b3fb395e543c5bc6044d76e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Build a <a class="el" href="class_json_1_1_char_reader.html" title="Interface for reading JSON from a char array. ">CharReader</a> implementation. </p>
 <p>Usage: </p><div class="fragment"><div class="line"><span class="keyword">using namespace </span>Json;</div>
 <div class="line"><a class="code" href="class_json_1_1_char_reader_builder.html">CharReaderBuilder</a> builder;</div>
-<div class="line">builder.<a class="code" href="class_json_1_1_char_reader_builder.html#aaf2bb842d775c1cc20c33367831f7416">collectComments_</a> = <span class="keyword">true</span>;</div>
-<div class="line">std::shared_ptr&lt;CharReader&gt; reader(</div>
-<div class="line">  builder.newCharReader());</div>
+<div class="line">builder.<a class="code" href="class_json_1_1_char_reader_builder.html#aaf2bb842d775c1cc20c33367831f7416">collectComments_</a> = <span class="keyword">false</span>;</div>
 <div class="line"><a class="code" href="class_json_1_1_value.html">Value</a> value;</div>
 <div class="line">std::string errs;</div>
-<div class="line"><span class="keywordtype">bool</span> ok = <a class="code" href="namespace_json.html#acfebeaf759a841173ddce34c4da22486">parseFromStream</a>(std::cin, &amp;value, &amp;errs);</div>
+<div class="line"><span class="keywordtype">bool</span> ok = <a class="code" href="namespace_json.html#acfebeaf759a841173ddce34c4da22486">parseFromStream</a>(builder, std::cin, &amp;value, &amp;errs);</div>
 </div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a6e197b69a2ede3d87b03b9c5c78ba46a"></a>
 <div class="memitem">
@@ -164,6 +164,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>default: true </p>
+<p>It is possible to "allow" comments but still not "collect" them. </p>
+
 </div>
 </div>
 <a class="anchor" id="af0db7ea98b3fb395e543c5bc6044d76e"></a>
@@ -175,6 +178,9 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>default: all() </p>
+<p>For historical reasons, <a class="el" href="class_json_1_1_features.html" title="Configuration passed to reader and writer. ">Features</a> is a separate structure. </p>
 
 </div>
 </div>
