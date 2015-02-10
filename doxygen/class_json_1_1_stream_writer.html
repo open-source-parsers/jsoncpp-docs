@@ -62,54 +62,47 @@ JsonCpp - JSON data format manipulation library
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_json_1_1_stream_writer_1_1_comment_style.html">CommentStyle</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scoped enums are not available until C++11.  <a href="struct_json_1_1_stream_writer_1_1_comment_style.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_stream_writer_1_1_factory.html">Factory</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A simple abstract factory.  <a href="class_json_1_1_stream_writer_1_1_factory.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7c0444db3fc4226c86f3dc6f8a432a1a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_stream_writer.html#a7c0444db3fc4226c86f3dc6f8a432a1a">StreamWriter</a> (std::ostream *sout)</td></tr>
-<tr class="memdesc:a7c0444db3fc4226c86f3dc6f8a432a1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keep a reference, but do not take ownership of <code>sout</code>.  <a href="#a7c0444db3fc4226c86f3dc6f8a432a1a">More...</a><br /></td></tr>
-<tr class="separator:a7c0444db3fc4226c86f3dc6f8a432a1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66e6f5113618ce6b04cac9b3c85a3707"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_stream_writer.html#a66e6f5113618ce6b04cac9b3c85a3707">StreamWriter</a> ()</td></tr>
+<tr class="separator:a66e6f5113618ce6b04cac9b3c85a3707"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03f8fb6a873b6b50f05bc4556e043c3a"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_stream_writer.html#a03f8fb6a873b6b50f05bc4556e043c3a">~StreamWriter</a> ()</td></tr>
 <tr class="separator:a03f8fb6a873b6b50f05bc4556e043c3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf70039dcbd4096a3d49e5942e590d15"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_stream_writer.html#acf70039dcbd4096a3d49e5942e590d15">write</a> (<a class="el" href="class_json_1_1_value.html">Value</a> const &amp;root)=0</td></tr>
-<tr class="memdesc:acf70039dcbd4096a3d49e5942e590d15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write <a class="el" href="class_json_1_1_value.html" title="Represents a JSON value. ">Value</a> into document as configured in sub-class.  <a href="#acf70039dcbd4096a3d49e5942e590d15">More...</a><br /></td></tr>
-<tr class="separator:acf70039dcbd4096a3d49e5942e590d15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a237368cf13b41decc015640d25f176ab"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_stream_writer.html#a237368cf13b41decc015640d25f176ab">write</a> (<a class="el" href="class_json_1_1_value.html">Value</a> const &amp;root, std::ostream *sout)=0</td></tr>
+<tr class="memdesc:a237368cf13b41decc015640d25f176ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write <a class="el" href="class_json_1_1_value.html" title="Represents a JSON value. ">Value</a> into document as configured in sub-class.  <a href="#a237368cf13b41decc015640d25f176ab">More...</a><br /></td></tr>
+<tr class="separator:a237368cf13b41decc015640d25f176ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a887e3fe5c158f1d9fd3ccd59baf99d80"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_stream_writer.html#a887e3fe5c158f1d9fd3ccd59baf99d80">sout_</a></td></tr>
-<tr class="separator:a887e3fe5c158f1d9fd3ccd59baf99d80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac087569ccd2b5a22348cae92ec2a8996"><td class="memItemLeft" align="right" valign="top">std::ostream *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_stream_writer.html#ac087569ccd2b5a22348cae92ec2a8996">sout_</a></td></tr>
+<tr class="separator:ac087569ccd2b5a22348cae92ec2a8996"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Usage: </p>
 <div class="fragment"><div class="line"><span class="keyword">using namespace </span>Json;</div>
 <div class="line"><span class="keywordtype">void</span> writeToStdout(<a class="code" href="class_json_1_1_stream_writer_1_1_factory.html">StreamWriter::Factory</a> <span class="keyword">const</span>&amp; factory, <a class="code" href="class_json_1_1_value.html">Value</a> <span class="keyword">const</span>&amp; value) {</div>
 <div class="line">  std::unique_ptr&lt;StreamWriter&gt; <span class="keyword">const</span> writer(</div>
-<div class="line">    factory.<a class="code" href="class_json_1_1_stream_writer_1_1_factory.html#aa3d09c10a38e1a78ea38ee1f977b454b">newStreamWriter</a>(&amp;std::cout));</div>
-<div class="line">  writer-&gt;write(value);</div>
+<div class="line">    factory.<a class="code" href="class_json_1_1_stream_writer_1_1_factory.html#a9d30ec53e8288cd53befccf1009c5f31">newStreamWriter</a>());</div>
+<div class="line">  writer-&gt;write(value, &amp;std::cout);</div>
 <div class="line">  std::cout &lt;&lt; std::endl;  <span class="comment">// add lf and flush</span></div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a7c0444db3fc4226c86f3dc6f8a432a1a"></a>
+<a class="anchor" id="a66e6f5113618ce6b04cac9b3c85a3707"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">Json::StreamWriter::StreamWriter </td>
           <td>(</td>
-          <td class="paramtype">std::ostream *&#160;</td>
-          <td class="paramname"><em>sout</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Keep a reference, but do not take ownership of <code>sout</code>. </p>
 
 </div>
 </div>
@@ -137,7 +130,7 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="acf70039dcbd4096a3d49e5942e590d15"></a>
+<a class="anchor" id="a237368cf13b41decc015640d25f176ab"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -148,8 +141,18 @@ Protected Attributes</h2></td></tr>
           <td class="memname">virtual int Json::StreamWriter::write </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_json_1_1_value.html">Value</a> const &amp;&#160;</td>
-          <td class="paramname"><em>root</em></td><td>)</td>
+          <td class="paramname"><em>root</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">std::ostream *&#160;</td>
+          <td class="paramname"><em>sout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -160,6 +163,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Write <a class="el" href="class_json_1_1_value.html" title="Represents a JSON value. ">Value</a> into document as configured in sub-class. </p>
+<p>Do not take ownership of sout, but maintain a reference during function. </p><dl class="section pre"><dt>Precondition</dt><dd>sout != NULL </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>zero on success </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
@@ -171,7 +175,7 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a887e3fe5c158f1d9fd3ccd59baf99d80"></a>
+<a class="anchor" id="ac087569ccd2b5a22348cae92ec2a8996"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -179,7 +183,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::ostream&amp; Json::StreamWriter::sout_</td>
+          <td class="memname">std::ostream* Json::StreamWriter::sout_</td>
         </tr>
       </table>
   </td>

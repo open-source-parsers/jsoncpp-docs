@@ -182,9 +182,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a4d245ef719cc0853e8e78eb5f99c16e5"><td class="memItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_json.html#a4d245ef719cc0853e8e78eb5f99c16e5">operator&gt;&gt;</a> (std::istream &amp;, <a class="el" href="class_json_1_1_value.html">Value</a> &amp;)</td></tr>
 <tr class="memdesc:a4d245ef719cc0853e8e78eb5f99c16e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read from 'sin' into 'root'.  <a href="#a4d245ef719cc0853e8e78eb5f99c16e5">More...</a><br /></td></tr>
 <tr class="separator:a4d245ef719cc0853e8e78eb5f99c16e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa79afe3cde18398cf80add6c9567387c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_json.html#aa79afe3cde18398cf80add6c9567387c">writeString</a> (<a class="el" href="class_json_1_1_value.html">Value</a> const &amp;root, <a class="el" href="class_json_1_1_stream_writer_1_1_factory.html">StreamWriter::Factory</a> const &amp;factory)</td></tr>
-<tr class="memdesc:aa79afe3cde18398cf80add6c9567387c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write into stringstream, then return string, for convenience.  <a href="#aa79afe3cde18398cf80add6c9567387c">More...</a><br /></td></tr>
-<tr class="separator:aa79afe3cde18398cf80add6c9567387c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd767fe4c7e962d0ff3d1a6d1622619f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_json.html#afd767fe4c7e962d0ff3d1a6d1622619f">writeString</a> (<a class="el" href="class_json_1_1_stream_writer_1_1_factory.html">StreamWriter::Factory</a> const &amp;factory, <a class="el" href="class_json_1_1_value.html">Value</a> const &amp;root)</td></tr>
+<tr class="memdesc:afd767fe4c7e962d0ff3d1a6d1622619f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write into stringstream, then return string, for convenience.  <a href="#afd767fe4c7e962d0ff3d1a6d1622619f">More...</a><br /></td></tr>
+<tr class="separator:afd767fe4c7e962d0ff3d1a6d1622619f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d3eba6789f9a9c1ab563ff8b4a5090f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_json.html#a5d3eba6789f9a9c1ab563ff8b4a5090f">valueToString</a> (<a class="el" href="namespace_json.html#a08122e8005b706d982e48cca1e2119c7">Int</a> value)</td></tr>
 <tr class="separator:a5d3eba6789f9a9c1ab563ff8b4a5090f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d43b0ff222bd3975bcf1babca0b978f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_json.html#a4d43b0ff222bd3975bcf1babca0b978f">valueToString</a> (<a class="el" href="namespace_json.html#a800fb90eb6ee8d5d62b600c06f87f7d4">UInt</a> value)</td></tr>
@@ -210,6 +210,8 @@ Functions</h2></td></tr>
 <tr class="separator:a4d6ab0f651348832e5cc49b577a854d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e6b8616041876128cbef54b8c75da62"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_json.html#a2e6b8616041876128cbef54b8c75da62">normalizeEOL</a> (<a class="el" href="class_json_1_1_reader.html#a46795b5b272bf79a7730e406cb96375a">Reader::Location</a> begin, <a class="el" href="class_json_1_1_reader.html#a46795b5b272bf79a7730e406cb96375a">Reader::Location</a> end)</td></tr>
 <tr class="separator:a2e6b8616041876128cbef54b8c75da62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fedd83f49c9a9109d503b2b1d4824aa"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_json.html#a8fedd83f49c9a9109d503b2b1d4824aa">getValidReaderKeys</a> (std::set&lt; std::string &gt; *valid_keys)</td></tr>
+<tr class="separator:a8fedd83f49c9a9109d503b2b1d4824aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf0456e397a18cd7218a7b51dfc13c73"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_json.html#adf0456e397a18cd7218a7b51dfc13c73">codePointToUTF8</a> (unsigned int cp)</td></tr>
 <tr class="memdesc:adf0456e397a18cd7218a7b51dfc13c73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a unicode code-point to UTF-8.  <a href="#adf0456e397a18cd7218a7b51dfc13c73">More...</a><br /></td></tr>
 <tr class="separator:adf0456e397a18cd7218a7b51dfc13c73"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -235,6 +237,8 @@ Functions</h2></td></tr>
 <tr class="separator:a1a04cc9d31e64b5912dade003c9b99b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa11b210ff98a4f4dd4e2df19260f8c3a"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_json.html#aa11b210ff98a4f4dd4e2df19260f8c3a">containsControlCharacter</a> (const char *str)</td></tr>
 <tr class="separator:aa11b210ff98a4f4dd4e2df19260f8c3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45c3c8847f03b09cd61035e615d1d820"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_json.html#a45c3c8847f03b09cd61035e615d1d820">getValidWriterKeys</a> (std::set&lt; std::string &gt; *valid_keys)</td></tr>
+<tr class="separator:a45c3c8847f03b09cd61035e615d1d820"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -648,6 +652,54 @@ Json::DummyMapAllocatorInitializer&#160;</td><td class="memItemRight" valign="bo
 <p>Change ',' to '. </p>
 <p>' everywhere in buffer.</p>
 <p>We had a sophisticated way, but it did not work in WinCE. </p><dl class="section see"><dt>See also</dt><dd><a href="https://github.com/open-source-parsers/jsoncpp/pull/9">https://github.com/open-source-parsers/jsoncpp/pull/9</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8fedd83f49c9a9109d503b2b1d4824aa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Json::getValidReaderKeys </td>
+          <td>(</td>
+          <td class="paramtype">std::set&lt; std::string &gt; *&#160;</td>
+          <td class="paramname"><em>valid_keys</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a45c3c8847f03b09cd61035e615d1d820"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Json::getValidWriterKeys </td>
+          <td>(</td>
+          <td class="paramtype">std::set&lt; std::string &gt; *&#160;</td>
+          <td class="paramname"><em>valid_keys</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -1097,21 +1149,21 @@ template&lt;typename T , typename U &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="aa79afe3cde18398cf80add6c9567387c"></a>
+<a class="anchor" id="afd767fe4c7e962d0ff3d1a6d1622619f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">std::string Json::writeString </td>
           <td>(</td>
-          <td class="paramtype">Value const &amp;&#160;</td>
-          <td class="paramname"><em>root</em>, </td>
+          <td class="paramtype">StreamWriter::Factory const &amp;&#160;</td>
+          <td class="paramname"><em>factory</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">StreamWriter::Factory const &amp;&#160;</td>
-          <td class="paramname"><em>factory</em>&#160;</td>
+          <td class="paramtype">Value const &amp;&#160;</td>
+          <td class="paramname"><em>root</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1122,6 +1174,7 @@ template&lt;typename T , typename U &gt; </div>
 </div><div class="memdoc">
 
 <p>Write into stringstream, then return string, for convenience. </p>
+<p>A <a class="el" href="class_json_1_1_stream_writer.html" title="Usage: ">StreamWriter</a> will be created from the factory, used, and then deleted. </p>
 
 </div>
 </div>

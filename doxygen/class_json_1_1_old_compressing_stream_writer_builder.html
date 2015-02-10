@@ -63,9 +63,9 @@ JsonCpp - JSON data format manipulation library
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a89b498ea63300330e819087768fb9257"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_old_compressing_stream_writer_builder.html#a89b498ea63300330e819087768fb9257">OldCompressingStreamWriterBuilder</a> ()</td></tr>
 <tr class="separator:a89b498ea63300330e819087768fb9257"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b6456aec4aec55f368174303ec87e67"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_json_1_1_stream_writer.html">StreamWriter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_old_compressing_stream_writer_builder.html#a4b6456aec4aec55f368174303ec87e67">newStreamWriter</a> (std::ostream *) const </td></tr>
-<tr class="memdesc:a4b6456aec4aec55f368174303ec87e67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do not take ownership of sout, but maintain a reference.  <a href="#a4b6456aec4aec55f368174303ec87e67">More...</a><br /></td></tr>
-<tr class="separator:a4b6456aec4aec55f368174303ec87e67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4132731dcf3b0ed6be0c121d9436b9df"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_json_1_1_stream_writer.html">StreamWriter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_old_compressing_stream_writer_builder.html#a4132731dcf3b0ed6be0c121d9436b9df">newStreamWriter</a> () const </td></tr>
+<tr class="memdesc:a4132731dcf3b0ed6be0c121d9436b9df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate a <a class="el" href="class_json_1_1_char_reader.html" title="Interface for reading JSON from a char array. ">CharReader</a> via operator new().  <a href="#a4132731dcf3b0ed6be0c121d9436b9df">More...</a><br /></td></tr>
+<tr class="separator:a4132731dcf3b0ed6be0c121d9436b9df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_json_1_1_stream_writer_1_1_factory"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_json_1_1_stream_writer_1_1_factory')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_json_1_1_stream_writer_1_1_factory.html">Json::StreamWriter::Factory</a></td></tr>
 <tr class="memitem:ad334ad5e81e3b9b1768620a446366ff1 inherit pub_methods_class_json_1_1_stream_writer_1_1_factory"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_stream_writer_1_1_factory.html#ad334ad5e81e3b9b1768620a446366ff1">~Factory</a> ()</td></tr>
 <tr class="separator:ad334ad5e81e3b9b1768620a446366ff1 inherit pub_methods_class_json_1_1_stream_writer_1_1_factory"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -87,10 +87,11 @@ Public Attributes</h2></td></tr>
 <div class="textblock"><p>Build a <a class="el" href="class_json_1_1_stream_writer.html" title="Usage: ">StreamWriter</a> implementation. </p>
 <p>Comments are not written, and most whitespace is omitted. In addition, there are some special settings to allow compatibility with the old <a class="el" href="class_json_1_1_fast_writer.html" title="Outputs a Value in JSON format without formatting (not human friendly). ">FastWriter</a>. Usage: </p><div class="fragment"><div class="line"><a class="code" href="class_json_1_1_old_compressing_stream_writer_builder.html#a89b498ea63300330e819087768fb9257">OldCompressingStreamWriterBuilder</a> b;</div>
 <div class="line">b.dropNullPlaceHolders_ = <span class="keyword">true</span>; <span class="comment">// etc.</span></div>
-<div class="line">StreamWriter* w = b.newStreamWriter(&amp;std::cout);</div>
-<div class="line">w-&gt;write(value);</div>
+<div class="line">StreamWriter* w = b.newStreamWriter();</div>
+<div class="line">w-&gt;write(value, &amp;std::cout);</div>
 <div class="line"><span class="keyword">delete</span> w;</div>
-</div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><!-- fragment --><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000007">Deprecated:</a></b></dt><dd>Use <a class="el" href="class_json_1_1_stream_writer_builder.html" title="Build a StreamWriter implementation. ">StreamWriterBuilder</a> </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a89b498ea63300330e819087768fb9257"></a>
 <div class="memitem">
 <div class="memproto">
@@ -115,7 +116,7 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a4b6456aec4aec55f368174303ec87e67"></a>
+<a class="anchor" id="a4132731dcf3b0ed6be0c121d9436b9df"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -125,8 +126,7 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="class_json_1_1_stream_writer.html">StreamWriter</a> * Json::OldCompressingStreamWriterBuilder::newStreamWriter </td>
           <td>(</td>
-          <td class="paramtype">std::ostream *&#160;</td>
-          <td class="paramname"><em>sout</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -137,9 +137,15 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Do not take ownership of sout, but maintain a reference. </p>
+<p>Allocate a <a class="el" href="class_json_1_1_char_reader.html" title="Interface for reading JSON from a char array. ">CharReader</a> via operator new(). </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if something goes wrong (e.g. invalid settings) </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Implements <a class="el" href="class_json_1_1_stream_writer_1_1_factory.html#aa3d09c10a38e1a78ea38ee1f977b454b">Json::StreamWriter::Factory</a>.</p>
+<p>Implements <a class="el" href="class_json_1_1_stream_writer_1_1_factory.html#a9d30ec53e8288cd53befccf1009c5f31">Json::StreamWriter::Factory</a>.</p>
 
 </div>
 </div>

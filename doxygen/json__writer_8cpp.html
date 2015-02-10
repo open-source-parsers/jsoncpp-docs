@@ -57,6 +57,8 @@ JsonCpp - JSON data format manipulation library
 <code>#include &lt;memory&gt;</code><br />
 <code>#include &lt;sstream&gt;</code><br />
 <code>#include &lt;utility&gt;</code><br />
+<code>#include &lt;set&gt;</code><br />
+<code>#include &lt;stdexcept&gt;</code><br />
 <code>#include &lt;assert.h&gt;</code><br />
 <code>#include &lt;math.h&gt;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
@@ -100,9 +102,11 @@ Functions</h2></td></tr>
 <tr class="separator:a979ed531f091985e22f0051cd2a8e341"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0c8235a4a5c6599da5d3332743db8ac"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_json.html#aa0c8235a4a5c6599da5d3332743db8ac">Json::valueToQuotedString</a> (const char *value)</td></tr>
 <tr class="separator:aa0c8235a4a5c6599da5d3332743db8ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa79afe3cde18398cf80add6c9567387c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_json.html#aa79afe3cde18398cf80add6c9567387c">Json::writeString</a> (Value const &amp;root, StreamWriter::Factory const &amp;factory)</td></tr>
-<tr class="memdesc:aa79afe3cde18398cf80add6c9567387c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write into stringstream, then return string, for convenience.  <a href="#aa79afe3cde18398cf80add6c9567387c">More...</a><br /></td></tr>
-<tr class="separator:aa79afe3cde18398cf80add6c9567387c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45c3c8847f03b09cd61035e615d1d820"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_json.html#a45c3c8847f03b09cd61035e615d1d820">Json::getValidWriterKeys</a> (std::set&lt; std::string &gt; *valid_keys)</td></tr>
+<tr class="separator:a45c3c8847f03b09cd61035e615d1d820"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd767fe4c7e962d0ff3d1a6d1622619f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_json.html#afd767fe4c7e962d0ff3d1a6d1622619f">Json::writeString</a> (StreamWriter::Factory const &amp;factory, Value const &amp;root)</td></tr>
+<tr class="memdesc:afd767fe4c7e962d0ff3d1a6d1622619f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write into stringstream, then return string, for convenience.  <a href="#afd767fe4c7e962d0ff3d1a6d1622619f">More...</a><br /></td></tr>
+<tr class="separator:afd767fe4c7e962d0ff3d1a6d1622619f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87bc83d7e90fc666d28aa16727deda2f"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_json.html#a87bc83d7e90fc666d28aa16727deda2f">Json::operator&lt;&lt;</a> (std::ostream &amp;, const Value &amp;root)</td></tr>
 <tr class="memdesc:a87bc83d7e90fc666d28aa16727deda2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output using the <a class="el" href="class_json_1_1_styled_stream_writer.html" title="Writes a Value in JSON format in a human friendly way, to a stream rather than to a string...">StyledStreamWriter</a>.  <a href="#a87bc83d7e90fc666d28aa16727deda2f">More...</a><br /></td></tr>
 <tr class="separator:a87bc83d7e90fc666d28aa16727deda2f"><td class="memSeparator" colspan="2">&#160;</td></tr>

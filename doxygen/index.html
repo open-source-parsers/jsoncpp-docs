@@ -77,23 +77,26 @@ Code example</h1>
 <div class="fragment"><div class="line"><a class="code" href="class_json_1_1_value.html">Json::Value</a> root;   <span class="comment">// &#39;root&#39; will contain the root value after parsing.</span></div>
 <div class="line">std::cin &gt;&gt; root;</div>
 <div class="line"></div>
+<div class="line"><span class="comment">// You can also read into a particular sub-value.</span></div>
+<div class="line">std::cin &gt;&gt; root[<span class="stringliteral">&quot;subtree&quot;</span>];</div>
+<div class="line"></div>
 <div class="line"><span class="comment">// Get the value of the member of root named &#39;encoding&#39;, return &#39;UTF-8&#39; if there is no</span></div>
 <div class="line"><span class="comment">// such member.</span></div>
 <div class="line">std::string encoding = root.<a class="code" href="class_json_1_1_value.html#a28282c9b76fa031eba7a1843c47c16fe">get</a>(<span class="stringliteral">&quot;encoding&quot;</span>, <span class="stringliteral">&quot;UTF-8&quot;</span> ).<a class="code" href="class_json_1_1_value.html#a03ee3d5df576640c93ba683f140828bd">asString</a>();</div>
-<div class="line"><span class="comment">// Get the value of the member of root named &#39;encoding&#39;, return a &#39;null&#39; value if</span></div>
+<div class="line"><span class="comment">// Get the value of the member of root named &#39;encoding&#39;; return a &#39;null&#39; value if</span></div>
 <div class="line"><span class="comment">// there is no such member.</span></div>
 <div class="line"><span class="keyword">const</span> <a class="code" href="class_json_1_1_value.html">Json::Value</a> plugins = root[<span class="stringliteral">&quot;plug-ins&quot;</span>];</div>
 <div class="line"><span class="keywordflow">for</span> ( <span class="keywordtype">int</span> index = 0; index &lt; plugins.<a class="code" href="class_json_1_1_value.html#a4ca8ee6c48a34ca6c2f131956bab5e05">size</a>(); ++index )  <span class="comment">// Iterates over the sequence elements.</span></div>
 <div class="line">   loadPlugIn( plugins[index].asString() );</div>
 <div class="line">   </div>
-<div class="line">setIndentLength( root[<span class="stringliteral">&quot;indent&quot;</span>].<span class="keyword">get</span>(<span class="stringliteral">&quot;length&quot;</span>, 3).asInt() );</div>
-<div class="line">setIndentUseSpace( root[<span class="stringliteral">&quot;indent&quot;</span>].<span class="keyword">get</span>(<span class="stringliteral">&quot;use_space&quot;</span>, <span class="keyword">true</span>).asBool() );</div>
+<div class="line">foo::setIndentLength( root[<span class="stringliteral">&quot;indent&quot;</span>].<span class="keyword">get</span>(<span class="stringliteral">&quot;length&quot;</span>, 3).asInt() );</div>
+<div class="line">foo::setIndentUseSpace( root[<span class="stringliteral">&quot;indent&quot;</span>].<span class="keyword">get</span>(<span class="stringliteral">&quot;use_space&quot;</span>, <span class="keyword">true</span>).asBool() );</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Since Json::Value has implicit constructor for all value types, it is not</span></div>
 <div class="line"><span class="comment">// necessary to explicitly construct the Json::Value object:</span></div>
-<div class="line">root[<span class="stringliteral">&quot;encoding&quot;</span>] = getCurrentEncoding();</div>
-<div class="line">root[<span class="stringliteral">&quot;indent&quot;</span>][<span class="stringliteral">&quot;length&quot;</span>] = getCurrentIndentLength();</div>
-<div class="line">root[<span class="stringliteral">&quot;indent&quot;</span>][<span class="stringliteral">&quot;use_space&quot;</span>] = getCurrentIndentUseSpace();</div>
+<div class="line">root[<span class="stringliteral">&quot;encoding&quot;</span>] = foo::getCurrentEncoding();</div>
+<div class="line">root[<span class="stringliteral">&quot;indent&quot;</span>][<span class="stringliteral">&quot;length&quot;</span>] = foo::getCurrentIndentLength();</div>
+<div class="line">root[<span class="stringliteral">&quot;indent&quot;</span>][<span class="stringliteral">&quot;use_space&quot;</span>] = foo::getCurrentIndentUseSpace();</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// If you like the defaults, you can insert directly into a stream.</span></div>
 <div class="line">std::cout &lt;&lt; root;</div>
@@ -103,22 +106,26 @@ Code example</h1>
 <div class="line">std::cout &lt;&lt; std::endl;</div>
 </div><!-- fragment --><h1><a class="anchor" id="_advanced"></a>
 Advanced usage</h1>
-<p>We are finalizing the new <em>Builder</em> API, which will be in versions <code>1.4.0</code> and <code>0.8.0</code> when released. Until then, you may continue to use the old API, include <code>Writer</code>, <code>Reader</code>, and <code>Feature</code>. </p><div class="fragment"><div class="line"><span class="comment">// EXPERIMENTAL</span></div>
-<div class="line"><span class="comment">// Or use `writeString()` for convenience, with a specialized builder.</span></div>
+<p>Configure <em>builders</em> to create <em>readers</em> and <em>writers</em>. For configuration, we use our own <code><a class="el" href="class_json_1_1_value.html" title="Represents a JSON value. ">Json::Value</a></code> (rather than standard setters/getters) so that we can add features without losing binary-compatibility.</p>
+<div class="fragment"><div class="line"><span class="comment">// For convenience, use `writeString()` with a specialized builder.</span></div>
 <div class="line"><a class="code" href="class_json_1_1_stream_writer_builder.html">Json::StreamWriterBuilder</a> wbuilder;</div>
-<div class="line">builder.<a class="code" href="class_json_1_1_stream_writer_builder.html#a6f5c378955e6b949d9d2888b2ab4d71a">indentation_</a> = <span class="stringliteral">&quot;\t&quot;</span>;</div>
-<div class="line">std::string document = <a class="code" href="namespace_json.html#aa79afe3cde18398cf80add6c9567387c">Json::writeString</a>(root, wbuilder);</div>
+<div class="line">wbuilder.<a class="code" href="class_json_1_1_stream_writer_builder.html#a79bdf2e639a52f4e758c0b95bd1d3423">settings_</a>[<span class="stringliteral">&quot;indentation&quot;</span>] = <span class="stringliteral">&quot;\t&quot;</span>;</div>
+<div class="line">std::string document = <a class="code" href="namespace_json.html#afd767fe4c7e962d0ff3d1a6d1622619f">Json::writeString</a>(wbuilder, root);</div>
 <div class="line"></div>
-<div class="line"><span class="comment">// You can also read into a particular sub-value.</span></div>
-<div class="line">std::cin &gt;&gt; root[<span class="stringliteral">&quot;subtree&quot;</span>];</div>
-<div class="line"></div>
-<div class="line"><span class="comment">// EXPERIMENTAL</span></div>
-<div class="line"><span class="comment">// Here we use a specialized Builder, discard comments, and</span></div>
-<div class="line"><span class="comment">// record errors.</span></div>
+<div class="line"><span class="comment">// Here, using a specialized Builder, we discard comments and</span></div>
+<div class="line"><span class="comment">// record errors as we parse.</span></div>
 <div class="line"><a class="code" href="class_json_1_1_char_reader_builder.html">Json::CharReaderBuilder</a> rbuilder;</div>
-<div class="line">rbuilder.<a class="code" href="class_json_1_1_char_reader_builder.html#aaf2bb842d775c1cc20c33367831f7416">collectComments_</a> = <span class="keyword">false</span>;</div>
+<div class="line">rbuilder.<a class="code" href="class_json_1_1_char_reader_builder.html#ac69b7911ad64c171c51ebaf2ea26d958">settings_</a>[<span class="stringliteral">&quot;collectComments&quot;</span>] = <span class="keyword">false</span>;</div>
 <div class="line">std::string errs;</div>
-<div class="line"><a class="code" href="namespace_json.html#acfebeaf759a841173ddce34c4da22486">Json::parseFromStream</a>(rbuilder, std::cin, &amp;root[<span class="stringliteral">&quot;subtree&quot;</span>], &amp;errs);</div>
+<div class="line"><span class="keywordtype">bool</span> ok = <a class="code" href="namespace_json.html#acfebeaf759a841173ddce34c4da22486">Json::parseFromStream</a>(rbuilder, std::cin, &amp;root, &amp;errs);</div>
+</div><!-- fragment --><p>Yes, compile-time configuration-checking would be helpful, but <code><a class="el" href="class_json_1_1_value.html" title="Represents a JSON value. ">Json::Value</a></code> lets you write and read the builder configuration, which is better! In other words, you can configure your JSON parser using JSON.</p>
+<p>CharReaders and StreamWriters are not thread-safe, but they are re-usable. </p><div class="fragment"><div class="line"><a class="code" href="class_json_1_1_char_reader_builder.html">Json::CharReaderBuilder</a> rbuilder;</div>
+<div class="line">cfg &gt;&gt; rbuilder.<a class="code" href="class_json_1_1_char_reader_builder.html#ac69b7911ad64c171c51ebaf2ea26d958">settings_</a>;</div>
+<div class="line">std::unique_ptr&lt;Json::CharReader&gt; <span class="keyword">const</span> reader(rbuilder.<a class="code" href="class_json_1_1_char_reader_builder.html#a3e3c9f4aeb07023ef0c5f6255003078a">newCharReader</a>());</div>
+<div class="line">reader-&gt;parse(start, stop, &amp;value1, &amp;errs);</div>
+<div class="line"><span class="comment">// ...</span></div>
+<div class="line">reader-&gt;parse(start, stop, &amp;value2, &amp;errs);</div>
+<div class="line"><span class="comment">// etc.</span></div>
 </div><!-- fragment --><h1><a class="anchor" id="_pbuild"></a>
 Build instructions</h1>
 <p>The build instructions are located in the file <a href="https://github.com/open-source-parsers/jsoncpp/blob/master/README.md">README.md</a> in the top-directory of the project.</p>
@@ -148,7 +155,7 @@ License</h1>
 <p>Basically JsonCpp is licensed under MIT license, or public domain if desired and recognized in your jurisdiction.</p>
 <dl class="section author"><dt>Author</dt><dd>Baptiste Lepilleur <a href="#" onclick="location.href='mai'+'lto:'+'ble'+'p@'+'use'+'rs'+'.so'+'ur'+'cef'+'or'+'ge.'+'ne'+'t'; return false;">blep@<span style="display: none;">.nosp@m.</span>user<span style="display: none;">.nosp@m.</span>s.sou<span style="display: none;">.nosp@m.</span>rcef<span style="display: none;">.nosp@m.</span>orge.<span style="display: none;">.nosp@m.</span>net</a> (originator) </dd></dl>
 <dl class="section version"><dt>Version</dt><dd><div class="fragment"><div class="line">1.4.0</div>
-</div><!-- fragment --> </dd></dl>
+</div><!-- fragment --> We make strong guarantees about binary-compatibility, consistent with <a href="http://apr.apache.org/versioning.html">the Apache versioning scheme</a>. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="version_8h.html">version.h</a> </dd></dl>
 </div></div><!-- contents -->
 <hr>
