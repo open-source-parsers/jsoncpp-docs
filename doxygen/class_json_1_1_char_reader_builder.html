@@ -232,6 +232,7 @@ Public Attributes</h2></td></tr>
 <div class="line">  (*settings)[<span class="stringliteral">&quot;strictRoot&quot;</span>] = <span class="keyword">false</span>;</div>
 <div class="line">  (*settings)[<span class="stringliteral">&quot;allowDroppedNullPlaceholders&quot;</span>] = <span class="keyword">false</span>;</div>
 <div class="line">  (*settings)[<span class="stringliteral">&quot;allowNumericKeys&quot;</span>] = <span class="keyword">false</span>;</div>
+<div class="line">  (*settings)[<span class="stringliteral">&quot;stackLimit&quot;</span>] = 1000;</div>
 </div><!-- fragment --></dd></dl>
 <p>[CharReaderBuilderStrictMode]</p>
 <p>[CharReaderBuilderStrictMode] </p>
@@ -268,11 +269,30 @@ Public Attributes</h2></td></tr>
 
 <p>Configuration of this builder. </p>
 <p>These are case-sensitive. Available settings (case-sensitive):</p><ul>
-<li>"collectComments": false or true</li>
-<li>"allowComments"</li>
-<li>"strictRoot"</li>
-<li>"allowDroppedNullPlaceholders"</li>
-<li>"allowNumericKeys"</li>
+<li>"collectComments": false or true<ul>
+<li>true to collect comment and allow writing them back during serialization, false to discard comments. This parameter is ignored if allowComments is false.</li>
+</ul>
+</li>
+<li>"allowComments": false or true<ul>
+<li>true if comments are allowed.</li>
+</ul>
+</li>
+<li>"strictRoot": false or true<ul>
+<li>true if root must be either an array or an object value</li>
+</ul>
+</li>
+<li>"allowDroppedNullPlaceholders": false or true<ul>
+<li>true if dropped null placeholders are allowed. (See <a class="el" href="class_json_1_1_stream_writer_builder.html" title="Build a StreamWriter implementation. ">StreamWriterBuilder</a>.)</li>
+</ul>
+</li>
+<li>"allowNumericKeys": false or true<ul>
+<li>true if numeric object keys are allowed.</li>
+</ul>
+</li>
+<li>"stackLimit": integer<ul>
+<li>This is a security issue (seg-faults caused by deeply nested JSON), so the default is low.</li>
+</ul>
+</li>
 </ul>
 <p>You can examine 'settings_` yourself to see the defaults. You can also write and read them just like any JSON <a class="el" href="class_json_1_1_value.html" title="Represents a JSON value. ">Value</a>. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="class_json_1_1_char_reader_builder.html#a03ff031e06aabff989ab4addc87294ab" title="Called by ctor, but you can use this to reset settings_. ">setDefaults()</a> </dd></dl>
 

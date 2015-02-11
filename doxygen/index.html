@@ -109,13 +109,13 @@ Advanced usage</h1>
 <p>Configure <em>builders</em> to create <em>readers</em> and <em>writers</em>. For configuration, we use our own <code><a class="el" href="class_json_1_1_value.html" title="Represents a JSON value. ">Json::Value</a></code> (rather than standard setters/getters) so that we can add features without losing binary-compatibility.</p>
 <div class="fragment"><div class="line"><span class="comment">// For convenience, use `writeString()` with a specialized builder.</span></div>
 <div class="line"><a class="code" href="class_json_1_1_stream_writer_builder.html">Json::StreamWriterBuilder</a> wbuilder;</div>
-<div class="line">wbuilder.<a class="code" href="class_json_1_1_stream_writer_builder.html#a79bdf2e639a52f4e758c0b95bd1d3423">settings_</a>[<span class="stringliteral">&quot;indentation&quot;</span>] = <span class="stringliteral">&quot;\t&quot;</span>;</div>
+<div class="line">wbuilder.<a class="code" href="class_json_1_1_stream_writer_builder.html#a79bdf2e639a52f4e758c0b95bd1d3423">settings_</a>[<span class="stringliteral">&quot;indentation&quot;</span>] = <span class="stringliteral">&quot;\t&quot;</span>;  <span class="comment">// simple Json::Value</span></div>
 <div class="line">std::string document = <a class="code" href="namespace_json.html#afd767fe4c7e962d0ff3d1a6d1622619f">Json::writeString</a>(wbuilder, root);</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Here, using a specialized Builder, we discard comments and</span></div>
 <div class="line"><span class="comment">// record errors as we parse.</span></div>
 <div class="line"><a class="code" href="class_json_1_1_char_reader_builder.html">Json::CharReaderBuilder</a> rbuilder;</div>
-<div class="line">rbuilder.<a class="code" href="class_json_1_1_char_reader_builder.html#ac69b7911ad64c171c51ebaf2ea26d958">settings_</a>[<span class="stringliteral">&quot;collectComments&quot;</span>] = <span class="keyword">false</span>;</div>
+<div class="line">rbuilder.<a class="code" href="class_json_1_1_char_reader_builder.html#ac69b7911ad64c171c51ebaf2ea26d958">settings_</a>[<span class="stringliteral">&quot;collectComments&quot;</span>] = <span class="keyword">false</span>;  <span class="comment">// simple Json::Value</span></div>
 <div class="line">std::string errs;</div>
 <div class="line"><span class="keywordtype">bool</span> ok = <a class="code" href="namespace_json.html#acfebeaf759a841173ddce34c4da22486">Json::parseFromStream</a>(rbuilder, std::cin, &amp;root, &amp;errs);</div>
 </div><!-- fragment --><p>Yes, compile-time configuration-checking would be helpful, but <code><a class="el" href="class_json_1_1_value.html" title="Represents a JSON value. ">Json::Value</a></code> lets you write and read the builder configuration, which is better! In other words, you can configure your JSON parser using JSON.</p>

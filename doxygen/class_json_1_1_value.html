@@ -301,8 +301,11 @@ Public Member Functions</h2></td></tr>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a6d6e9ea6807e46d5b7ded66d3032f607"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_json_1_1_value.html">Value</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_value.html#a6d6e9ea6807e46d5b7ded66d3032f607">null</a> = reinterpret_cast&lt;const <a class="el" href="class_json_1_1_value.html">Value</a>&amp;&gt;(<a class="el" href="namespace_json.html#ab30055b4bbd82aecaca57ccecd63bbe6">kNullRef</a>)</td></tr>
 <tr class="separator:a6d6e9ea6807e46d5b7ded66d3032f607"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa4ffd4e53967170c3e8c9abf682b5cd"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_json_1_1_value.html">Value</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_value.html#aaa4ffd4e53967170c3e8c9abf682b5cd">nullRef</a> = <a class="el" href="class_json_1_1_value.html#a6d6e9ea6807e46d5b7ded66d3032f607">null</a></td></tr>
+<tr class="memdesc:aaa4ffd4e53967170c3e8c9abf682b5cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">! We regret this reference to a global instance; prefer the simpler <a class="el" href="class_json_1_1_value.html#ada6ba1369448fb0240bccc36efaa46f7" title="Create a default Value of the given type. ">Value()</a>.  <a href="#aaa4ffd4e53967170c3e8c9abf682b5cd">More...</a><br /></td></tr>
+<tr class="separator:aaa4ffd4e53967170c3e8c9abf682b5cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af91df130daa50dd43d2cd89e6ee67706"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_json_1_1_value.html#a1cbb82642ed05109b9833e49f042ece7">LargestInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_value.html#af91df130daa50dd43d2cd89e6ee67706">minLargestInt</a> = <a class="el" href="class_json_1_1_value.html#a1cbb82642ed05109b9833e49f042ece7">LargestInt</a>(~(<a class="el" href="class_json_1_1_value.html#a6682a3684d635e03fc06ba229fa24eec">LargestUInt</a>(-1) / 2))</td></tr>
-<tr class="memdesc:af91df130daa50dd43d2cd89e6ee67706"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum signed integer value that can be stored in a <a class="el" href="class_json_1_1_value.html" title="Represents a JSON value. ">Json::Value</a>.  <a href="#af91df130daa50dd43d2cd89e6ee67706">More...</a><br /></td></tr>
+<tr class="memdesc:af91df130daa50dd43d2cd89e6ee67706"><td class="mdescLeft">&#160;</td><td class="mdescRight">! just a kludge for binary-compatibility; same as null  <a href="#af91df130daa50dd43d2cd89e6ee67706">More...</a><br /></td></tr>
 <tr class="separator:af91df130daa50dd43d2cd89e6ee67706"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b4977696f13296fa8755c7953fafb2f"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_json_1_1_value.html#a1cbb82642ed05109b9833e49f042ece7">LargestInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_value.html#a8b4977696f13296fa8755c7953fafb2f">maxLargestInt</a> = <a class="el" href="class_json_1_1_value.html#a1cbb82642ed05109b9833e49f042ece7">LargestInt</a>(<a class="el" href="class_json_1_1_value.html#a6682a3684d635e03fc06ba229fa24eec">LargestUInt</a>(-1) / 2)</td></tr>
 <tr class="memdesc:a8b4977696f13296fa8755c7953fafb2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum signed integer value that can be stored in a <a class="el" href="class_json_1_1_value.html" title="Represents a JSON value. ">Json::Value</a>.  <a href="#a8b4977696f13296fa8755c7953fafb2f">More...</a><br /></td></tr>
@@ -2296,6 +2299,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>! just a kludge for binary-compatibility; same as null </p>
 <p>Minimum signed integer value that can be stored in a <a class="el" href="class_json_1_1_value.html" title="Represents a JSON value. ">Json::Value</a>. </p>
 
 </div>
@@ -2317,6 +2321,28 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aaa4ffd4e53967170c3e8c9abf682b5cd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_json_1_1_value.html">Value</a> &amp; Json::Value::nullRef = <a class="el" href="class_json_1_1_value.html#a6d6e9ea6807e46d5b7ded66d3032f607">null</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>! We regret this reference to a global instance; prefer the simpler <a class="el" href="class_json_1_1_value.html#ada6ba1369448fb0240bccc36efaa46f7" title="Create a default Value of the given type. ">Value()</a>. </p>
 
 </div>
 </div>

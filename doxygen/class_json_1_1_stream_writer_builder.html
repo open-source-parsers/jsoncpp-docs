@@ -194,6 +194,8 @@ Public Attributes</h2></td></tr>
 <dl class="section pre"><dt>Precondition</dt><dd>'settings' != NULL (but Json::null is fine) </dd></dl>
 <dl class="section remark"><dt>Remarks</dt><dd>Defaults: <div class="fragment"><div class="line">  (*settings)[<span class="stringliteral">&quot;commentStyle&quot;</span>] = <span class="stringliteral">&quot;All&quot;</span>;</div>
 <div class="line">  (*settings)[<span class="stringliteral">&quot;indentation&quot;</span>] = <span class="stringliteral">&quot;\t&quot;</span>;</div>
+<div class="line">  (*settings)[<span class="stringliteral">&quot;enableYAMLCompatibility&quot;</span>] = <span class="keyword">false</span>;</div>
+<div class="line">  (*settings)[<span class="stringliteral">&quot;dropNullPlaceholders&quot;</span>] = <span class="keyword">false</span>;</div>
 </div><!-- fragment --></dd></dl>
 <p>[StreamWriterBuilderDefaults]</p>
 <p>[StreamWriterBuilderDefaults] </p>
@@ -230,8 +232,16 @@ Public Attributes</h2></td></tr>
 
 <p>Configuration of this builder. </p>
 <p>Available settings (case-sensitive):</p><ul>
-<li>"commentStyle": "None", "Some", or "All"</li>
+<li>"commentStyle": "None" or "All"</li>
 <li>"indentation": "&lt;anything&gt;"</li>
+<li>"enableYAMLCompatibility": false or true<ul>
+<li>slightly change the whitespace around colons</li>
+</ul>
+</li>
+<li>"dropNullPlaceholders": false or true<ul>
+<li>Drop the "null" string from the writer's output for nullValues. Strictly speaking, this is not valid JSON. But when the output is being fed to a browser's Javascript, it makes for smaller output and the browser can handle the output just fine.</li>
+</ul>
+</li>
 </ul>
 <p>You can examine 'settings_` yourself to see the defaults. You can also write and read them just like any JSON <a class="el" href="class_json_1_1_value.html" title="Represents a JSON value. ">Value</a>. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="class_json_1_1_stream_writer_builder.html#a53bf106b141e28637b01ad0ecd2acbf6" title="Called by ctor, but you can use this to reset settings_. ">setDefaults()</a> </dd></dl>
 

@@ -46,7 +46,8 @@ JsonCpp - JSON data format manipulation library
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">json_reader.cpp File Reference</div>  </div>
 </div><!--header-->
@@ -95,6 +96,13 @@ Functions</h2></td></tr>
 <tr class="memitem:a4d245ef719cc0853e8e78eb5f99c16e5"><td class="memItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_json.html#a4d245ef719cc0853e8e78eb5f99c16e5">Json::operator&gt;&gt;</a> (std::istream &amp;, Value &amp;)</td></tr>
 <tr class="memdesc:a4d245ef719cc0853e8e78eb5f99c16e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read from 'sin' into 'root'.  <a href="#a4d245ef719cc0853e8e78eb5f99c16e5">More...</a><br /></td></tr>
 <tr class="separator:a4d245ef719cc0853e8e78eb5f99c16e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:aa07a622879ae3a72facddfd839f459b9"><td class="memItemLeft" align="right" valign="top">static int const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__reader_8cpp.html#aa07a622879ae3a72facddfd839f459b9">stackLimit_g</a> = 1000</td></tr>
+<tr class="separator:aa07a622879ae3a72facddfd839f459b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53b45133c80814ea63d9f61966cfb831"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__reader_8cpp.html#a53b45133c80814ea63d9f61966cfb831">stackDepth_g</a> = 0</td></tr>
+<tr class="separator:a53b45133c80814ea63d9f61966cfb831"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a class="anchor" id="aa367b75c5aed883fef5befbdf04835a4"></a>
@@ -105,6 +113,47 @@ Functions</h2></td></tr>
           <td class="memname">#define snprintf&#160;&#160;&#160;_snprintf</td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a class="anchor" id="a53b45133c80814ea63d9f61966cfb831"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int stackDepth_g = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa07a622879ae3a72facddfd839f459b9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int const stackLimit_g = 1000</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
