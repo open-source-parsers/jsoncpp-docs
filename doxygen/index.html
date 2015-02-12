@@ -80,20 +80,24 @@ Code example</h1>
 <div class="line"><span class="comment">// You can also read into a particular sub-value.</span></div>
 <div class="line">std::cin &gt;&gt; root[<span class="stringliteral">&quot;subtree&quot;</span>];</div>
 <div class="line"></div>
-<div class="line"><span class="comment">// Get the value of the member of root named &#39;encoding&#39;, return &#39;UTF-8&#39; if there is no</span></div>
-<div class="line"><span class="comment">// such member.</span></div>
+<div class="line"><span class="comment">// Get the value of the member of root named &#39;encoding&#39;,</span></div>
+<div class="line"><span class="comment">// and return &#39;UTF-8&#39; if there is no such member.</span></div>
 <div class="line">std::string encoding = root.<a class="code" href="class_json_1_1_value.html#a28282c9b76fa031eba7a1843c47c16fe">get</a>(<span class="stringliteral">&quot;encoding&quot;</span>, <span class="stringliteral">&quot;UTF-8&quot;</span> ).<a class="code" href="class_json_1_1_value.html#a03ee3d5df576640c93ba683f140828bd">asString</a>();</div>
-<div class="line"><span class="comment">// Get the value of the member of root named &#39;encoding&#39;; return a &#39;null&#39; value if</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Get the value of the member of root named &#39;plug-ins&#39;; return a &#39;null&#39; value if</span></div>
 <div class="line"><span class="comment">// there is no such member.</span></div>
 <div class="line"><span class="keyword">const</span> <a class="code" href="class_json_1_1_value.html">Json::Value</a> plugins = root[<span class="stringliteral">&quot;plug-ins&quot;</span>];</div>
-<div class="line"><span class="keywordflow">for</span> ( <span class="keywordtype">int</span> index = 0; index &lt; plugins.<a class="code" href="class_json_1_1_value.html#a4ca8ee6c48a34ca6c2f131956bab5e05">size</a>(); ++index )  <span class="comment">// Iterates over the sequence elements.</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Iterate over the sequence elements.</span></div>
+<div class="line"><span class="keywordflow">for</span> ( <span class="keywordtype">int</span> index = 0; index &lt; plugins.<a class="code" href="class_json_1_1_value.html#a4ca8ee6c48a34ca6c2f131956bab5e05">size</a>(); ++index )</div>
 <div class="line">   loadPlugIn( plugins[index].asString() );</div>
 <div class="line">   </div>
+<div class="line"><span class="comment">// Try other datatypes. Some are auto-convertible to others.</span></div>
 <div class="line">foo::setIndentLength( root[<span class="stringliteral">&quot;indent&quot;</span>].<span class="keyword">get</span>(<span class="stringliteral">&quot;length&quot;</span>, 3).asInt() );</div>
 <div class="line">foo::setIndentUseSpace( root[<span class="stringliteral">&quot;indent&quot;</span>].<span class="keyword">get</span>(<span class="stringliteral">&quot;use_space&quot;</span>, <span class="keyword">true</span>).asBool() );</div>
 <div class="line"></div>
-<div class="line"><span class="comment">// Since Json::Value has implicit constructor for all value types, it is not</span></div>
-<div class="line"><span class="comment">// necessary to explicitly construct the Json::Value object:</span></div>
+<div class="line"><span class="comment">// Since Json::Value has an implicit constructor for all value types, it is not</span></div>
+<div class="line"><span class="comment">// necessary to explicitly construct the Json::Value object.</span></div>
 <div class="line">root[<span class="stringliteral">&quot;encoding&quot;</span>] = foo::getCurrentEncoding();</div>
 <div class="line">root[<span class="stringliteral">&quot;indent&quot;</span>][<span class="stringliteral">&quot;length&quot;</span>] = foo::getCurrentIndentLength();</div>
 <div class="line">root[<span class="stringliteral">&quot;indent&quot;</span>][<span class="stringliteral">&quot;use_space&quot;</span>] = foo::getCurrentIndentUseSpace();</div>
