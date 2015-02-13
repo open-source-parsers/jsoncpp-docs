@@ -197,6 +197,7 @@ Public Attributes</h2></td></tr>
 <div class="line">  (*settings)[<span class="stringliteral">&quot;strictRoot&quot;</span>] = <span class="keyword">true</span>;</div>
 <div class="line">  (*settings)[<span class="stringliteral">&quot;allowDroppedNullPlaceholders&quot;</span>] = <span class="keyword">false</span>;</div>
 <div class="line">  (*settings)[<span class="stringliteral">&quot;allowNumericKeys&quot;</span>] = <span class="keyword">false</span>;</div>
+<div class="line">  (*settings)[<span class="stringliteral">&quot;failIfExtra&quot;</span>] = <span class="keyword">true</span>;</div>
 </div><!-- fragment --></dd></dl>
 <p>[CharReaderBuilderDefaults]</p>
 <p>[CharReaderBuilderDefaults] </p>
@@ -233,6 +234,7 @@ Public Attributes</h2></td></tr>
 <div class="line">  (*settings)[<span class="stringliteral">&quot;allowDroppedNullPlaceholders&quot;</span>] = <span class="keyword">false</span>;</div>
 <div class="line">  (*settings)[<span class="stringliteral">&quot;allowNumericKeys&quot;</span>] = <span class="keyword">false</span>;</div>
 <div class="line">  (*settings)[<span class="stringliteral">&quot;stackLimit&quot;</span>] = 1000;</div>
+<div class="line">  (*settings)[<span class="stringliteral">&quot;failIfExtra&quot;</span>] = <span class="keyword">false</span>;</div>
 </div><!-- fragment --></dd></dl>
 <p>[CharReaderBuilderStrictMode]</p>
 <p>[CharReaderBuilderStrictMode] </p>
@@ -269,28 +271,33 @@ Public Attributes</h2></td></tr>
 
 <p>Configuration of this builder. </p>
 <p>These are case-sensitive. Available settings (case-sensitive):</p><ul>
-<li>"collectComments": false or true<ul>
+<li><code>"collectComments": false or true</code><ul>
 <li>true to collect comment and allow writing them back during serialization, false to discard comments. This parameter is ignored if allowComments is false.</li>
 </ul>
 </li>
-<li>"allowComments": false or true<ul>
+<li><code>"allowComments": false or true</code><ul>
 <li>true if comments are allowed.</li>
 </ul>
 </li>
-<li>"strictRoot": false or true<ul>
+<li><code>"strictRoot": false or true</code><ul>
 <li>true if root must be either an array or an object value</li>
 </ul>
 </li>
-<li>"allowDroppedNullPlaceholders": false or true<ul>
+<li><code>"allowDroppedNullPlaceholders": false or true</code><ul>
 <li>true if dropped null placeholders are allowed. (See <a class="el" href="class_json_1_1_stream_writer_builder.html" title="Build a StreamWriter implementation. ">StreamWriterBuilder</a>.)</li>
 </ul>
 </li>
-<li>"allowNumericKeys": false or true<ul>
+<li><code>"allowNumericKeys": false or true</code><ul>
 <li>true if numeric object keys are allowed.</li>
 </ul>
 </li>
-<li>"stackLimit": integer<ul>
+<li><code>"stackLimit": integer</code><ul>
+<li>Exceeding stackLimit (recursive depth of <code>readValue()</code>) will cause an exception.</li>
 <li>This is a security issue (seg-faults caused by deeply nested JSON), so the default is low.</li>
+</ul>
+</li>
+<li><code>"failIfExtra": false or true</code><ul>
+<li>If true, <code>parse()</code> returns false when extra non-whitespace trails the JSON value in the input string.</li>
 </ul>
 </li>
 </ul>
