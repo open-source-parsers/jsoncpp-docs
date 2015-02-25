@@ -197,6 +197,7 @@ Public Attributes</h2></td></tr>
 <div class="line">  (*settings)[<span class="stringliteral">&quot;strictRoot&quot;</span>] = <span class="keyword">true</span>;</div>
 <div class="line">  (*settings)[<span class="stringliteral">&quot;allowDroppedNullPlaceholders&quot;</span>] = <span class="keyword">false</span>;</div>
 <div class="line">  (*settings)[<span class="stringliteral">&quot;allowNumericKeys&quot;</span>] = <span class="keyword">false</span>;</div>
+<div class="line">  (*settings)[<span class="stringliteral">&quot;allowSingleQuotes&quot;</span>] = <span class="keyword">false</span>;</div>
 <div class="line">  (*settings)[<span class="stringliteral">&quot;failIfExtra&quot;</span>] = <span class="keyword">true</span>;</div>
 </div><!-- fragment --></dd></dl>
 <p>[CharReaderBuilderDefaults]</p>
@@ -233,6 +234,7 @@ Public Attributes</h2></td></tr>
 <div class="line">  (*settings)[<span class="stringliteral">&quot;strictRoot&quot;</span>] = <span class="keyword">false</span>;</div>
 <div class="line">  (*settings)[<span class="stringliteral">&quot;allowDroppedNullPlaceholders&quot;</span>] = <span class="keyword">false</span>;</div>
 <div class="line">  (*settings)[<span class="stringliteral">&quot;allowNumericKeys&quot;</span>] = <span class="keyword">false</span>;</div>
+<div class="line">  (*settings)[<span class="stringliteral">&quot;allowSingleQuotes&quot;</span>] = <span class="keyword">false</span>;</div>
 <div class="line">  (*settings)[<span class="stringliteral">&quot;stackLimit&quot;</span>] = 1000;</div>
 <div class="line">  (*settings)[<span class="stringliteral">&quot;failIfExtra&quot;</span>] = <span class="keyword">false</span>;</div>
 </div><!-- fragment --></dd></dl>
@@ -289,6 +291,10 @@ Public Attributes</h2></td></tr>
 </li>
 <li><code>"allowNumericKeys": false or true</code><ul>
 <li>true if numeric object keys are allowed.</li>
+</ul>
+</li>
+<li><code>"allowSingleQuotes": false or true</code><ul>
+<li>true if '' are allowed for strings (both keys and values)</li>
 </ul>
 </li>
 <li><code>"stackLimit": integer</code><ul>
