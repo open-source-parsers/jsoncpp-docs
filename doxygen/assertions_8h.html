@@ -55,9 +55,9 @@ JsonCpp - JSON data format manipulation library
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a188941dcc789ccb6539c3d6f41405582"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="assertions_8h.html#a188941dcc789ccb6539c3d6f41405582">JSON_ASSERT</a>(condition)&#160;&#160;&#160;if (!(condition)) {throw std::runtime_error( &quot;assert json failed&quot; );}</td></tr>
+<tr class="memitem:a188941dcc789ccb6539c3d6f41405582"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="assertions_8h.html#a188941dcc789ccb6539c3d6f41405582">JSON_ASSERT</a>(condition)&#160;&#160;&#160;if (!(condition)) {throw std::logic_error( &quot;assert json failed&quot; );}</td></tr>
 <tr class="separator:a188941dcc789ccb6539c3d6f41405582"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67007439f94bc6afc465923f56147ba1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="assertions_8h.html#a67007439f94bc6afc465923f56147ba1">JSON_FAIL_MESSAGE</a>(message)&#160;&#160;&#160;do{std::ostringstream oss; oss &lt;&lt; message; throw std::runtime_error(oss.str());}while(0)</td></tr>
+<tr class="memitem:a67007439f94bc6afc465923f56147ba1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="assertions_8h.html#a67007439f94bc6afc465923f56147ba1">JSON_FAIL_MESSAGE</a>(message)&#160;&#160;&#160;do{std::ostringstream oss; oss &lt;&lt; message; throw std::logic_error(oss.str());}while(0)</td></tr>
 <tr class="separator:a67007439f94bc6afc465923f56147ba1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7facdeeca0f495765e3b204c265eadb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="assertions_8h.html#ad7facdeeca0f495765e3b204c265eadb">JSON_ASSERT_MESSAGE</a>(condition, message)</td></tr>
 <tr class="separator:ad7facdeeca0f495765e3b204c265eadb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -72,7 +72,7 @@ Macros</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">condition</td><td>)</td>
-          <td>&#160;&#160;&#160;if (!(condition)) {throw std::runtime_error( &quot;assert json failed&quot; );}</td>
+          <td>&#160;&#160;&#160;if (!(condition)) {throw std::logic_error( &quot;assert json failed&quot; );}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -118,7 +118,7 @@ Macros</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">message</td><td>)</td>
-          <td>&#160;&#160;&#160;do{std::ostringstream oss; oss &lt;&lt; message; throw std::runtime_error(oss.str());}while(0)</td>
+          <td>&#160;&#160;&#160;do{std::ostringstream oss; oss &lt;&lt; message; throw std::logic_error(oss.str());}while(0)</td>
         </tr>
       </table>
 </div><div class="memdoc">
