@@ -99,17 +99,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a32228cc84d83200cca8441451997996c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_value.html#a32228cc84d83200cca8441451997996c">Value</a> (double value)</td></tr>
 <tr class="separator:a32228cc84d83200cca8441451997996c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad87b849356816aca75995dd07302e49d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_value.html#ad87b849356816aca75995dd07302e49d">Value</a> (const char *value)</td></tr>
+<tr class="memdesc:ad87b849356816aca75995dd07302e49d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy til first 0. (NULL causes to seg-fault.)  <a href="#ad87b849356816aca75995dd07302e49d">More...</a><br /></td></tr>
 <tr class="separator:ad87b849356816aca75995dd07302e49d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13e567d467bb1e699d71e27a76b0e988"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_value.html#a13e567d467bb1e699d71e27a76b0e988">Value</a> (const char *beginValue, const char *endValue)</td></tr>
-<tr class="memdesc:a13e567d467bb1e699d71e27a76b0e988"><td class="mdescLeft">&#160;</td><td class="mdescRight">! Copy til first 0. (NULL causes to seg-fault.)  <a href="#a13e567d467bb1e699d71e27a76b0e988">More...</a><br /></td></tr>
+<tr class="memdesc:a13e567d467bb1e699d71e27a76b0e988"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy all, incl zeroes.  <a href="#a13e567d467bb1e699d71e27a76b0e988">More...</a><br /></td></tr>
 <tr class="separator:a13e567d467bb1e699d71e27a76b0e988"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a081830e95f88a37054da7e46c65b0766"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_value.html#a081830e95f88a37054da7e46c65b0766">Value</a> (const <a class="el" href="class_json_1_1_static_string.html">StaticString</a> &amp;value)</td></tr>
-<tr class="memdesc:a081830e95f88a37054da7e46c65b0766"><td class="mdescLeft">&#160;</td><td class="mdescRight">! Copy all, incl zeroes.  <a href="#a081830e95f88a37054da7e46c65b0766">More...</a><br /></td></tr>
+<tr class="memdesc:a081830e95f88a37054da7e46c65b0766"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a value from a static string.  <a href="#a081830e95f88a37054da7e46c65b0766">More...</a><br /></td></tr>
 <tr class="separator:a081830e95f88a37054da7e46c65b0766"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4501dd4edf3ce3d5145fc656f088b21"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_value.html#aa4501dd4edf3ce3d5145fc656f088b21">Value</a> (const std::string &amp;value)</td></tr>
+<tr class="memdesc:aa4501dd4edf3ce3d5145fc656f088b21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy data() til <a class="el" href="class_json_1_1_value.html#a4ca8ee6c48a34ca6c2f131956bab5e05" title="Number of values in array or object. ">size()</a>. Embedded zeroes too.  <a href="#aa4501dd4edf3ce3d5145fc656f088b21">More...</a><br /></td></tr>
 <tr class="separator:aa4501dd4edf3ce3d5145fc656f088b21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a350a31ea4a30d384994b0bc010b17495"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_value.html#a350a31ea4a30d384994b0bc010b17495">Value</a> (bool value)</td></tr>
-<tr class="memdesc:a350a31ea4a30d384994b0bc010b17495"><td class="mdescLeft">&#160;</td><td class="mdescRight">! Copy data() til <a class="el" href="class_json_1_1_value.html#a4ca8ee6c48a34ca6c2f131956bab5e05" title="Number of values in array or object. ">size()</a>. Embedded zeroes too.  <a href="#a350a31ea4a30d384994b0bc010b17495">More...</a><br /></td></tr>
 <tr class="separator:a350a31ea4a30d384994b0bc010b17495"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a436dfd3670f95fd665f680eba5cebcf0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_value.html#a436dfd3670f95fd665f680eba5cebcf0">Value</a> (const <a class="el" href="class_json_1_1_value.html">Value</a> &amp;other)</td></tr>
 <tr class="memdesc:a436dfd3670f95fd665f680eba5cebcf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deep copy.  <a href="#a436dfd3670f95fd665f680eba5cebcf0">More...</a><br /></td></tr>
@@ -142,12 +143,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a899214ed2253d3f4f061b922b0e622b5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_value.html#a899214ed2253d3f4f061b922b0e622b5">compare</a> (const <a class="el" href="class_json_1_1_value.html">Value</a> &amp;other) const </td></tr>
 <tr class="separator:a899214ed2253d3f4f061b922b0e622b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b7da48b163bcec63b1424f1608b7da6"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_value.html#a5b7da48b163bcec63b1424f1608b7da6">asCString</a> () const </td></tr>
+<tr class="memdesc:a5b7da48b163bcec63b1424f1608b7da6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Embedded zeroes could cause you trouble!  <a href="#a5b7da48b163bcec63b1424f1608b7da6">More...</a><br /></td></tr>
 <tr class="separator:a5b7da48b163bcec63b1424f1608b7da6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03ee3d5df576640c93ba683f140828bd"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_value.html#a03ee3d5df576640c93ba683f140828bd">asString</a> () const </td></tr>
-<tr class="memdesc:a03ee3d5df576640c93ba683f140828bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">! Embedded zeroes could cause you trouble!  <a href="#a03ee3d5df576640c93ba683f140828bd">More...</a><br /></td></tr>
+<tr class="memdesc:a03ee3d5df576640c93ba683f140828bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Embedded zeroes are possible.  <a href="#a03ee3d5df576640c93ba683f140828bd">More...</a><br /></td></tr>
 <tr class="separator:a03ee3d5df576640c93ba683f140828bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8461f52e91a982fdfc58d024a698cda5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_value.html#a8461f52e91a982fdfc58d024a698cda5">getString</a> (char const **str, char const **<a class="el" href="class_json_1_1_value.html#a596da1926b2f2a4056bff2edb713eb0b">end</a>) const </td></tr>
-<tr class="memdesc:a8461f52e91a982fdfc58d024a698cda5"><td class="mdescLeft">&#160;</td><td class="mdescRight">! Embedded zeroes are possible.  <a href="#a8461f52e91a982fdfc58d024a698cda5">More...</a><br /></td></tr>
+<tr class="memdesc:a8461f52e91a982fdfc58d024a698cda5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get raw char* of string-value.  <a href="#a8461f52e91a982fdfc58d024a698cda5">More...</a><br /></td></tr>
 <tr class="separator:a8461f52e91a982fdfc58d024a698cda5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac786e35b860b1d700cb3d3e56dd6a235"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_json_1_1_value.html#abdf7a7ff73eb130ffcab28504ffdb405">Int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_value.html#ac786e35b860b1d700cb3d3e56dd6a235">asInt</a> () const </td></tr>
 <tr class="separator:ac786e35b860b1d700cb3d3e56dd6a235"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -324,12 +326,13 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a6d6e9ea6807e46d5b7ded66d3032f607"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_json_1_1_value.html">Value</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_value.html#a6d6e9ea6807e46d5b7ded66d3032f607">null</a> = reinterpret_cast&lt;const <a class="el" href="class_json_1_1_value.html">Value</a>&amp;&gt;(<a class="el" href="namespace_json.html#ab30055b4bbd82aecaca57ccecd63bbe6">kNullRef</a>)</td></tr>
+<tr class="memdesc:a6d6e9ea6807e46d5b7ded66d3032f607"><td class="mdescLeft">&#160;</td><td class="mdescRight">We regret this reference to a global instance; prefer the simpler <a class="el" href="class_json_1_1_value.html#ada6ba1369448fb0240bccc36efaa46f7" title="Create a default Value of the given type. ">Value()</a>.  <a href="#a6d6e9ea6807e46d5b7ded66d3032f607">More...</a><br /></td></tr>
 <tr class="separator:a6d6e9ea6807e46d5b7ded66d3032f607"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa4ffd4e53967170c3e8c9abf682b5cd"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_json_1_1_value.html">Value</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_value.html#aaa4ffd4e53967170c3e8c9abf682b5cd">nullRef</a> = <a class="el" href="class_json_1_1_value.html#a6d6e9ea6807e46d5b7ded66d3032f607">null</a></td></tr>
-<tr class="memdesc:aaa4ffd4e53967170c3e8c9abf682b5cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">! We regret this reference to a global instance; prefer the simpler <a class="el" href="class_json_1_1_value.html#ada6ba1369448fb0240bccc36efaa46f7" title="Create a default Value of the given type. ">Value()</a>.  <a href="#aaa4ffd4e53967170c3e8c9abf682b5cd">More...</a><br /></td></tr>
+<tr class="memdesc:aaa4ffd4e53967170c3e8c9abf682b5cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">just a kludge for binary-compatibility; same as null  <a href="#aaa4ffd4e53967170c3e8c9abf682b5cd">More...</a><br /></td></tr>
 <tr class="separator:aaa4ffd4e53967170c3e8c9abf682b5cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af91df130daa50dd43d2cd89e6ee67706"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_json_1_1_value.html#a1cbb82642ed05109b9833e49f042ece7">LargestInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_value.html#af91df130daa50dd43d2cd89e6ee67706">minLargestInt</a> = <a class="el" href="class_json_1_1_value.html#a1cbb82642ed05109b9833e49f042ece7">LargestInt</a>(~(<a class="el" href="class_json_1_1_value.html#a6682a3684d635e03fc06ba229fa24eec">LargestUInt</a>(-1) / 2))</td></tr>
-<tr class="memdesc:af91df130daa50dd43d2cd89e6ee67706"><td class="mdescLeft">&#160;</td><td class="mdescRight">! just a kludge for binary-compatibility; same as null  <a href="#af91df130daa50dd43d2cd89e6ee67706">More...</a><br /></td></tr>
+<tr class="memdesc:af91df130daa50dd43d2cd89e6ee67706"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum signed integer value that can be stored in a <a class="el" href="class_json_1_1_value.html" title="Represents a JSON value. ">Json::Value</a>.  <a href="#af91df130daa50dd43d2cd89e6ee67706">More...</a><br /></td></tr>
 <tr class="separator:af91df130daa50dd43d2cd89e6ee67706"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b4977696f13296fa8755c7953fafb2f"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_json_1_1_value.html#a1cbb82642ed05109b9833e49f042ece7">LargestInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_value.html#a8b4977696f13296fa8755c7953fafb2f">maxLargestInt</a> = <a class="el" href="class_json_1_1_value.html#a1cbb82642ed05109b9833e49f042ece7">LargestInt</a>(<a class="el" href="class_json_1_1_value.html#a6682a3684d635e03fc06ba229fa24eec">LargestUInt</a>(-1) / 2)</td></tr>
 <tr class="memdesc:a8b4977696f13296fa8755c7953fafb2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum signed integer value that can be stored in a <a class="el" href="class_json_1_1_value.html" title="Represents a JSON value. ">Json::Value</a>.  <a href="#a8b4977696f13296fa8755c7953fafb2f">More...</a><br /></td></tr>
@@ -617,6 +620,8 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Copy til first 0. (NULL causes to seg-fault.) </p>
+
 </div>
 </div>
 <a class="anchor" id="a13e567d467bb1e699d71e27a76b0e988"></a>
@@ -643,7 +648,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>! Copy til first 0. (NULL causes to seg-fault.) </p>
+<p>Copy all, incl zeroes. </p>
 
 </div>
 </div>
@@ -661,8 +666,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>! Copy all, incl zeroes. </p>
-<p>Constructs a value from a static string.</p>
+<p>Constructs a value from a static string. </p>
 <p>Like other value string constructor but do not duplicate the string for internal storage. The given string must remain alive after the call to this constructor. </p><dl class="section note"><dt>Note</dt><dd>This works only for null-terminated strings. (We cannot change the size of this class, so we have nowhere to store the length, which might be computed later for various operations.)</dd></dl>
 <p>Example of usage: </p><div class="fragment"><div class="line"><span class="keyword">static</span> StaticString foo(<span class="stringliteral">&quot;some text&quot;</span>);</div>
 <div class="line"><a class="code" href="class_json_1_1_value.html">Json::Value</a> aValue(foo);</div>
@@ -683,6 +687,8 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Copy data() til <a class="el" href="class_json_1_1_value.html#a4ca8ee6c48a34ca6c2f131956bab5e05" title="Number of values in array or object. ">size()</a>. Embedded zeroes too. </p>
+
 </div>
 </div>
 <a class="anchor" id="a350a31ea4a30d384994b0bc010b17495"></a>
@@ -698,8 +704,6 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>! Copy data() til <a class="el" href="class_json_1_1_value.html#a4ca8ee6c48a34ca6c2f131956bab5e05" title="Number of values in array or object. ">size()</a>. Embedded zeroes too. </p>
 
 </div>
 </div>
@@ -783,6 +787,8 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Embedded zeroes could cause you trouble! </p>
 
 </div>
 </div>
@@ -889,7 +895,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>! Embedded zeroes could cause you trouble! </p>
+<p>Embedded zeroes are possible. </p>
 
 </div>
 </div>
@@ -1315,8 +1321,8 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>! Embedded zeroes are possible. </p>
-<p>Get raw char* of string-value. </p><dl class="section return"><dt>Returns</dt><dd>false if !string. (Seg-fault if str or end are NULL.) </dd></dl>
+<p>Get raw char* of string-value. </p>
+<dl class="section return"><dt>Returns</dt><dd>false if !string. (Seg-fault if str or end are NULL.) </dd></dl>
 
 </div>
 </div>
@@ -2545,7 +2551,6 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>! just a kludge for binary-compatibility; same as null </p>
 <p>Minimum signed integer value that can be stored in a <a class="el" href="class_json_1_1_value.html" title="Represents a JSON value. ">Json::Value</a>. </p>
 
 </div>
@@ -2568,6 +2573,8 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>We regret this reference to a global instance; prefer the simpler <a class="el" href="class_json_1_1_value.html#ada6ba1369448fb0240bccc36efaa46f7" title="Create a default Value of the given type. ">Value()</a>. </p>
+
 </div>
 </div>
 <a class="anchor" id="aaa4ffd4e53967170c3e8c9abf682b5cd"></a>
@@ -2588,7 +2595,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>! We regret this reference to a global instance; prefer the simpler <a class="el" href="class_json_1_1_value.html#ada6ba1369448fb0240bccc36efaa46f7" title="Create a default Value of the given type. ">Value()</a>. </p>
+<p>just a kludge for binary-compatibility; same as null </p>
 
 </div>
 </div>
