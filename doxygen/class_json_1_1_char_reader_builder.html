@@ -220,6 +220,7 @@ Public Attributes</h2></td></tr>
 <div class="line">  (*settings)[<span class="stringliteral">&quot;allowNumericKeys&quot;</span>] = <span class="keyword">false</span>;</div>
 <div class="line">  (*settings)[<span class="stringliteral">&quot;allowSingleQuotes&quot;</span>] = <span class="keyword">false</span>;</div>
 <div class="line">  (*settings)[<span class="stringliteral">&quot;failIfExtra&quot;</span>] = <span class="keyword">true</span>;</div>
+<div class="line">  (*settings)[<span class="stringliteral">&quot;rejectDupKeys&quot;</span>] = <span class="keyword">true</span>;</div>
 </div><!-- fragment --></dd></dl>
 <p>[CharReaderBuilderDefaults]</p>
 <p>[CharReaderBuilderDefaults] </p>
@@ -258,6 +259,7 @@ Public Attributes</h2></td></tr>
 <div class="line">  (*settings)[<span class="stringliteral">&quot;allowSingleQuotes&quot;</span>] = <span class="keyword">false</span>;</div>
 <div class="line">  (*settings)[<span class="stringliteral">&quot;stackLimit&quot;</span>] = 1000;</div>
 <div class="line">  (*settings)[<span class="stringliteral">&quot;failIfExtra&quot;</span>] = <span class="keyword">false</span>;</div>
+<div class="line">  (*settings)[<span class="stringliteral">&quot;rejectDupKeys&quot;</span>] = <span class="keyword">false</span>;</div>
 </div><!-- fragment --></dd></dl>
 <p>[CharReaderBuilderStrictMode]</p>
 <p>[CharReaderBuilderStrictMode] </p>
@@ -325,6 +327,10 @@ Public Attributes</h2></td></tr>
 </li>
 <li><code>"failIfExtra": false or true</code><ul>
 <li>If true, <code>parse()</code> returns false when extra non-whitespace trails the JSON value in the input string.</li>
+</ul>
+</li>
+<li><code>"rejectDupKeys": false or true</code><ul>
+<li>If true, <code>parse()</code> returns false when a key is duplicated within an object.</li>
 </ul>
 </li>
 </ul>
