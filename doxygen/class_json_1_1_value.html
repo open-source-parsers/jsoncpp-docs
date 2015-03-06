@@ -118,6 +118,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a287dea48da3912d02756735bf677b27b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_value.html#a287dea48da3912d02756735bf677b27b">~Value</a> ()</td></tr>
 <tr class="separator:a287dea48da3912d02756735bf677b27b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a795acb28772da4c5d85ae8f4af36c69f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_json_1_1_value.html">Value</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_value.html#a795acb28772da4c5d85ae8f4af36c69f">operator=</a> (<a class="el" href="class_json_1_1_value.html">Value</a> other)</td></tr>
+<tr class="memdesc:a795acb28772da4c5d85ae8f4af36c69f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deep copy, then swap(other).  <a href="#a795acb28772da4c5d85ae8f4af36c69f">More...</a><br /></td></tr>
 <tr class="separator:a795acb28772da4c5d85ae8f4af36c69f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab841120d78e296e1bc06a373345e822"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_value.html#aab841120d78e296e1bc06a373345e822">swap</a> (<a class="el" href="class_json_1_1_value.html">Value</a> &amp;other)</td></tr>
 <tr class="memdesc:aab841120d78e296e1bc06a373345e822"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swap everything.  <a href="#aab841120d78e296e1bc06a373345e822">More...</a><br /></td></tr>
@@ -1153,6 +1154,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Return the member named key if it exist, defaultValue otherwise. </p>
+<dl class="section note"><dt>Note</dt><dd>deep copy </dd></dl>
 
 </div>
 </div>
@@ -1187,6 +1189,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Return the member named key if it exist, defaultValue otherwise. </p>
+<dl class="section note"><dt>Note</dt><dd>deep copy </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">key</td><td>may contain embedded nulls. </td></tr>
@@ -1221,6 +1224,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Return the member named key if it exist, defaultValue otherwise. </p>
+<dl class="section note"><dt>Note</dt><dd>deep copy </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">key</td><td>may contain embedded nulls. </td></tr>
@@ -1707,6 +1711,9 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Deep copy, then swap(other). </p>
+<dl class="section note"><dt>Note</dt><dd>Over-write existing comments. To preserve comments, use <a class="el" href="class_json_1_1_value.html#a5263476047f20e2fc6de470e4de34fe5" title="Swap values but leave comments and source offsets in place. ">swapPayload()</a>. </dd></dl>
 
 </div>
 </div>
