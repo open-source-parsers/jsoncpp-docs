@@ -164,6 +164,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a4d245ef719cc0853e8e78eb5f99c16e5"><td class="memItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_json.html#a4d245ef719cc0853e8e78eb5f99c16e5">operator&gt;&gt;</a> (std::istream &amp;, <a class="el" href="class_json_1_1_value.html">Value</a> &amp;)</td></tr>
 <tr class="memdesc:a4d245ef719cc0853e8e78eb5f99c16e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read from 'sin' into 'root'.  <a href="#a4d245ef719cc0853e8e78eb5f99c16e5">More...</a><br /></td></tr>
 <tr class="separator:a4d245ef719cc0853e8e78eb5f99c16e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97f039a107b3f6cf1c3edee50e978f76"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_json.html#a97f039a107b3f6cf1c3edee50e978f76">throwRuntimeError</a> (std::string const &amp;msg)</td></tr>
+<tr class="memdesc:a97f039a107b3f6cf1c3edee50e978f76"><td class="mdescLeft">&#160;</td><td class="mdescRight">used internally  <a href="#a97f039a107b3f6cf1c3edee50e978f76">More...</a><br /></td></tr>
+<tr class="separator:a97f039a107b3f6cf1c3edee50e978f76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27613326e9e36bbfe04a905ac90caa91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_json.html#a27613326e9e36bbfe04a905ac90caa91">throwLogicError</a> (std::string const &amp;msg)</td></tr>
+<tr class="memdesc:a27613326e9e36bbfe04a905ac90caa91"><td class="mdescLeft">&#160;</td><td class="mdescRight">used internally  <a href="#a27613326e9e36bbfe04a905ac90caa91">More...</a><br /></td></tr>
+<tr class="separator:a27613326e9e36bbfe04a905ac90caa91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd767fe4c7e962d0ff3d1a6d1622619f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_json.html#afd767fe4c7e962d0ff3d1a6d1622619f">writeString</a> (<a class="el" href="class_json_1_1_stream_writer_1_1_factory.html">StreamWriter::Factory</a> const &amp;factory, <a class="el" href="class_json_1_1_value.html">Value</a> const &amp;root)</td></tr>
 <tr class="memdesc:afd767fe4c7e962d0ff3d1a6d1622619f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write into stringstream, then return string, for convenience.  <a href="#afd767fe4c7e962d0ff3d1a6d1622619f">More...</a><br /></td></tr>
 <tr class="separator:afd767fe4c7e962d0ff3d1a6d1622619f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -205,15 +211,15 @@ Functions</h2></td></tr>
 <tr class="memitem:aff0180507262a244de61b961178d7443"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
 <tr class="memitem:aff0180507262a244de61b961178d7443"><td class="memTemplItemLeft" align="right" valign="top">static bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_json.html#aff0180507262a244de61b961178d7443">InRange</a> (double d, T min, U max)</td></tr>
 <tr class="separator:aff0180507262a244de61b961178d7443"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15d890c8378a7922b7cbd69658b27d74"><td class="memItemLeft" align="right" valign="top">static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_json.html#a15d890c8378a7922b7cbd69658b27d74">duplicateStringValue</a> (const char *value, size_t length=<a class="el" href="namespace_json.html#ab5042c2239f95d374e3c9da88245863f">unknown</a>)</td></tr>
-<tr class="memdesc:a15d890c8378a7922b7cbd69658b27d74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Duplicates the specified string value.  <a href="#a15d890c8378a7922b7cbd69658b27d74">More...</a><br /></td></tr>
-<tr class="separator:a15d890c8378a7922b7cbd69658b27d74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a678ac3a60cd70ec0fb4c9abfd40eb0c4"><td class="memItemLeft" align="right" valign="top">static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_json.html#a678ac3a60cd70ec0fb4c9abfd40eb0c4">duplicateStringValue</a> (const char *value, size_t length)</td></tr>
+<tr class="memdesc:a678ac3a60cd70ec0fb4c9abfd40eb0c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Duplicates the specified string value.  <a href="#a678ac3a60cd70ec0fb4c9abfd40eb0c4">More...</a><br /></td></tr>
+<tr class="separator:a678ac3a60cd70ec0fb4c9abfd40eb0c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9795a09a0141d1f12d307c4386aeaee6"><td class="memItemLeft" align="right" valign="top">static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_json.html#a9795a09a0141d1f12d307c4386aeaee6">duplicateAndPrefixStringValue</a> (const char *value, unsigned int length)</td></tr>
 <tr class="separator:a9795a09a0141d1f12d307c4386aeaee6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad8b4982c1acd164f541fba396ac9fb1"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_json.html#aad8b4982c1acd164f541fba396ac9fb1">decodePrefixedString</a> (bool isPrefixed, char const *prefixed, unsigned *length, char const **value)</td></tr>
 <tr class="separator:aad8b4982c1acd164f541fba396ac9fb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf8dd162c01e37846e129556c50e4037"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_json.html#acf8dd162c01e37846e129556c50e4037">releaseStringValue</a> (char *value)</td></tr>
-<tr class="memdesc:acf8dd162c01e37846e129556c50e4037"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free the string duplicated by <a class="el" href="namespace_json.html#a15d890c8378a7922b7cbd69658b27d74" title="Duplicates the specified string value. ">duplicateStringValue()</a>/duplicateAndPrefixStringValue().  <a href="#acf8dd162c01e37846e129556c50e4037">More...</a><br /></td></tr>
+<tr class="memdesc:acf8dd162c01e37846e129556c50e4037"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free the string duplicated by <a class="el" href="namespace_json.html#a678ac3a60cd70ec0fb4c9abfd40eb0c4" title="Duplicates the specified string value. ">duplicateStringValue()</a>/duplicateAndPrefixStringValue().  <a href="#acf8dd162c01e37846e129556c50e4037">More...</a><br /></td></tr>
 <tr class="separator:acf8dd162c01e37846e129556c50e4037"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a04cc9d31e64b5912dade003c9b99b5"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_json.html#a1a04cc9d31e64b5912dade003c9b99b5">IsIntegral</a> (double d)</td></tr>
 <tr class="separator:a1a04cc9d31e64b5912dade003c9b99b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -236,9 +242,6 @@ Variables</h2></td></tr>
 <tr class="separator:ab30055b4bbd82aecaca57ccecd63bbe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aecc0306aa526f25c5156f842182fb7fb"><td class="memItemLeft" align="right" valign="top">static const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_json.html#aecc0306aa526f25c5156f842182fb7fb">maxUInt64AsDouble</a> = 18446744073709551615.0</td></tr>
 <tr class="separator:aecc0306aa526f25c5156f842182fb7fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5042c2239f95d374e3c9da88245863f"><td class="memItemLeft" align="right" valign="top">static const size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_json.html#ab5042c2239f95d374e3c9da88245863f">unknown</a> = (size_t)-1</td></tr>
-<tr class="memdesc:ab5042c2239f95d374e3c9da88245863f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unknown size marker.  <a href="#ab5042c2239f95d374e3c9da88245863f">More...</a><br /></td></tr>
-<tr class="separator:ab5042c2239f95d374e3c9da88245863f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>JSON (JavaScript Object Notation). </p>
@@ -646,7 +649,7 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a15d890c8378a7922b7cbd69658b27d74"></a>
+<a class="anchor" id="a678ac3a60cd70ec0fb4c9abfd40eb0c4"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -663,7 +666,7 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>length</em> = <code>unknown</code>&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1040,7 +1043,7 @@ template&lt;typename T , typename U &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Free the string duplicated by <a class="el" href="namespace_json.html#a15d890c8378a7922b7cbd69658b27d74" title="Duplicates the specified string value. ">duplicateStringValue()</a>/duplicateAndPrefixStringValue(). </p>
+<p>Free the string duplicated by <a class="el" href="namespace_json.html#a678ac3a60cd70ec0fb4c9abfd40eb0c4" title="Duplicates the specified string value. ">duplicateStringValue()</a>/duplicateAndPrefixStringValue(). </p>
 
 </div>
 </div>
@@ -1081,6 +1084,42 @@ template&lt;typename T , typename U &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a27613326e9e36bbfe04a905ac90caa91"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Json::throwLogicError </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>msg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>used internally </p>
+
+</div>
+</div>
+<a class="anchor" id="a97f039a107b3f6cf1c3edee50e978f76"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Json::throwRuntimeError </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>msg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>used internally </p>
 
 </div>
 </div>
@@ -1352,28 +1391,6 @@ template&lt;typename T , typename U &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ab5042c2239f95d374e3c9da88245863f"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const size_t Json::unknown = (size_t)-1</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Unknown size marker. </p>
 
 </div>
 </div>

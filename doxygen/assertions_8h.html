@@ -51,11 +51,11 @@ JsonCpp - JSON data format manipulation library
 <div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &lt;sstream&gt;</code><br />
 <code>#include &quot;<a class="el" href="config_8h.html">config.h</a>&quot;</code><br />
-<code>#include &lt;stdexcept&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a188941dcc789ccb6539c3d6f41405582"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="assertions_8h.html#a188941dcc789ccb6539c3d6f41405582">JSON_ASSERT</a>(condition)&#160;&#160;&#160;{if (!(condition)) {throw std::logic_error( &quot;assert json failed&quot; );}}</td></tr>
+<tr class="memitem:a188941dcc789ccb6539c3d6f41405582"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="assertions_8h.html#a188941dcc789ccb6539c3d6f41405582">JSON_ASSERT</a>(condition)&#160;&#160;&#160;{if (!(condition)) {<a class="el" href="namespace_json.html#a27613326e9e36bbfe04a905ac90caa91">Json::throwLogicError</a>( &quot;assert json failed&quot; );}}</td></tr>
+<tr class="memdesc:a188941dcc789ccb6539c3d6f41405582"><td class="mdescLeft">&#160;</td><td class="mdescRight">It should not be possible for a maliciously designed file to cause an abort() or seg-fault, so these macros are used only for pre-condition violations and internal logic errors.  <a href="#a188941dcc789ccb6539c3d6f41405582">More...</a><br /></td></tr>
 <tr class="separator:a188941dcc789ccb6539c3d6f41405582"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67007439f94bc6afc465923f56147ba1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="assertions_8h.html#a67007439f94bc6afc465923f56147ba1">JSON_FAIL_MESSAGE</a>(message)</td></tr>
 <tr class="separator:a67007439f94bc6afc465923f56147ba1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -72,10 +72,12 @@ Macros</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">condition</td><td>)</td>
-          <td>&#160;&#160;&#160;{if (!(condition)) {throw std::logic_error( &quot;assert json failed&quot; );}}</td>
+          <td>&#160;&#160;&#160;{if (!(condition)) {<a class="el" href="namespace_json.html#a27613326e9e36bbfe04a905ac90caa91">Json::throwLogicError</a>( &quot;assert json failed&quot; );}}</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>It should not be possible for a maliciously designed file to cause an abort() or seg-fault, so these macros are used only for pre-condition violations and internal logic errors. </p>
 
 </div>
 </div>
@@ -105,7 +107,7 @@ Macros</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">if</span> (!(condition)) {                                                          <a class="code" href="assertions_8h.html#a67007439f94bc6afc465923f56147ba1">\</a></div>
 <div class="line"><a class="code" href="assertions_8h.html#a67007439f94bc6afc465923f56147ba1">    JSON_FAIL_MESSAGE</a>(message);                                                \</div>
 <div class="line">  }</div>
-<div class="ttc" id="assertions_8h_html_a67007439f94bc6afc465923f56147ba1"><div class="ttname"><a href="assertions_8h.html#a67007439f94bc6afc465923f56147ba1">JSON_FAIL_MESSAGE</a></div><div class="ttdeci">#define JSON_FAIL_MESSAGE(message)</div><div class="ttdef"><b>Definition:</b> assertions.h:20</div></div>
+<div class="ttc" id="assertions_8h_html_a67007439f94bc6afc465923f56147ba1"><div class="ttname"><a href="assertions_8h.html#a67007439f94bc6afc465923f56147ba1">JSON_FAIL_MESSAGE</a></div><div class="ttdeci">#define JSON_FAIL_MESSAGE(message)</div><div class="ttdef"><b>Definition:</b> assertions.h:26</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -123,9 +125,11 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">{                                                                            \</div>
-<div class="line">    std::ostringstream oss; oss &lt;&lt; message;                                    \</div>
-<div class="line">    throw std::logic_error(oss.str());                                         \</div>
+<div class="line">    std::ostringstream oss; oss &lt;&lt; message;                                    <a class="code" href="namespace_json.html#a27613326e9e36bbfe04a905ac90caa91">\</a></div>
+<div class="line"><a class="code" href="namespace_json.html#a27613326e9e36bbfe04a905ac90caa91">    Json::throwLogicError</a>(oss.str());                                          \</div>
+<div class="line">    abort();                                                                   \</div>
 <div class="line">  }</div>
+<div class="ttc" id="namespace_json_html_a27613326e9e36bbfe04a905ac90caa91"><div class="ttname"><a href="namespace_json.html#a27613326e9e36bbfe04a905ac90caa91">Json::throwLogicError</a></div><div class="ttdeci">void throwLogicError(std::string const &amp;msg)</div><div class="ttdoc">used internally </div><div class="ttdef"><b>Definition:</b> json_value.cpp:191</div></div>
 </div><!-- fragment -->
 </div>
 </div>
