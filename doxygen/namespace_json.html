@@ -193,10 +193,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a87bc83d7e90fc666d28aa16727deda2f"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_json.html#a87bc83d7e90fc666d28aa16727deda2f">operator&lt;&lt;</a> (std::ostream &amp;, const <a class="el" href="class_json_1_1_value.html">Value</a> &amp;root)</td></tr>
 <tr class="memdesc:a87bc83d7e90fc666d28aa16727deda2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output using the <a class="el" href="class_json_1_1_styled_stream_writer.html" title="Writes a Value in JSON format in a human friendly way, to a stream rather than to a string...">StyledStreamWriter</a>.  <a href="#a87bc83d7e90fc666d28aa16727deda2f">More...</a><br /></td></tr>
 <tr class="separator:a87bc83d7e90fc666d28aa16727deda2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d6ab0f651348832e5cc49b577a854d2"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_json.html#a4d6ab0f651348832e5cc49b577a854d2">containsNewLine</a> (<a class="el" href="class_json_1_1_reader.html#a46795b5b272bf79a7730e406cb96375a">Reader::Location</a> begin, <a class="el" href="class_json_1_1_reader.html#a46795b5b272bf79a7730e406cb96375a">Reader::Location</a> end)</td></tr>
-<tr class="separator:a4d6ab0f651348832e5cc49b577a854d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e6b8616041876128cbef54b8c75da62"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_json.html#a2e6b8616041876128cbef54b8c75da62">normalizeEOL</a> (<a class="el" href="class_json_1_1_reader.html#a46795b5b272bf79a7730e406cb96375a">Reader::Location</a> begin, <a class="el" href="class_json_1_1_reader.html#a46795b5b272bf79a7730e406cb96375a">Reader::Location</a> end)</td></tr>
-<tr class="separator:a2e6b8616041876128cbef54b8c75da62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8fedd83f49c9a9109d503b2b1d4824aa"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_json.html#a8fedd83f49c9a9109d503b2b1d4824aa">getValidReaderKeys</a> (std::set&lt; std::string &gt; *valid_keys)</td></tr>
 <tr class="separator:a8fedd83f49c9a9109d503b2b1d4824aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac99d7a5551039dfa712dd1d143c25a16"><td class="memItemLeft" align="right" valign="top">static char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_json.html#ac99d7a5551039dfa712dd1d143c25a16">getDecimalPoint</a> ()</td></tr>
@@ -564,42 +560,6 @@ Variables</h2></td></tr>
           <td></td>
           <td class="paramtype">unsigned&#160;</td>
           <td class="paramname"><em>len</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a4d6ab0f651348832e5cc49b577a854d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4d6ab0f651348832e5cc49b577a854d2">&#9670;&nbsp;</a></span>containsNewLine()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static bool Json::containsNewLine </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_json_1_1_reader.html#a46795b5b272bf79a7730e406cb96375a">Reader::Location</a>&#160;</td>
-          <td class="paramname"><em>begin</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="class_json_1_1_reader.html#a46795b5b272bf79a7730e406cb96375a">Reader::Location</a>&#160;</td>
-          <td class="paramname"><em>end</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -986,42 +946,6 @@ template&lt;typename T , typename U &gt; </div>
           <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>d</em></td><td>)</td>
           <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a2e6b8616041876128cbef54b8c75da62"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e6b8616041876128cbef54b8c75da62">&#9670;&nbsp;</a></span>normalizeEOL()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static std::string Json::normalizeEOL </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_json_1_1_reader.html#a46795b5b272bf79a7730e406cb96375a">Reader::Location</a>&#160;</td>
-          <td class="paramname"><em>begin</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="class_json_1_1_reader.html#a46795b5b272bf79a7730e406cb96375a">Reader::Location</a>&#160;</td>
-          <td class="paramname"><em>end</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
